@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import { getDepartmentBySlug, type DepartmentData } from '../data/departments';
 import Navbar from '../components/layout/Navbar';
