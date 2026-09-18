@@ -18,7 +18,7 @@ const NavItem = ({ link, isSolid }: { link: NavLink, isSolid: boolean }) => {
                 className={`relative flex items-center gap-1 text-[13px] 2xl:text-[15px] font-semibold tracking-[0.02em] transition-colors duration-200 whitespace-nowrap py-6 ${isSolid ? 'text-neutral-700 hover:text-primary' : 'text-white/95 hover:text-white'}`}
             >
                 {link.label}
-                {link.hasDropdown && <ChevronDown className={`w-[14px] h-[14px] transition-transform duration-300 ${isHovered ? '-rotate-180' : ''}`} />}
+                {link.hasDropdown && <ChevronDown className={`w-[14px] h-[14px] transition-transform duration-300 ${isHovered ? '-rotate-180' : ''} ${isSolid ? 'text-primary' : 'text-white/80'}`} />}
                 
                 {/* Underline indicator */}
                 <span className={`absolute bottom-4 left-0 right-0 h-[2px] rounded-full transition-transform duration-300 origin-left ${isHovered ? 'scale-x-100' : 'scale-x-0'} ${isSolid ? 'bg-primary' : 'bg-white'}`} />
@@ -32,13 +32,13 @@ const NavItem = ({ link, isSolid }: { link: NavLink, isSolid: boolean }) => {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
-                            className="absolute top-[80%] left-0 min-w-[220px] bg-white rounded-xl shadow-2xl border border-neutral-100 overflow-hidden py-2 z-50"
+                            className="absolute top-[80%] left-0 min-w-[220px] bg-white rounded-xl shadow-2xl border border-primary/20 overflow-y-auto max-h-[75vh] py-2 z-50 scrollbar-thin scrollbar-thumb-neutral-200 scrollbar-track-transparent"
                         >
                             {link.subItems?.map((sub: SubItem, idx: number) => (
                                 <Link 
                                     key={idx} 
                                     to={sub.href}
-                                    className="block px-5 py-3 text-[16px] font-medium text-neutral-700 hover:text-primary hover:bg-orange-50/50 transition-colors"
+                                    className="block px-5 py-2.5 text-[15px] font-medium text-neutral-700 hover:text-primary hover:bg-orange-50/50 transition-colors"
                                 >
                                     {sub.label}
                                 </Link>
@@ -95,10 +95,10 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
 
-            <div className="max-w-[1500px] w-full mx-auto px-4 md:px-8">
-                <div className="flex items-center justify-between h-[72px] gap-8">
+            <div className="max-w-[1500px] w-full mx-auto px-4 md:px-8 relative z-50">
+                <div className="flex items-center justify-between h-[72px] gap-2 lg:gap-4 xl:gap-6">
                     {/* Desktop links */}
-                    <div className="hidden xl:flex items-center justify-center gap-2 xl:gap-3 2xl:gap-4 flex-1 min-w-0">
+                    <div className="hidden xl:flex items-center justify-between gap-1 xl:gap-2 2xl:gap-3 flex-1 min-w-0">
                         {navLinks.map((link) => (
                             <NavItem key={link.label} link={link} isSolid={isSolid} />
                         ))}
@@ -149,7 +149,7 @@ const Navbar: React.FC = () => {
                                                         // but for now let's just make it a link.
                                                     }}
                                                 >
-                                                    <ChevronDown className="w-5 h-5 opacity-40" />
+                                                    <ChevronDown className="w-5 h-5 text-primary" />
                                                 </button>
                                             )}
                                         </div>
@@ -160,7 +160,7 @@ const Navbar: React.FC = () => {
                                                         key={sub.label}
                                                         to={sub.href}
                                                         onClick={() => setMobileOpen(false)}
-                                                        className="text-[16px] font-medium text-neutral-600 py-2"
+                                                        className="text-[16px] font-medium text-neutral-600 hover:text-primary py-2 transition-colors"
                                                     >
                                                         {sub.label}
                                                     </Link>
@@ -181,20 +181,20 @@ const Navbar: React.FC = () => {
                     {[1, 2].map((group) => (
                         <div key={group} className="flex gap-10 shrink-0 items-center min-w-full justify-around">
                             <span className="flex items-center gap-1.5">
-                                <span className="w-1 h-1 rounded-full bg-neutral-900 animate-ping" />
+                                <span className="w-1 h-1 rounded-full bg-white animate-ping" />
                                 <span className="text-white/80 font-medium">Placements 2024-25:</span>
-                                <span className="text-neutral-900 font-extrabold">370+ Offers</span>
+                                <span className="text-white font-extrabold">370+ Offers</span>
                             </span>
                             <span className="text-white/40">•</span>
                             <span className="flex items-center gap-1.5">
                                 <span className="text-white/80 font-medium">Highest:</span>
-                                <span className="text-neutral-900 font-extrabold">9.08 LPA</span>
+                                <span className="text-white font-extrabold">9.08 LPA</span>
                                 <span className="text-white/60 text-[9px] font-medium">(TCS Prime)</span>
                             </span>
                             <span className="text-white/40">•</span>
                             <span className="flex items-center gap-1.5">
                                 <span className="text-white/80 font-medium">Placement Rate:</span>
-                                <span className="text-neutral-900 font-extrabold">80%</span>
+                                <span className="text-white font-extrabold">80%</span>
                             </span>
                             <span className="text-white/40">•</span>
                             <span className="flex items-center gap-1.5">

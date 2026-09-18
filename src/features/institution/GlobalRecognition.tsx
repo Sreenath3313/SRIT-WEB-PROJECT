@@ -15,11 +15,11 @@ const stats: StatItem[] = [
 
 const GlobalRecognition: React.FC = () => {
     return (
-        <section className="py-20 bg-neutral-dark">
+        <section className="py-20 bg-[#FF5422]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <span className="text-primary text-xs uppercase tracking-[0.3em] font-semibold font-sans mb-4 block">
+                    <span className="text-white/80 text-xs uppercase tracking-[0.3em] font-semibold font-sans mb-4 block">
                         Institutional Highlights
                     </span>
                     <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white">
@@ -34,10 +34,10 @@ const GlobalRecognition: React.FC = () => {
                             key={index}
                             className="text-center group"
                         >
-                            <div className="font-serif text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-500">
+                            <div className="font-serif text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:text-white/80 transition-colors duration-500">
                                 {stat.value}
                             </div>
-                            <div className="text-sm text-white/50 font-sans tracking-wide uppercase">
+                            <div className="text-sm text-white/70 font-sans tracking-wide uppercase">
                                 {stat.label}
                             </div>
                         </div>
@@ -46,9 +46,9 @@ const GlobalRecognition: React.FC = () => {
 
                 {/* Separator */}
                 <div className="mt-16 flex items-center justify-center">
-                    <div className="w-16 h-px bg-primary/40" />
-                    <div className="w-2 h-2 rounded-full bg-primary mx-4" />
-                    <div className="w-16 h-px bg-primary/40" />
+                    <div className="w-16 h-px bg-white/40" />
+                    <div className="w-2 h-2 rounded-full bg-white mx-4" />
+                    <div className="w-16 h-px bg-white/40" />
                 </div>
             </div>
         </section>

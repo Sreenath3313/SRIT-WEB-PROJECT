@@ -14,12 +14,25 @@ export const navLinks: NavLink[] = [
     { label: 'Home', href: '/', hasDropdown: false },
     { 
         label: 'About Us', 
-        href: '/#about', 
+        href: '/about/overview', 
         hasDropdown: true,
         subItems: [
-            { label: 'Overview', href: '/#about' },
-            { label: 'Vision & Mission', href: '/#vision' },
-            { label: 'Leadership', href: '/#leadership' }
+            { label: 'Overview', href: '/about/overview' },
+            { label: 'Vision & Mission', href: '/about/vision-mission' },
+            { label: 'About Chairperson', href: '/about/chairperson' },
+            { label: 'About Secretary', href: '/about/secretary' },
+            { label: 'About Principal', href: '/about/principal' },
+            { label: 'Governing Body', href: '/about/governing-body' },
+            { label: 'SRIT Policies and Documents', href: '/about/policies-documents' },
+            { label: 'Awards and Achievements', href: '/about/awards-achievements' },
+            { label: 'Academic Council', href: '/about/academic-council' },
+            { label: 'Finance Committee', href: '/about/finance-committee' },
+            { label: 'Organization Chart', href: '/about/organization-chart' },
+            { label: 'MOUs', href: '/about/mous' },
+            { label: 'Affiliations & Accreditations', href: '/about/affiliations-accreditations' },
+            { label: 'Milestones', href: '/about/milestones' },
+            { label: 'SRIT Standard Operating Procedures', href: '/about/standard-operating-procedures' },
+            { label: 'Institutional Strategic Plan', href: '/about/institutional-strategic-plan' }
         ]
     },
     { 

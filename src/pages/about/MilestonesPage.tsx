@@ -1,0 +1,189 @@
+import React from 'react';
+import AboutUsLayout from '../../features/about/components/AboutUsLayout';
+
+const MilestonesPage: React.FC = () => {
+    return (
+        <AboutUsLayout title="Milestones">
+            <h3 className="text-2xl font-serif font-bold text-[#0A0903] mt-8 mb-4">Milestones</h3>
+<h3 className="text-2xl font-serif font-bold text-[#0A0903] mt-8 mb-4">Academic Year: 2020-21</h3>
+<p className="text-neutral-600 leading-relaxed mb-4">Civil Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 18</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 42</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 25</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 4</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 10</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 15</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Electrical & Electronics Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 44</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 49</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 15</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 1</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 8</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 26</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Mechanical Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 31</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 49</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 11</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 2</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 12</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 17</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Electronics &   
+Communication 
+Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 52</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 50</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 15</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 4</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 6</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 36</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Computer Science & Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 55</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 51</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 13</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 4</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 9</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 36</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Computer Science & Engineering (Data mining)</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 23</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 18</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 2</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 0</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 7</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 18</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Computer Science & Engineering (Artificial intelligence & machine learning)</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 23</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 20</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 1</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 1</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 6</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 18</li>
+<h3 className="text-2xl font-serif font-bold text-[#0A0903] mt-8 mb-4">Academic Year: 2019-20</h3>
+<p className="text-neutral-600 leading-relaxed mb-4">Civil Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 36</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 40</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 22</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST -  3</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority -  11</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 23</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Electrical & Electronics Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 48</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 37</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 17</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 3</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 18</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 33</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Mechanical Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 47</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 41</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 8</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 3</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 13</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 32</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Electronics &   
+Communication 
+Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 56</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 51</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC -13</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 4</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 15</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 36</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Computer Science & Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 50</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC -  45</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 12</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 5</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 10</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 36</li>
+<h3 className="text-2xl font-serif font-bold text-[#0A0903] mt-8 mb-4">Academic Year: 2018-19</h3>
+<p className="text-neutral-600 leading-relaxed mb-4">Civil Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 21</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 48</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC -12</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 1</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 8</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 20</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Electrical & Electronics Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 37</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 40</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 16</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 3</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority -10</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 25</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Mechanical Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 14</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC -38</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC - 9</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST -7</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 7</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 8</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Electronics &   
+Communication 
+Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 42</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 48</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC -13</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 3</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 14</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 36</li>
+<p className="text-neutral-600 leading-relaxed mb-4">Computer Science & Engineering</p>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Open - 42</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">OBC - 52</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">SC -16</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">ST - 2</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Minority - 8</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Management - 36</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Chairperson</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Secretary</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Principal</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Governing Council</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Academic Council</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Mandatory Disclosures</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">News Letters</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Chairperson</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Secretary</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Principal</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Governing Council</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Academic Council</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Mandatory Disclosures</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">News Letters</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Milestones</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Cafeteria</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Internships</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Unnath Bharath Abhiyan</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">APSCHE Initiatives</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Contact Us</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">UGCNo content found</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">NBA</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">AICTE</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">APSCHE</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">JNTUA</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">AISHE</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">NIRF</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">IQAC</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">NAAC</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">NISP</li>
+<h3 className="text-2xl font-serif font-bold text-[#0A0903] mt-8 mb-4">Departments</h3>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Computer Science Engineering (CSE)</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Computer Science Engineering- AI & ML (CSM)</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Electronics and Communications Engineering (ECE)</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Electrical and Electronics Engineering (EEE)</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Mechanical Engineering(MEC)</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Computer Science and Engineering -  Artificial Intelligence & Data Science (CAD)</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Civil Engineering (CIV)</li>
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20100'%3E%3C/svg%3E" alt="Image" className="max-w-full h-auto rounded-lg my-6" />
+<img src="https://www.srit.ac.in/wp-content/uploads/2021/06/srit-300-100-white.png" alt="Image" className="max-w-full h-auto rounded-lg my-6" />
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Rotarypuram Village,  BK Samudram Mandal,  Anantapur District - 515701,  AP</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">91-951 561 1111</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Rotarypuram Village,  BK Samudram Mandal,  Anantapur District - 515701,  Andhra Pradesh</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">91-951 561 1111</li>
+<h3 className="text-2xl font-serif font-bold text-[#0A0903] mt-8 mb-4">Please write your Comments, Feedback, Suggestions, Complaints to</h3>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">hr@srit.ac.in</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Privacy Policy</li>
+<li className="text-neutral-600 mb-2 ml-4 list-disc">Terms Of Use</li>
+<h3 className="text-2xl font-serif font-bold text-[#0A0903] mt-8 mb-4">Copyright © 2007 SRIT. All Rights Reserved. Build with 🧡 by Digital GYB.</h3>
+        </AboutUsLayout>
+    );
+};
+
+export default MilestonesPage;

@@ -84,7 +84,7 @@ const ResearchLabs: React.FC = () => {
                                     </p>
                                 </div>
                                 <div className="mt-auto pt-4 border-t border-neutral-100">
-                                    <span className="inline-flex items-center text-primary text-[12px] font-bold tracking-widest uppercase group-hover:text-orange-600 transition-colors">
+                                    <span className="inline-flex items-center text-primary text-[12px] font-bold tracking-widest uppercase group-hover:text-[#FF5422] transition-colors">
                                         Explore Facility <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                                     </span>
                                 </div>

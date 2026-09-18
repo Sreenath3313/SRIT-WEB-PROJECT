@@ -214,10 +214,10 @@ const NdliClubPage: React.FC = () => {
                 
                 {/* 1. STUNNING BOARDROOM HERO SECTION */}
                 <div className="section-container mb-12">
-                    <div className="bg-neutral-dark text-white rounded-[32px] p-8 lg:p-14 border border-neutral-850 shadow-2xl relative overflow-hidden">
+                    <div className="bg-white text-neutral-900 rounded-[32px] p-8 lg:p-14 border border-neutral-200 shadow-2xl relative overflow-hidden">
                         
                         {/* Background Subtle Tech-Grid overlay */}
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] opacity-25 pointer-events-none" />
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,84,34,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,84,34,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-50 pointer-events-none" />
                         
                         <div className="grid lg:grid-cols-[1.3fr,1fr] gap-8 lg:gap-16 items-center relative z-10">
                             
@@ -228,7 +228,7 @@ const NdliClubPage: React.FC = () => {
                                         <span className="w-1.5 h-1.5 bg-primary rounded-full animate-ping" />
                                         IIT Kharagpur Chapter
                                     </span>
-                                    <span className="bg-neutral-800 text-neutral-300 border border-neutral-750 rounded-full px-3 py-1 text-xs font-mono tracking-wide">
+                                    <span className="bg-neutral-100 text-neutral-500 border border-neutral-200 rounded-full px-3 py-1 text-xs font-mono tracking-wide">
                                         Club Registration ID: INAPNC3YPFWR
                                     </span>
                                 </div>
@@ -237,7 +237,7 @@ const NdliClubPage: React.FC = () => {
                                     initial={{ opacity: 0, y: 15 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="font-serif text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight"
+                                    className="font-serif text-3xl md:text-4xl lg:text-5xl font-black text-neutral-900 leading-tight tracking-tight"
                                 >
                                     National Digital Library of India <span className="text-primary">(NDLI) Club</span>
                                 </motion.h1>
@@ -246,7 +246,7 @@ const NdliClubPage: React.FC = () => {
                                     initial={{ opacity: 0, y: 15 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.15 }}
-                                    className="text-neutral-300 text-sm lg:text-base leading-relaxed text-justify max-w-2xl"
+                                    className="text-neutral-600 text-sm lg:text-base leading-relaxed text-justify max-w-2xl"
                                 >
                                     Establishing an immersive learning environment within SRIT to access over 60 million academic materials, facilitating structural research methodologies, literature searches, and expert webinars.
                                 </motion.p>
@@ -263,7 +263,7 @@ const NdliClubPage: React.FC = () => {
                                         href="https://club.ndl.iitkgp.ac.in/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-neutral-800 hover:bg-neutral-750 text-neutral-200 border border-neutral-700 px-5 py-3 rounded-xl text-xs md:text-sm font-bold transition-all flex items-center gap-2"
+                                        className="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 border border-neutral-200 px-5 py-3 rounded-xl text-xs md:text-sm font-bold transition-all flex items-center gap-2"
                                     >
                                         <span>Official Portal</span>
                                         <ArrowUpRight className="w-4 h-4 text-neutral-400" />
@@ -278,7 +278,7 @@ const NdliClubPage: React.FC = () => {
                                     <div className="absolute -inset-2 bg-gradient-to-r from-primary to-orange-400 rounded-2xl blur opacity-25 group-hover:opacity-45 transition duration-700 pointer-events-none" />
                                     
                                     {/* Outer Border Frame */}
-                                    <div className="relative rounded-2xl p-2 bg-neutral-900 border border-neutral-700 shadow-2xl overflow-hidden">
+                                    <div className="relative rounded-2xl p-2 bg-white border border-neutral-200 shadow-2xl overflow-hidden">
                                         <OptimizedImage
                                             src="/library.jpg"
                                             webpSrc="/library.webp"
@@ -293,10 +293,10 @@ const NdliClubPage: React.FC = () => {
                                                 BC
                                             </div>
                                             <div className="flex-grow min-w-0">
-                                                <p className="text-[10px] font-bold text-neutral-200 truncate leading-tight">B Chandra kala</p>
+                                                <p className="text-[10px] font-bold text-neutral-800 truncate leading-tight">B Chandra kala</p>
                                                 <p className="text-[8px] text-neutral-400 uppercase tracking-widest truncate leading-none mt-0.5">Club Convenor</p>
                                             </div>
-                                            <a href="mailto:chandrakala.hs@srit.ac.in" className="w-7 h-7 rounded-lg bg-neutral-800 hover:bg-primary hover:text-white text-neutral-400 flex items-center justify-center transition-colors">
+                                            <a href="mailto:chandrakala.hs@srit.ac.in" className="w-7 h-7 rounded-lg bg-neutral-100 hover:bg-primary hover:text-white text-neutral-400 flex items-center justify-center transition-colors">
                                                 <Mail className="w-3.5 h-3.5" />
                                             </a>
                                         </div>
@@ -530,7 +530,7 @@ const NdliClubPage: React.FC = () => {
                         <div className="w-full rounded-2xl overflow-hidden border border-neutral-200 bg-white shadow-md flex flex-col">
                             
                             {/* Terminal Console Header */}
-                            <div className="bg-neutral-900 px-5 py-4 flex items-center justify-between border-b border-neutral-800 flex-wrap gap-2">
+                            <div className="bg-white px-5 py-4 flex items-center justify-between border-b border-neutral-200 flex-wrap gap-2">
                                 <div className="flex items-center gap-4">
                                     {/* Mac-style Buttons */}
                                     <div className="flex gap-1.5 shrink-0">
@@ -540,7 +540,7 @@ const NdliClubPage: React.FC = () => {
                                     </div>
                                     
                                     {/* Division hairline */}
-                                    <div className="w-px h-4 bg-neutral-800 hidden sm:block" />
+                                    <div className="w-px h-4 bg-neutral-100 hidden sm:block" />
 
                                     {/* Status Feed */}
                                     <div className="flex items-center gap-2">
@@ -562,7 +562,7 @@ const NdliClubPage: React.FC = () => {
                                         href={activeSheet.src.replace('&amp;', '&')} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1 text-[10px] font-mono font-bold text-neutral-400 hover:text-white bg-neutral-850 hover:bg-neutral-800 rounded px-2.5 py-1 border border-neutral-800 transition-colors"
+                                        className="flex items-center gap-1 text-[10px] font-mono font-bold text-neutral-500 hover:text-primary bg-neutral-50 hover:bg-neutral-100 rounded px-2.5 py-1 border border-neutral-200 transition-colors"
                                     >
                                         <span>Expand Fullscreen</span>
                                         <ArrowUpRight className="w-3 h-3" />

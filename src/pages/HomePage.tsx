@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
                 
                 {/* Aesthetic Dark Horizontal Divider */}
                 <div className="w-full bg-white flex justify-center py-6 lg:py-8 relative z-10">
-                    <div className="w-[92%] max-w-[1400px] h-[3px] bg-[#161616] rounded-full" />
+                    <div className="w-[92%] max-w-[1400px] h-[3px] bg-primary rounded-full" />
                 </div>
 
                 <About />

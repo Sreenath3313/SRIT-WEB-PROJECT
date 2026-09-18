@@ -23,7 +23,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
             <div className="mb-16 text-center">
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-neutral-dark mb-4 relative inline-block">
                     Our Faculty
-                    <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-[#F85E00] rounded-full"></span>
+                    <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-[#FF5422] rounded-full"></span>
                 </h2>
                 <p className="text-neutral-600 text-[15px] max-w-2xl mx-auto mt-8 px-4">
                     The {dept.code} department is proud to be home to {dept.stats.faculty} highly qualified faculty members dedicated to academic excellence, research, and mentoring the next generation of engineers.
@@ -50,7 +50,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                                         className="w-full h-full flex items-center justify-center text-4xl font-serif font-bold transition-transform duration-700 group-hover:scale-105"
                                         style={{
                                             background: '#FFF5EB',
-                                            color: '#F85E00',
+                                            color: '#FF5422',
                                         }}
                                     >
                                         {avatarPlaceholder(faculty.name)}
@@ -65,7 +65,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                             <p className="text-[15px] text-neutral-800 mb-1">
                                 {faculty.designation}
                             </p>
-                            <a href={`mailto:${email}`} className="text-[14px] text-[#F85E00] hover:underline mb-8 font-medium">
+                            <a href={`mailto:${email}`} className="text-[14px] text-[#FF5422] hover:underline mb-8 font-medium">
                                 {email}
                             </a>
                             
@@ -108,7 +108,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                     href="https://www.srit.ac.in"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-neutral-200 rounded-full text-sm font-bold uppercase tracking-wider text-neutral-700 hover:border-[#F85E00] hover:text-[#F85E00] transition-colors duration-300"
+                    className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-neutral-200 rounded-full text-sm font-bold uppercase tracking-wider text-neutral-700 hover:border-[#FF5422] hover:text-[#FF5422] transition-colors duration-300"
                 >
                     View Full Directory
                 </a>

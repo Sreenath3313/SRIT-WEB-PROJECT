@@ -342,7 +342,7 @@ const DepartmentCourseStructure: React.FC<DepartmentCourseStructureProps> = ({ d
             <div className="text-center mb-8">
                 <div className="flex items-center justify-center gap-3 mb-4">
                     <span className="w-8 h-[2px] rounded-full" style={{ background: '#F85E00' }} />
-                    <span className="text-xs font-bold tracking-[0.3em] uppercase" style={{ color: '#F85E00' }}>
+                    <span className="text-xs font-bold tracking-[0.3em] uppercase" style={{ color: '#FF5422' }}>
                         {dept.code} · Academics
                     </span>
                     <span className="w-8 h-[2px] rounded-full" style={{ background: '#F85E00' }} />
@@ -361,8 +361,8 @@ const DepartmentCourseStructure: React.FC<DepartmentCourseStructureProps> = ({ d
                             key={section.key}
                             className="rounded-xl overflow-hidden transition-all duration-300"
                             style={{
-                                border: isOpen ? '1px solid rgba(248, 94, 0, 0.15)' : '1px solid rgba(10, 9, 3, 0.06)',
-                                boxShadow: isOpen ? '0 4px 20px rgba(248, 94, 0, 0.08)' : '0 1px 4px rgba(0,0,0,0.03)',
+                                border: isOpen ? '1px solid rgba(255, 84, 34, 0.25)' : '1px solid rgba(10, 9, 3, 0.06)',
+                                boxShadow: isOpen ? '0 4px 20px rgba(255, 84, 34, 0.12)' : '0 1px 4px rgba(0,0,0,0.06)',
                             }}
                         >
                             {/* Accordion Header */}
@@ -379,7 +379,7 @@ const DepartmentCourseStructure: React.FC<DepartmentCourseStructureProps> = ({ d
                             >
                                 <h3
                                     className="font-serif text-lg lg:text-xl font-semibold"
-                                    style={{ color: '#F85E00' }}
+                                    style={{ color: '#FF5422' }}
                                 >
                                     {section.title}
                                 </h3>
@@ -389,7 +389,7 @@ const DepartmentCourseStructure: React.FC<DepartmentCourseStructureProps> = ({ d
                                     className="shrink-0 ml-4"
                                 >
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M5 8L10 13L15 8" stroke="#FFB563" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M5 8L10 13L15 8" stroke="#FF5422" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </motion.span>
                             </button>
@@ -465,7 +465,7 @@ const DepartmentCourseStructure: React.FC<DepartmentCourseStructureProps> = ({ d
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     className="inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors duration-200"
-                                                                    style={{ color: '#F85E00' }}
+                                                                    style={{ color: '#FF5422' }}
                                                                     onMouseEnter={(e) => {
                                                                         e.currentTarget.style.color = '#FFB563';
                                                                     }}

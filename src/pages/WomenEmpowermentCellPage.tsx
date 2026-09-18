@@ -115,16 +115,16 @@ const WomenEmpowermentCellPage: React.FC = () => {
                     {accordionData.map((item, index) => {
                         const isOpen = openIndex === index;
                         return (
-                            <div key={index} className="w-full bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden">
+                            <div key={index} className="w-full rounded-xl overflow-hidden transition-all duration-300 mb-4" style={{ border: isOpen ? '1px solid rgba(255, 84, 34, 0.25)' : '1px solid rgba(10, 9, 3, 0.06)', boxShadow: isOpen ? '0 4px 20px rgba(255, 84, 34, 0.12)' : '0 1px 4px rgba(0,0,0,0.06)' }}>
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                                    className="w-full bg-[#1e2330] p-4 sm:p-5 flex items-center justify-between transition-colors hover:bg-[#252b3b]"
+                                    className="w-full p-4 sm:p-5 flex items-center justify-between transition-colors duration-300" style={{ background: '#0A0903' }} onMouseEnter={(e) => { if (!isOpen) e.currentTarget.style.background = '#1a1812'; }} onMouseLeave={(e) => { e.currentTarget.style.background = '#0A0903'; }}
                                 >
-                                    <h3 className="font-semibold text-[#ea580c] text-[18px] sm:text-[20px] text-left">
+                                    <h3 className="font-semibold text-[#FF5422] text-[18px] sm:text-[20px] text-left">
                                         {item.title}
                                     </h3>
                                     <ChevronDown
-                                        className={`w-6 h-6 text-[#ea580c] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                                        className={`w-6 h-6 text-[#FF5422] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
                                     />
                                 </button>
                                 <AnimatePresence>

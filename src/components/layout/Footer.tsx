@@ -45,27 +45,27 @@ const socialLinks = [
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-neutral-dark text-white">
+        <footer className="bg-white border-t border-neutral-200">
             {/* Top accent line */}
-            <div className="h-[2px] bg-primary/20" />
+            <div className="h-[3px] bg-primary" />
             <div className="section-container pt-10 pb-6">
                 {/* Top — logo + contact */}
-                <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 mb-8 pb-6 border-b border-white/8">
+                <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 mb-8 pb-6 border-b border-neutral-200">
                     <div>
-                        <Link to="/" className="font-serif text-xl lg:text-2xl font-bold text-white tracking-wide">
+                        <Link to="/" className="font-serif text-xl lg:text-2xl font-bold text-neutral-900 tracking-wide">
                             Srinivasa Ramanujan<br />
                             Institute of Technology
                         </Link>
-                        <p className="text-white/30 text-sm mt-1.5">
+                        <p className="text-neutral-500 text-sm mt-1.5">
                             Rotarypuram, Anantapur — 515701, Andhra Pradesh
                         </p>
                     </div>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5 text-sm text-white/35">
-                        <a href="tel:9515611111" className="hover:text-white/60 transition-colors">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5 text-sm text-neutral-500">
+                        <a href="tel:9515611111" className="hover:text-primary transition-colors">
                             91-951 561 1111
                         </a>
-                        <span className="hidden sm:block w-px h-3 bg-white/15" />
-                        <a href="mailto:hr@srit.ac.in" className="hover:text-white/60 transition-colors">
+                        <span className="hidden sm:block w-px h-3 bg-neutral-300" />
+                        <a href="mailto:hr@srit.ac.in" className="hover:text-primary transition-colors">
                             hr@srit.ac.in
                         </a>
                     </div>
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                     {Object.entries(columns).map(([title, links]) => (
                         <div key={title}>
-                            <p className="label-caps text-white/20 mb-3">{title}</p>
+                            <p className="label-caps text-neutral-500 mb-3">{title}</p>
                             <ul className="space-y-1.5">
                                 {links.map((link) => (
                                     <li key={link.label}>
@@ -84,14 +84,14 @@ const Footer: React.FC = () => {
                                                 href={link.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-white/40 text-sm hover:text-white transition-colors duration-300"
+                                                className="text-neutral-600 text-sm hover:text-primary transition-colors duration-300"
                                             >
                                                 {link.label}
                                             </a>
                                         ) : (
                                             <Link
                                                 to={link.href}
-                                                className="text-white/40 text-sm hover:text-white transition-colors duration-300"
+                                                className="text-neutral-600 text-sm hover:text-primary transition-colors duration-300"
                                             >
                                                 {link.label}
                                             </Link>
@@ -104,8 +104,8 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Bottom — copyright + social */}
-                <div className="pt-6 border-t border-white/6 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-white/15 text-xs">
+                <div className="pt-6 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p className="text-neutral-500 text-xs">
                         © 2007–{new Date().getFullYear()} Srinivasa Ramanujan Institute of Technology. All rights reserved.
                     </p>
 
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
                                 href={social.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 flex items-center justify-center text-white/20 hover:text-white/50 transition-colors duration-300"
+                                className="w-10 h-10 flex items-center justify-center text-neutral-400 hover:text-primary transition-colors duration-300"
                                 aria-label={social.label}
                             >
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

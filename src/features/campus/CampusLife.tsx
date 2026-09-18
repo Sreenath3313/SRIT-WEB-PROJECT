@@ -77,7 +77,7 @@ const CampusLife: React.FC = () => {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="text-[#ea580c] font-sans font-bold text-[10px] md:text-sm tracking-[0.25em] uppercase mb-3 md:mb-4 block">
+                        <span className="text-[#FF5422] font-sans font-bold text-[10px] md:text-sm tracking-[0.25em] uppercase mb-3 md:mb-4 block">
                             GALLERY INTERFACE
                         </span>
                         <h2 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-neutral-900 tracking-tighter uppercase leading-[1.0] md:leading-[0.9]">
@@ -142,7 +142,7 @@ const CampusLife: React.FC = () => {
                                     <span
                                         className="font-mono font-bold text-[10px] md:text-sm"
                                         style={{
-                                            color: isActive ? '#ea580c' : '#a3a3a3',
+                                            color: isActive ? '#FF5422' : '#a3a3a3',
                                             transition: 'color 0.5s ease',
                                         }}
                                     >

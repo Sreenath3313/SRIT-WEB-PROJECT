@@ -117,7 +117,7 @@ const SpreadsheetTable: React.FC<SpreadsheetTableProps> = ({
                                             return (
                                                 <td key={vi} className="px-4 py-3.5 text-[16px] text-neutral-700 whitespace-nowrap border-b border-primary/5">
                                                     {isLink ? (
-                                                        <a href={val.trim()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ea580c] hover:text-[#c2410c] hover:underline font-bold text-[14px] bg-[#ea580c]/5 hover:bg-[#ea580c]/10 px-3.5 py-1.5 rounded-md transition-colors">
+                                                        <a href={val.trim()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#FF5422] hover:text-[#c2410c] hover:underline font-bold text-[14px] bg-[#FF5422]/5 hover:bg-[#FF5422]/10 px-3.5 py-1.5 rounded-md transition-colors">
                                                             View / Download
                                                         </a>
                                                     ) : (
@@ -135,7 +135,7 @@ const SpreadsheetTable: React.FC<SpreadsheetTableProps> = ({
                                             return (
                                                 <td key={vi} className="px-4 py-3.5 text-[16px] text-neutral-700 whitespace-nowrap border-b border-primary/5">
                                                     {isLink ? (
-                                                        <a href={strVal.trim()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#ea580c] hover:text-[#c2410c] hover:underline font-bold text-[14px] bg-[#ea580c]/5 hover:bg-[#ea580c]/10 px-3.5 py-1.5 rounded-md transition-colors">
+                                                        <a href={strVal.trim()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#FF5422] hover:text-[#c2410c] hover:underline font-bold text-[14px] bg-[#FF5422]/5 hover:bg-[#FF5422]/10 px-3.5 py-1.5 rounded-md transition-colors">
                                                             View / Download
                                                         </a>
                                                     ) : (

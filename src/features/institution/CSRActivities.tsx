@@ -10,7 +10,7 @@ const csrImages = [
 
 const CSRActivities: React.FC = () => {
     return (
-        <section id="csr" className="section-y-lg bg-neutral-50 overflow-hidden">
+        <section id="csr" className="section-y-lg bg-white overflow-hidden">
             <div className="section-container">
                 <div className="text-center mb-16">
                     <motion.p
@@ -51,7 +51,7 @@ const CSRActivities: React.FC = () => {
                             whileHover={{ y: -8 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative h-[380px] sm:h-[400px] lg:h-[420px] w-full overflow-hidden rounded-2xl shadow-xl bg-neutral-900"
+                            className="group relative h-[380px] sm:h-[400px] lg:h-[420px] w-full overflow-hidden rounded-2xl shadow-xl bg-neutral-200"
                             style={{ position: 'relative' }}
                         >
                             <img

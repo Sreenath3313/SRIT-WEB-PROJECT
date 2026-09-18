@@ -13,7 +13,7 @@ const Infrastructure: React.FC = () => {
     const isInView = useInView(ref, { once: true, margin: '-80px' });
 
     return (
-        <section id="infrastructure" ref={ref} className="section-y-lg bg-neutral-dark text-white pt-24 pb-32">
+        <section id="infrastructure" ref={ref} className="section-y-lg bg-white text-neutral-900 pt-24 pb-32 border-t border-neutral-100">
             {/* Top accent line */}
             <div className="absolute top-0 left-0 w-full h-[3px] bg-primary" />
 
@@ -24,10 +24,10 @@ const Infrastructure: React.FC = () => {
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16"
                 >
-                    <p className="label-caps text-white/30 tracking-[0.25em] mb-5">
+                    <p className="label-caps text-primary tracking-[0.25em] mb-5">
                         Campus Facilities
                     </p>
-                    <h2 className="heading-lg text-white">
+                    <h2 className="heading-lg text-neutral-900">
                         World-Class Infrastructure
                     </h2>
                 </motion.div>

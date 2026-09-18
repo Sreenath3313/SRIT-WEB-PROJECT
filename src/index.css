@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #FF6600;       /* Truer, more vibrant orange */
-  --color-primary-dark: #E65C00;  /* Deeper orange */
-  --color-primary-light: #FF8833; /* Brighter orange highlight */
+  --color-primary: #FF5422;       /* Truer, more vibrant orange */
+  --color-primary-dark: #DD4700;  /* Deeper orange */
+  --color-primary-light: #FF7043; /* Brighter orange highlight */
   
   /* Clean, crisp modern Slate for highly readable text (No muddy colors) */
   --color-neutral-dark: #0A0F1A;    
@@ -251,11 +251,11 @@ img {
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 .animate-marquee-reverse {
-  animation: marquee-reverse 15s linear infinite;
+  animation: marquee-reverse 10s linear infinite;
 }
 
 .animate-marquee:hover,

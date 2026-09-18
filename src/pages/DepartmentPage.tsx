@@ -39,8 +39,6 @@ const DepartmentPage: React.FC = () => {
     const activeTab = pathParts.length > 2 ? pathParts[2] : 'about';
 
     const handleTabChange = (tabKey: string) => {
-        document.documentElement.style.scrollBehavior = 'smooth';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
         navigate(`/department/${slug}/${tabKey}`);
     };
 
@@ -116,11 +114,11 @@ const DepartmentPage: React.FC = () => {
                                     onClick={() => handleTabChange(item.key)}
                                     className={`w-full text-left flex items-center gap-3.5 px-4 py-2.5 rounded-xl mb-1 transition-all duration-300 group ${
                                         isActive 
-                                            ? 'bg-[#F85E00] text-white font-semibold shadow-md shadow-[#F85E00]/15 scale-[1.01]' 
-                                            : 'bg-transparent text-neutral-600 hover:bg-neutral-50 hover:text-[#F85E00] font-medium'
+                                            ? 'bg-[#FF5422] text-white font-semibold shadow-md shadow-[#FF5422]/15 scale-[1.01]' 
+                                            : 'bg-transparent text-neutral-600 hover:bg-neutral-50 hover:text-[#FF5422] font-medium'
                                     }`}
                                 >
-                                    <span className={`transition-colors duration-300 ${isActive ? 'text-white' : 'text-neutral-400 group-hover:text-[#F85E00]'}`}>
+                                    <span className={`transition-colors duration-300 ${isActive ? 'text-white' : 'text-neutral-400 group-hover:text-[#FF5422]'}`}>
                                         {item.icon}
                                     </span>
                                     <span className="text-[14px] tracking-[0.01em]">{item.label}</span>
@@ -134,19 +132,19 @@ const DepartmentPage: React.FC = () => {
                         <div className="grid grid-cols-2 gap-2">
                             <div className="rounded-2xl p-2.5 bg-white border border-neutral-100/80 shadow-[0_2px_8px_rgba(0,0,0,0.01)] flex flex-col justify-between">
                                 <p className="text-[9.5px] font-bold uppercase tracking-wide text-neutral-400">Faculty</p>
-                                <p className="text-lg font-bold text-[#F85E00] mt-1">{dept.stats.faculty}</p>
+                                <p className="text-lg font-bold text-[#FF5422] mt-1">{dept.stats.faculty}</p>
                             </div>
                             <div className="rounded-2xl p-2.5 bg-white border border-neutral-100/80 shadow-[0_2px_8px_rgba(0,0,0,0.01)] flex flex-col justify-between">
                                 <p className="text-[9.5px] font-bold uppercase tracking-wide text-neutral-400">Labs</p>
-                                <p className="text-lg font-bold text-[#F85E00] mt-1">{dept.stats.labs}</p>
+                                <p className="text-lg font-bold text-[#FF5422] mt-1">{dept.stats.labs}</p>
                             </div>
                             <div className="rounded-2xl p-2.5 bg-white border border-neutral-100/80 shadow-[0_2px_8px_rgba(0,0,0,0.01)] flex flex-col justify-between">
                                 <p className="text-[9.5px] font-bold uppercase tracking-wide text-neutral-400">Students</p>
-                                <p className="text-lg font-bold text-[#F85E00] mt-1">{dept.stats.students}</p>
+                                <p className="text-lg font-bold text-[#FF5422] mt-1">{dept.stats.students}</p>
                             </div>
                             <div className="rounded-2xl p-2.5 bg-white border border-neutral-100/80 shadow-[0_2px_8px_rgba(0,0,0,0.01)] flex flex-col justify-between">
                                 <p className="text-[9.5px] font-bold uppercase tracking-wide text-neutral-400">Placements</p>
-                                <p className="text-lg font-bold text-[#F85E00] mt-1">{dept.stats.placement}</p>
+                                <p className="text-lg font-bold text-[#FF5422] mt-1">{dept.stats.placement}</p>
                             </div>
                         </div>
                     </div>
@@ -154,21 +152,23 @@ const DepartmentPage: React.FC = () => {
 
                 {/* Main Content */}
                 <main className="flex-1 min-w-0 lg:ml-[270px] min-h-screen">
-                    <section className="relative overflow-hidden min-h-[300px] lg:min-h-[400px] flex items-end">
-                        <div className="absolute inset-0">
-                            <img src={dept.image} alt={dept.fullName} className="w-full h-full object-cover" />
-                            {/* Replaced the harsh orange with a premium cinematic dark gradient for text legibility */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                        </div>
-                        <div className="relative z-10 px-4 sm:px-6 py-8 sm:py-12 lg:px-12 lg:py-16 w-full">
-                            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
-                                {dept.fullName}
-                            </h1>
-                            <p className="text-white/90 text-base sm:text-lg lg:text-xl mt-3 sm:mt-4 max-w-3xl font-medium">
-                                {dept.tagline}
-                            </p>
-                        </div>
-                    </section>
+                    {activeTab === 'about' && (
+                        <section className="relative overflow-hidden min-h-[300px] lg:min-h-[400px] flex items-end">
+                            <div className="absolute inset-0">
+                                <img src={dept.image} alt={dept.fullName} className="w-full h-full object-cover" />
+                                {/* Replaced the harsh orange with a premium cinematic dark gradient for text legibility */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                            </div>
+                            <div className="relative z-10 px-4 sm:px-6 py-8 sm:py-12 lg:px-12 lg:py-16 w-full">
+                                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+                                    {dept.fullName}
+                                </h1>
+                                <p className="text-white/90 text-base sm:text-lg lg:text-xl mt-3 sm:mt-4 max-w-3xl font-medium">
+                                    {dept.tagline}
+                                </p>
+                            </div>
+                        </section>
+                    )}
 
                     <div className="lg:hidden px-4 sm:px-6 pt-5 sm:pt-6 -mb-2 sm:-mb-4 overflow-x-auto no-scrollbar">
                         <div className="flex gap-2 min-w-max pb-2">
@@ -180,7 +180,7 @@ const DepartmentPage: React.FC = () => {
                                         onClick={() => handleTabChange(item.key)}
                                         className={`flex items-center gap-2 px-5 py-2 rounded-full text-[14px] font-semibold whitespace-nowrap transition-all duration-300 ${
                                             isActive 
-                                                ? 'bg-[#F85E00] text-white shadow-lg shadow-[#F85E00]/15' 
+                                                ? 'bg-[#FF5422] text-white shadow-lg shadow-[#FF5422]/15' 
                                                 : 'bg-white text-neutral-600 border border-neutral-200 hover:bg-neutral-50'
                                         }`}
                                     >

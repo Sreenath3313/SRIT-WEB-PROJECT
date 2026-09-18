@@ -99,8 +99,8 @@ const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
             {/* ── Header ───────────────────────────────────── */}
             <div>
                 <div className="flex items-center gap-3 mb-4">
-                    <span className="w-8 h-[2px] rounded-full" style={{ background: '#F85E00' }} />
-                    <span className="text-xs font-bold tracking-[0.3em] uppercase" style={{ color: '#F85E00' }}>
+                    <span className="w-8 h-[2px] rounded-full" style={{ background: '#FF5422' }} />
+                    <span className="text-xs font-bold tracking-[0.3em] uppercase" style={{ color: '#FF5422' }}>
                         {dept.code} · Gallery
                     </span>
                 </div>
@@ -120,9 +120,9 @@ const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
                         onClick={() => setActiveCategory(cat)}
                         className="px-5 py-2.5 text-[15px] font-medium rounded-full transition-all duration-300 shrink-0"
                         style={{
-                            background: activeCategory === cat ? '#F85E00' : 'white',
+                            background: activeCategory === cat ? '#FF5422' : 'white',
                             color: activeCategory === cat ? 'white' : '#0A0903',
-                            border: `1px solid ${activeCategory === cat ? '#F85E00' : 'rgba(248, 94, 0, 0.12)'}`,
+                            border: `1px solid ${activeCategory === cat ? '#FF5422' : 'rgba(248, 94, 0, 0.12)'}`,
                             boxShadow: activeCategory === cat ? '0 4px 12px rgba(248, 94, 0, 0.25)' : '0 1px 4px rgba(0,0,0,0.03)',
                         }}
                         onMouseEnter={(e) => {
@@ -225,7 +225,7 @@ const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
                                 </p>
                                 <span
                                     className="inline-block mt-1 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full"
-                                    style={{ background: '#F85E00', color: 'white' }}
+                                    style={{ background: '#FF5422', color: 'white' }}
                                 >
                                     {selectedImage.category}
                                 </span>
@@ -235,7 +235,7 @@ const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
                                 onClick={() => setSelectedImage(null)}
                                 className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200"
                                 style={{ background: 'rgba(255,255,255,0.1)', color: 'white' }}
-                                onMouseEnter={(e) => { e.currentTarget.style.background = '#F85E00'; }}
+                                onMouseEnter={(e) => { e.currentTarget.style.background = '#FF5422'; }}
                                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; }}
                             >
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

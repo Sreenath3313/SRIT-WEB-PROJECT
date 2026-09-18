@@ -51,7 +51,7 @@ const Departments: React.FC = () => {
                                 <div className="absolute bottom-0 left-0 w-full h-[3px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20" />
 
                                 {/* Image Header */}
-                                <div className="relative h-48 sm:h-52 overflow-hidden bg-neutral-900">
+                                <div className="relative h-48 sm:h-52 overflow-hidden bg-neutral-200">
                                     <img
                                         src={deptImages[dept.code] || dept.image}
                                         alt={dept.name}

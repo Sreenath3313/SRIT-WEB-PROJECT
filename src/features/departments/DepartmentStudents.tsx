@@ -288,8 +288,8 @@ const DepartmentStudents: React.FC = () => {
                         key={section.key}
                         className="rounded-xl overflow-hidden transition-all duration-300"
                         style={{
-                            border: isOpen ? '1px solid rgba(248, 94, 0, 0.15)' : '1px solid rgba(10, 9, 3, 0.06)',
-                            boxShadow: isOpen ? '0 4px 20px rgba(248, 94, 0, 0.08)' : '0 1px 4px rgba(0,0,0,0.03)',
+                            border: isOpen ? '1px solid rgba(255, 84, 34, 0.25)' : '1px solid rgba(10, 9, 3, 0.06)',
+                            boxShadow: isOpen ? '0 4px 20px rgba(255, 84, 34, 0.12)' : '0 1px 4px rgba(0,0,0,0.06)',
                         }}
                     >
                         {/* ── Accordion Header ─────────────────────── */}
@@ -300,7 +300,7 @@ const DepartmentStudents: React.FC = () => {
                             onMouseEnter={(e) => { if (!isOpen) e.currentTarget.style.background = '#1a1812'; }}
                             onMouseLeave={(e) => { e.currentTarget.style.background = '#0A0903'; }}
                         >
-                            <h3 className="font-serif text-lg lg:text-xl font-semibold text-primary">
+                            <h3 className="font-serif text-lg lg:text-xl font-semibold text-[#FF5422]">
                                 {section.title}
                             </h3>
                             <motion.span
@@ -309,7 +309,7 @@ const DepartmentStudents: React.FC = () => {
                                 className="shrink-0 ml-4"
                             >
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M5 8L10 13L15 8" stroke="#FFB563" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M5 8L10 13L15 8" stroke="#FF5422" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </motion.span>
                         </button>
@@ -410,7 +410,7 @@ const DepartmentStudents: React.FC = () => {
                                                 className={`px-4 py-2 text-[14px] font-medium rounded-md transition-all duration-200 shrink-0 border ${
                                                     currentYear === year 
                                                     ? 'bg-primary text-white border-primary opacity-100' 
-                                                    : 'bg-transparent text-[#0A0903] border-neutral-200 opacity-50 hover:border-primary/50 hover:text-primary hover:opacity-100'
+                                                    : 'bg-transparent text-[#0A0903] border-neutral-200 opacity-50 hover:border-primary/50 hover:text-[#FF5422] hover:opacity-100'
                                                 }`}
                                             >
                                                 {year}

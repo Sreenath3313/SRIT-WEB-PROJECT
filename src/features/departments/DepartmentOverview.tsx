@@ -26,7 +26,7 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
 
                 <div className="bg-white rounded-2xl border border-neutral-200/60 shadow-sm overflow-hidden">
                     <div className="p-4 bg-neutral-50 border-b border-neutral-200/60">
-                        <h3 className="text-center font-semibold text-[#ea580c]">
+                        <h3 className="text-center font-semibold text-[#FF5422]">
                             {dept.fullName} Program Overview
                         </h3>
                     </div>
@@ -36,14 +36,14 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
                             const isOpen = openIndex === index;
 
                             return (
-                                <div key={index} className="bg-[#1e2330]">
+                                <div key={index} className="rounded-xl overflow-hidden transition-all duration-300" style={{ border: isOpen ? '1px solid rgba(255, 84, 34, 0.25)' : '1px solid rgba(10, 9, 3, 0.06)', boxShadow: isOpen ? '0 4px 20px rgba(255, 84, 34, 0.12)' : '0 1px 4px rgba(0,0,0,0.06)' }}>
                                     <button
                                         onClick={() => setOpenIndex(isOpen ? null : index)}
-                                        className="w-full flex items-center justify-between p-4 text-left transition-colors hover:bg-[#252b3b]"
+                                        className="w-full flex items-center justify-between p-4 lg:p-5 text-left transition-colors duration-300" style={{ background: '#0A0903' }} onMouseEnter={(e) => { if (!isOpen) e.currentTarget.style.background = '#1a1812'; }} onMouseLeave={(e) => { e.currentTarget.style.background = '#0A0903'; }}
                                     >
-                                        <span className="font-medium text-[#ea580c]">{item.title}</span>
+                                        <span className="font-medium text-[#FF5422]">{item.title}</span>
                                         <ChevronDown
-                                            className={`w-5 h-5 text-[#ea580c] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                                            className={`w-5 h-5 text-[#FF5422] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                                         />
                                     </button>
 
@@ -69,7 +69,7 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
                                                 ) : (
                                                     <div
                                                         className="p-6 prose prose-neutral max-w-none w-full
-                                                        prose-h4:text-[#ea580c] prose-h4:font-bold prose-h4:mb-3 prose-h4:uppercase
+                                                        prose-h4:text-[#FF5422] prose-h4:font-bold prose-h4:mb-3 prose-h4:uppercase
                                                         prose-p:text-neutral-600 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-justify
                                                         prose-strong:text-neutral-900
                                                         prose-table:w-full prose-table:border-collapse prose-table:text-[16px]

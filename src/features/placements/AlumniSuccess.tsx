@@ -118,14 +118,14 @@ const AlumniSuccess: React.FC = () => {
 
                                     {/* ROW 4: Location */}
                                     <div className="z-20 flex items-center gap-1.5 mt-5 text-base text-neutral-700 font-medium">
-                                        <MapPin className="w-4 h-4 text-orange-600 shrink-0" />
+                                        <MapPin className="w-4 h-4 text-[#FF5422] shrink-0" />
                                         SRIT Alumni Network
                                     </div>
 
                                     {/* ROW 5: Bottom — button + register link */}
                                     <div className="z-20 flex items-end justify-start mt-7 pb-2">
                                         {/* Bottom-left: View Details button */}
-                                        <button className="bg-[#ea580c] hover:bg-orange-600 text-white text-xs sm:text-base font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-lg transition-colors shadow-sm">
+                                        <button className="bg-[#FF5422] hover:bg-[#FF5422] text-white text-xs sm:text-base font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-lg transition-colors shadow-sm">
                                             View Details
                                         </button>
                                     </div>

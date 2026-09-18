@@ -84,7 +84,7 @@ const Notifications: React.FC = () => {
 
     return (
         <div className="w-full pb-16">
-            <h2 className="text-center font-sans text-3xl md:text-4xl font-black text-[#ea580c] uppercase tracking-wider mb-10">
+            <h2 className="text-center font-sans text-3xl md:text-4xl font-black text-[#FF5422] uppercase tracking-wider mb-10">
                 NOTIFICATIONS
             </h2>
             
@@ -111,7 +111,7 @@ const Notifications: React.FC = () => {
                                     currentCirculars.map((item: any) => (
                                         <tr key={item.id} className="border-b border-neutral-200 hover:bg-neutral-50 transition-colors">
                                             <td className="px-3 py-2.5 text-center font-medium border-r border-neutral-200">{item.id}</td>
-                                            <td className="px-3 py-2.5 font-medium hover:text-[#ea580c] cursor-pointer underline-offset-2 hover:underline transition-all">
+                                            <td className="px-3 py-2.5 font-medium hover:text-[#FF5422] cursor-pointer underline-offset-2 hover:underline transition-all">
                                                 {item.text}
                                             </td>
                                         </tr>
@@ -131,7 +131,7 @@ const Notifications: React.FC = () => {
                                 onClick={() => setActiveCircularYear(year)}
                                 className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
                                     activeCircularYear === year 
-                                    ? 'text-[#ea580c] bg-white border border-neutral-200 shadow-sm' 
+                                    ? 'text-[#FF5422] bg-white border border-neutral-200 shadow-sm' 
                                     : 'text-neutral-500 hover:text-neutral-800'
                                 }`}
                             >
@@ -170,7 +170,7 @@ const Notifications: React.FC = () => {
                                             <td className="px-2 py-2 text-[11px] text-center font-medium border-r border-neutral-200 align-top whitespace-pre-line leading-tight">
                                                 {item.category}
                                             </td>
-                                            <td className="px-3 py-2 text-[12px] font-medium hover:text-[#ea580c] cursor-pointer underline-offset-2 hover:underline transition-all">
+                                            <td className="px-3 py-2 text-[12px] font-medium hover:text-[#FF5422] cursor-pointer underline-offset-2 hover:underline transition-all">
                                                 {item.notification}
                                             </td>
                                         </tr>
@@ -190,7 +190,7 @@ const Notifications: React.FC = () => {
                                 onClick={() => setActiveExamYear(year)}
                                 className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
                                     activeExamYear === year 
-                                    ? 'text-[#ea580c] bg-white border border-neutral-200 shadow-sm' 
+                                    ? 'text-[#FF5422] bg-white border border-neutral-200 shadow-sm' 
                                     : 'text-neutral-500 hover:text-neutral-800'
                                 }`}
                             >
@@ -247,7 +247,7 @@ const Notifications: React.FC = () => {
                                 onClick={() => setActivePlacementYear(year)}
                                 className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
                                     activePlacementYear === year 
-                                    ? 'text-[#ea580c] bg-white border border-neutral-200 shadow-sm' 
+                                    ? 'text-[#FF5422] bg-white border border-neutral-200 shadow-sm' 
                                     : 'text-neutral-500 hover:text-neutral-800'
                                 }`}
                             >
