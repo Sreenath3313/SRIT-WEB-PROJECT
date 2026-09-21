@@ -31,9 +31,9 @@ const NavItem = ({ link }: { link: NavLink }) => {
         >
             <Link
                 to={link.href}
-                className={`relative flex items-center gap-0.5 whitespace-nowrap px-1.5 py-2 text-[13px] font-medium tracking-normal transition-colors duration-200 ${isActive || isHovered
-                        ? 'text-primary'
-                        : 'text-slate-700'
+                className={`relative flex items-center gap-0.5 whitespace-nowrap px-1.5 py-2 text-[13px] font-bold tracking-normal transition-colors duration-200 ${isActive || isHovered
+                    ? 'text-primary'
+                    : 'text-slate-700'
                     }`}
             >
                 {link.label}
@@ -44,8 +44,8 @@ const NavItem = ({ link }: { link: NavLink }) => {
 
                 <span
                     className={`absolute bottom-0 left-1.5 right-1.5 h-[1.5px] bg-primary rounded-full transition-transform duration-200 origin-center ${isActive || isHovered
-                            ? 'scale-x-100'
-                            : 'scale-x-0'
+                        ? 'scale-x-100'
+                        : 'scale-x-0'
                         }`}
                 />
             </Link>
@@ -61,14 +61,17 @@ const NavItem = ({ link }: { link: NavLink }) => {
                                 duration: 0.15,
                                 ease: 'easeOut',
                             }}
-                            className={`absolute top-full left-0 ${link.subItems && link.subItems.length > 10 ? 'w-[560px] xl:w-[640px] grid grid-cols-2' : 'min-w-[220px]'} bg-white rounded-md shadow-lg border border-neutral-100 overflow-y-auto max-h-[75vh] py-1 z-50`}
+                            className={`absolute top-full ${link.subItems && link.subItems.length > 10
+                                    ? 'left-1/2 -translate-x-1/2 w-[560px] xl:w-[640px] grid grid-cols-2'
+                                    : 'left-0 min-w-[220px] max-w-[calc(100vw-32px)]'
+                                } bg-white rounded-md shadow-lg border border-neutral-100 overflow-y-auto max-h-[75vh] py-1 z-50`}
                         >
                             {link.subItems?.map(
                                 (sub: SubItem, idx: number) => (
                                     <Link
                                         key={idx}
                                         to={sub.href}
-                                        className="block px-4 py-2 text-[13px] font-normal text-slate-700 hover:text-primary hover:bg-orange-50 transition-colors"
+                                        className="block px-4 py-2 text-[13px] font-semibold text-slate-700 hover:text-primary hover:bg-orange-50 transition-colors break-words"
                                     >
                                         {sub.label}
                                     </Link>
@@ -96,7 +99,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="tel:+919515611111"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Phone className="w-3 h-3" />
                             +91 951 561 1111
@@ -106,7 +109,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="mailto:hr@srit.ac.in"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Mail className="w-3 h-3" />
                             hr@srit.ac.in
@@ -116,7 +119,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <UserCheck className="w-3 h-3" />
                             Faculty Login
@@ -126,7 +129,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <User className="w-3 h-3" />
                             Student Login
@@ -136,7 +139,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <GraduationCap className="w-3 h-3" />
                             Degree Verification
@@ -146,7 +149,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Users className="w-3 h-3" />
                             Alumni
@@ -156,7 +159,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Users className="w-3 h-3" />
                             EAPCET/ECET Ranks
@@ -169,7 +172,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Download className="w-3 h-3" />
                             Downloads
@@ -179,7 +182,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="/#contact"
-                            className="flex items-center gap-1 text-[11px] font-normal whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Contact className="w-3 h-3" />
                             Contact Us
@@ -210,8 +213,8 @@ const Navbar: React.FC = () => {
                     >
                         <span
                             className={`absolute left-1/2 -translate-x-1/2 w-6 h-[2px] transition-all duration-300 bg-slate-800 ${mobileOpen
-                                    ? 'top-1/2 -translate-y-1/2 rotate-45'
-                                    : 'top-3'
+                                ? 'top-1/2 -translate-y-1/2 rotate-45'
+                                : 'top-3'
                                 }`}
                         />
 
@@ -222,8 +225,8 @@ const Navbar: React.FC = () => {
 
                         <span
                             className={`absolute left-1/2 -translate-x-1/2 w-6 h-[2px] transition-all duration-300 bg-slate-800 ${mobileOpen
-                                    ? 'top-1/2 -translate-y-1/2 -rotate-45'
-                                    : 'bottom-3'
+                                ? 'top-1/2 -translate-y-1/2 -rotate-45'
+                                : 'bottom-3'
                                 }`}
                         />
                     </button>
@@ -246,15 +249,14 @@ const Navbar: React.FC = () => {
                             {[1, 2, 3].map((group) => (
                                 <div
                                     key={group}
-                                    className="flex items-center h-full gap-8 shrink-0 text-[11px] xl:text-[12px] font-normal tracking-wide"
+                                    className="flex items-center h-full gap-8 shrink-0 text-[11px] xl:text-[12px] font-semibold tracking-wide"
                                 >
-
                                     <span className="flex items-center gap-1.5">
                                         <span className="text-white/90">
                                             2024-25:
                                         </span>
 
-                                        <span className="font-semibold text-white">
+                                        <span className="font-bold text-white">
                                             370+ Offers
                                         </span>
                                     </span>
@@ -266,7 +268,7 @@ const Navbar: React.FC = () => {
                                             Highest:
                                         </span>
 
-                                        <span className="font-semibold text-white">
+                                        <span className="font-bold text-white">
                                             9.08 LPA
                                         </span>
 
@@ -282,7 +284,7 @@ const Navbar: React.FC = () => {
                                             Placement Rate:
                                         </span>
 
-                                        <span className="font-semibold text-white">
+                                        <span className="font-bold text-white">
                                             80%
                                         </span>
                                     </span>
@@ -294,12 +296,11 @@ const Navbar: React.FC = () => {
                                             Top Recruiters:
                                         </span>
 
-                                        <span className="font-semibold text-white">
+                                        <span className="font-bold text-white">
                                             TCS, Cognizant, HCL, Infosys,
                                             Foxconn, Lumen Technologies
                                         </span>
                                     </span>
-
                                 </div>
                             ))}
 
@@ -344,7 +345,7 @@ const Navbar: React.FC = () => {
                                                 !link.hasDropdown &&
                                                 setMobileOpen(false)
                                             }
-                                            className="text-[14px] font-medium text-slate-800"
+                                            className="text-[14px] font-bold text-slate-800"
                                         >
                                             {link.label}
                                         </Link>
@@ -371,7 +372,7 @@ const Navbar: React.FC = () => {
                                                     onClick={() =>
                                                         setMobileOpen(false)
                                                     }
-                                                    className="text-[13px] font-normal text-slate-600 hover:text-primary py-1.5 transition-colors"
+                                                    className="text-[13px] font-semibold text-slate-600 hover:text-primary py-1.5 transition-colors"
                                                 >
                                                     {sub.label}
                                                 </Link>
