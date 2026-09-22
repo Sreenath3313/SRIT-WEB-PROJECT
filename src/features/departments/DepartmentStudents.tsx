@@ -20,8 +20,8 @@ interface SectionData {
     // NEW: Dynamic Google Sheets Integration!
     // To use this, publish your Google Sheet to the web as a CSV and paste the link here for the specific year.
     // The component will automatically fetch the data, overriding the static `data` above.
-    sheetUrls?: Record<string, string>; 
-    
+    sheetUrls?: Record<string, string>;
+
     // To add a button in the UI that directly opens the Google Sheet to edit it, paste the normal URL here.
     editUrls?: Record<string, string>;
 }
@@ -32,7 +32,7 @@ const sections: SectionData[] = [
         title: 'Student Academic Activities',
         subtitle: 'Participation of Students in Academic Events',
         columns: ['S. No', 'Student Name', 'Event Name', 'Event Type', 'College Name & Venue', 'Participation/Prizes Won'],
-        
+
         // EXAMPLE OF HOW TO ADD SPREADSHEET LINKS:
         sheetUrls: {
             '2025-26': 'https://docs.google.com/spreadsheets/d/1rMzUi4DqMdUyWiWHjUW-TyYTjKp7DxWh6P5vZ4vsHy0/export?format=csv',
@@ -40,7 +40,7 @@ const sections: SectionData[] = [
         editUrls: {
             '2025-26': 'https://docs.google.com/spreadsheets/d/1rMzUi4DqMdUyWiWHjUW-TyYTjKp7DxWh6P5vZ4vsHy0/edit?usp=sharing',
         },
-        
+
         data: {
             '2025-26': [
                 { sno: 1, name: 'Bheemesh Ampe', event: 'Workshop', type: 'Full Stack Development', venue: 'Shaastra, IIT Madras', prize: 'Participation' },
@@ -223,7 +223,7 @@ const DepartmentStudents: React.FC = () => {
     // Effect to fetch CSV data when a section and year are active
     useEffect(() => {
         if (!openSection) return;
-        
+
         const section = sections.find(s => s.key === openSection);
         if (!section || !section.sheetUrls) return;
 
@@ -266,15 +266,15 @@ const DepartmentStudents: React.FC = () => {
             {sections.map((section) => {
                 const isOpen = openSection === section.key;
                 const currentYear = activeYears[section.key];
-                
+
                 // Determine whether to use dynamic fetched data or static fallback
                 const cacheKey = `${section.key}-${currentYear}`;
                 const isDynamic = !!section.sheetUrls?.[currentYear];
                 const isLoading = isDynamic && loadingStates[cacheKey];
-                
+
                 let dynamicRows: string[][] = [];
                 let staticRows: TableRow[] = [];
-                
+
                 if (isDynamic) {
                     dynamicRows = fetchedData[cacheKey] || [];
                 } else {
@@ -300,7 +300,7 @@ const DepartmentStudents: React.FC = () => {
                             onMouseEnter={(e) => { if (!isOpen) e.currentTarget.style.background = '#1a1812'; }}
                             onMouseLeave={(e) => { e.currentTarget.style.background = '#0A0903'; }}
                         >
-                            <h3 className="font-serif text-lg lg:text-xl font-semibold text-[#FF5422]">
+                            <h3 className="font-serif text-lg lg:text-xl font-bold text-[#FF5422]">
                                 {section.title}
                             </h3>
                             <motion.span
@@ -340,7 +340,7 @@ const DepartmentStudents: React.FC = () => {
 
                                     {/* ── Data Table ────────────────────── */}
                                     <div className="px-4 lg:px-6 overflow-x-auto custom-scrollbar relative min-h-[100px]">
-                                        
+
                                         {isLoading && (
                                             <div className="absolute inset-0 bg-white/80 z-10 flex items-center justify-center">
                                                 <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" />
@@ -370,7 +370,7 @@ const DepartmentStudents: React.FC = () => {
                                                     </tr>
                                                 ) : (
                                                     <>
-                                                        {isDynamic 
+                                                        {isDynamic
                                                             // Render Dynamic Google Sheets Rows
                                                             ? dynamicRows.map((rowArr, ri) => (
                                                                 <tr key={`dyn-${ri}`} className={`transition-colors duration-200 hover:bg-primary/5 ${ri % 2 === 0 ? 'bg-[rgba(255,250,243,0.5)]' : 'bg-white'}`}>
@@ -407,11 +407,10 @@ const DepartmentStudents: React.FC = () => {
                                             <button
                                                 key={year}
                                                 onClick={() => setYearForSection(section.key, year)}
-                                                className={`px-4 py-2 text-[14px] font-medium rounded-md transition-all duration-200 shrink-0 border ${
-                                                    currentYear === year 
-                                                    ? 'bg-primary text-white border-primary opacity-100' 
-                                                    : 'bg-transparent text-[#0A0903] border-neutral-200 opacity-50 hover:border-primary/50 hover:text-[#FF5422] hover:opacity-100'
-                                                }`}
+                                                className={`px-4 py-2 text-[14px] font-medium rounded-md transition-all duration-200 shrink-0 border ${currentYear === year
+                                                        ? 'bg-primary text-white border-primary opacity-100'
+                                                        : 'bg-transparent text-[#0A0903] border-neutral-200 opacity-50 hover:border-primary/50 hover:text-[#FF5422] hover:opacity-100'
+                                                    }`}
                                             >
                                                 {year}
                                             </button>

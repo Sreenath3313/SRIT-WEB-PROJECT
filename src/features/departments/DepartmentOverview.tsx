@@ -8,8 +8,25 @@ interface DepartmentOverviewProps {
     dept: DepartmentData;
 }
 
+interface CseRecord {
+    title: string;
+    url: string;
+    height?: number;
+}
+
+const cseOfficialRecords: CseRecord[] = [
+    { title: 'Course Expert Team', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTd4THt-4X8lQQOHCsYDfWwEqHnQprnlWObI0es7f_BB8dN4u8HBqJ3oZlfI8okNQ/pubhtml?widget=true&headers=false', height: 800 },
+    { title: 'Department Academic Committee (DAC)', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9vFpYZrBacVzn03s8YQXd5R3H9Fwe-zJhbvb7eadRAqP5SBZG_bJS4aIhoCvW5A/pubhtml?widget=true&headers=false', height: 500 },
+    { title: 'Program Assessment Committee (PAC)', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6pFHH0H0hnlusqpmVmLq5Wxus_9NcdDGw-awBax7A4Momus12uVzEBZ8Kfes29VCIAnkHfn9mc9SP/pubhtml?widget=true&chrome=false&headers=false', height: 750 },
+    { title: 'Academic Audit', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQHPLZtZvyqQ6jvr_D8KrmLd4ZG81HJktdzwNt4okRPnT6gtmlg_aRrHmNPvYBKIw/pubhtml?widget=true&chrome=false&headers=false', height: 700 },
+    { title: 'Board of Studies', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSBIeJOA8XXpWY8ZzFF-lq2tu1vp_OPyLUrvqsqfhqsgZDBXm55qof3MeW2swITNA/pubhtml?widget=true&headers=false', height: 580 },
+    { title: 'Achievements', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTAbkdqHIMRvBWJAzzrrSqNuquO6i9pyEBLBFfIDrKb8EV3s8c3-BHM-LeRnGMibWzv94zzEQAAZDbx/pubhtml?widget=true&chrome=false&headers=false', height: 650 },
+    { title: 'News Letters', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTM8jIMbscJj8GZZrdzmXbA7WsUo4a_I0KfUjsV8ZRlg7jB-mxl8FigXaO4FPpWSQ/pubhtml?widget=true&headers=false', height: 600 },
+    { title: 'Technical Magazine', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRqeJceBjIc-OBRJOGPRxtztNhfWMqwPQIwjlsQgaxnP9C7R-H1HpAydVQmng5Suw/pubhtml?widget=true&headers=false', height: 600 },
+]
+
 const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     if (!dept.overview || dept.overview.length === 0) {
         return (
@@ -22,71 +39,128 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div>
-                <h2 className="text-2xl font-bold text-neutral-900 mb-6">Program Overview</h2>
+                <h2 className="text-2xl font-bold text-neutral-900 mb-6 uppercase">Program Overview</h2>
 
-                <div className="bg-white rounded-2xl border border-neutral-200/60 shadow-sm overflow-hidden">
-                    <div className="p-4 bg-neutral-50 border-b border-neutral-200/60">
-                        <h3 className="text-center font-semibold text-[#FF5422]">
-                            {dept.fullName} Program Overview
-                        </h3>
-                    </div>
+                {/* Peach/orange numbered accordion — matches reference image */}
+                <div
+                    className="rounded-2xl overflow-hidden shadow-sm"
+                    style={{ background: '#fdf0e6', border: '1px solid rgba(255,120,50,0.18)' }}
+                >
+                    {dept.overview.map((item, index) => {
+                        const isOpen = openIndex === index;
+                        const num = String(index + 1).padStart(2, '0');
 
-                    <div className="divide-y divide-neutral-200/60">
-                        {dept.overview.map((item, index) => {
-                            const isOpen = openIndex === index;
-
-                            return (
-                                <div key={index} className="rounded-xl overflow-hidden transition-all duration-300" style={{ border: isOpen ? '1px solid rgba(255, 84, 34, 0.25)' : '1px solid rgba(10, 9, 3, 0.06)', boxShadow: isOpen ? '0 4px 20px rgba(255, 84, 34, 0.12)' : '0 1px 4px rgba(0,0,0,0.06)' }}>
-                                    <button
-                                        onClick={() => setOpenIndex(isOpen ? null : index)}
-                                        className="w-full flex items-center justify-between p-4 lg:p-5 text-left transition-colors duration-300" style={{ background: '#0A0903' }} onMouseEnter={(e) => { if (!isOpen) e.currentTarget.style.background = '#1a1812'; }} onMouseLeave={(e) => { e.currentTarget.style.background = '#0A0903'; }}
+                        return (
+                            <div
+                                key={index}
+                                style={{
+                                    borderBottom: index < dept.overview!.length - 1
+                                        ? '1px solid rgba(255,120,50,0.15)'
+                                        : 'none',
+                                }}
+                            >
+                                {/* Accordion header */}
+                                <button
+                                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                                    className="w-full flex items-center gap-0 text-left transition-all duration-200 group"
+                                    style={{
+                                        background: isOpen
+                                            ? 'rgba(255,120,50,0.08)'
+                                            : 'transparent',
+                                    }}
+                                >
+                                    {/* Orange number badge */}
+                                    <span
+                                        className="flex items-center justify-center shrink-0 font-bold text-white text-sm"
+                                        style={{
+                                            background: '#FF5422',
+                                            width: '52px',
+                                            minHeight: '52px',
+                                            alignSelf: 'stretch',
+                                        }}
                                     >
-                                        <span className="font-medium text-[#FF5422]">{item.title}</span>
-                                        <ChevronDown
-                                            className={`w-5 h-5 text-[#FF5422] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-                                        />
-                                    </button>
+                                        {num}
+                                    </span>
 
-                                    <AnimatePresence>
-                                        {isOpen && (
-                                            <motion.div
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.3 }}
-                                                className="overflow-hidden bg-white"
-                                            >
-                                                {item.isSpreadsheet ? (
-                                                    <div className="p-0 border-t border-primary/10">
-                                                        <SpreadsheetTable 
-                                                            sheetUrls={item.sheetUrls}
-                                                            editUrls={item.editUrls}
-                                                            availableYears={item.availableYears}
-                                                            fallbackColumns={['News Letter', 'Date', 'Link']}
-                                                            fallbackData={{}}
-                                                        />
-                                                    </div>
-                                                ) : (
-                                                    <div
-                                                        className="p-6 prose prose-neutral max-w-none w-full
-                                                        prose-h4:text-[#FF5422] prose-h4:font-bold prose-h4:mb-3 prose-h4:uppercase
-                                                        prose-p:text-neutral-600 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-justify
-                                                        prose-strong:text-neutral-900
-                                                        prose-table:w-full prose-table:border-collapse prose-table:text-[16px]
-                                                        prose-th:border prose-th:border-neutral-200 prose-th:p-3.5 prose-th:text-[16px] prose-th:font-bold prose-th:bg-neutral-50
-                                                        prose-td:border prose-td:border-neutral-200 prose-td:p-3.5 prose-td:text-[16px]
-                                                        prose-iframe:w-full prose-iframe:min-h-[500px] prose-iframe:rounded-xl prose-iframe:border prose-iframe:border-neutral-200
-                                                        "
-                                                        dangerouslySetInnerHTML={{ __html: item.content }}
+                                    {/* Vertical divider */}
+                                    <span
+                                        style={{
+                                            width: '3px',
+                                            alignSelf: 'stretch',
+                                            background: 'rgba(255,84,34,0.25)',
+                                        }}
+                                    />
+
+                                    {/* Title */}
+                                    <span className="flex-1 px-5 py-3.5 font-bold text-[15px] text-neutral-800 group-hover:text-[#FF5422] transition-colors duration-200">
+                                        {item.title}
+                                    </span>
+
+                                    {/* Faded number on right */}
+                                    <span
+                                        className="hidden sm:block px-4 font-bold text-sm shrink-0"
+                                        style={{ color: 'rgba(255,84,34,0.35)' }}
+                                    >
+                                        {num}
+                                    </span>
+
+                                    {/* Circular chevron */}
+                                    <span
+                                        className="shrink-0 mr-4 flex items-center justify-center rounded-full transition-all duration-300"
+                                        style={{
+                                            width: '30px',
+                                            height: '30px',
+                                            border: '1.5px solid #FF5422',
+                                            color: '#FF5422',
+                                        }}
+                                    >
+                                        <ChevronDown
+                                            className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                                        />
+                                    </span>
+                                </button>
+
+                                {/* Accordion body */}
+                                <AnimatePresence>
+                                    {isOpen && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="overflow-hidden"
+                                            style={{ background: '#fff8f3' }}
+                                        >
+                                            {item.isSpreadsheet ? (
+                                                <div className="border-t border-orange-100">
+                                                    <SpreadsheetTable
+                                                        sheetUrls={item.sheetUrls}
+                                                        editUrls={item.editUrls}
+                                                        availableYears={item.availableYears}
+                                                        fallbackColumns={['News Letter', 'Date', 'Link']}
+                                                        fallbackData={{}}
                                                     />
-                                                )}
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </div>
-                            );
-                        })}
-                    </div>
+                                                </div>
+                                            ) : (
+                                                <div
+                                                    className="p-6 prose prose-neutral max-w-none w-full
+                                                    prose-h4:text-[#FF5422] prose-h4:font-bold prose-h4:mb-3 prose-h4:uppercase
+                                                    prose-p:text-neutral-600 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-justify
+                                                    prose-strong:text-neutral-900
+                                                    prose-table:w-full prose-table:border-collapse prose-table:text-[16px]
+                                                    prose-th:border prose-th:border-neutral-200 prose-th:p-3.5 prose-th:text-[16px] prose-th:font-bold prose-th:bg-neutral-50
+                                                    prose-td:border prose-td:border-neutral-200 prose-td:p-3.5 prose-td:text-[16px]
+                                                    prose-iframe:w-full prose-iframe:min-h-[500px] prose-iframe:rounded-xl prose-iframe:border prose-iframe:border-neutral-200
+                                                    "
+                                                    dangerouslySetInnerHTML={{ __html: item.content }}
+                                                />
+                                            )}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>

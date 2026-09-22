@@ -17,6 +17,7 @@ export interface FacultyMember {
     qualification: string;
     image?: string;
     profileUrl?: string;
+    email?: string;
 }
 
 export interface DepartmentData {
@@ -43,8 +44,8 @@ export interface DepartmentData {
     goals: string;
     hodMessage: HodMessage;
     faculty: FacultyMember[];
-    overview?: Array<{ 
-        title: string; 
+    overview?: Array<{
+        title: string;
         content: string;
         isSpreadsheet?: boolean;
         sheetUrls?: Record<string, string>;
@@ -59,120 +60,418 @@ export const departments: DepartmentData[] = [
         code: 'CSE',
         name: 'Computer Science & Engineering',
         fullName: 'Department of Computer Science & Engineering',
-        tagline: 'Knowledge creation and innovation driving every aspect of modern life.',
+
+        tagline:
+            'Knowledge creation and innovation driving every aspect of modern life.',
+
         description: [
-            'Computer Science and Engineering animates our world, driving knowledge creation and innovation that touches every aspect of our lives. The department at SRIT prepares students with a strong foundation in algorithms, data structures, operating systems, databases, and software engineering.',
-            'Students gain practical experience through industry-level internship programs and exposure to current technologies. The curriculum is aligned with industry standards, ensuring graduates are equipped for careers in software development, systems architecture, and emerging technology domains.',
-            'The B.Tech CSE programme (4 years / 8 semesters) is affiliated to JNTU Anantapur and approved by AICTE. The programme is NBA-accredited, reflecting the quality of academic delivery. Core subjects include Programming in C, Data Structures, Design & Analysis of Algorithms, Operating Systems, Database Management Systems, Computer Networks, Software Engineering, Web Technologies, and Compiler Design.',
+            'Computer Science and Engineering animates our world, driving knowledge creation and innovation that touches every aspect of our lives, from communications devices to the latest medical technology. The Department of Computer Science and Engineering embodies the college tradition of excellence in engineering education.',
+
+            'The B. Tech program in Computer Science and Engineering was started in 2008 with an intake of 60, increased to 120 in 2011, and increased to 420 in 2024. The department encourages students to use problem-solving skills and creativity as they become familiar with scientific engineering and computer programming principles.',
         ],
+
         highlights: [
-            'NBA-accredited B.Tech (CSE) programme — AICTE approved',
-            'Industry-aligned curriculum with real-world project experience',
-            'Advanced internship programs with top recruiters: TCS, Infosys, Wipro, HCL, Accenture',
-            'Certified faculty with industry and academic experience',
-            '8 state-of-the-art computing laboratories',
+            'CSE department started in 2008 with an intake of 60 students',
+            'Intake increased to 120 in 2011',
+            'Intake increased to 420 in 2024',
+            'Industry-Institute interaction and real-time problem solving',
+            'Focus on professional ethics and social responsibility',
         ],
-        image: '/College 1.jpg',
-        researchAreas: [
-            'Artificial Intelligence',
-            'Cybersecurity',
-            'Cloud Computing',
-            'Data Science',
-        ],
+
+        image: 'https://www.srit.ac.in/wp-content/uploads/2022/07/Computer-Science-and-Engineering-2.jpg',
+
+        researchAreas: [],
+
         stats: {
-            faculty: '42+',
-            labs: '8',
-            students: '750+',
-            placement: '96%',
+            faculty: '32',
+            labs: 'Not specified',
+            students: 'Not specified',
+            placement: 'Not specified',
         },
-        intake: 120,
-        accreditation: 'NBA Accredited',
-        eligibility: '10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
-        vision: 'To evolve as a leading department by offering best comprehensive teaching and learning practices for students to be self-competent technocrats with professional ethics and social responsibilities.',
+
+        intake: 420,
+
+        accreditation: 'See official CSE department information',
+
+        eligibility:
+            'See the official SRIT admissions information for current eligibility requirements.',
+
+        vision:
+            'To evolve as a leading department by offering best comprehensive teaching and learning practices for students to be self-competent technocrats with professional ethics and social responsibilities.',
+
         mission: [
             {
                 id: 'DM1',
-                text: 'Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical & practical aspects of computer science applications.',
+                text: 'Continuous enhancement of teaching-learning practices for theoretical and practical computer science knowledge.',
             },
             {
                 id: 'DM2',
-                text: 'Administer training on emerging technologies and motivate the students to inculcate self-learning abilities, ethical values and social consciousness to become competent professionals.',
+                text: 'Training on emerging technologies, self-learning, ethics and social consciousness.',
             },
             {
                 id: 'DM3',
-                text: 'Perpetual elevation of Industry-Institute interactions to facilitate the students to work on real-time problems to serve the needs of the society.',
+                text: 'Industry-Institute interaction and real-time problems for society.',
             },
         ],
-        goals: 'An SRIT graduate in CSE will lead a successful professional career in IT/ITES industry with ethical values, become a competent and responsible professional with good communication skills and leadership qualities, and engage in life-long learning acquiring new and relevant professional competencies.',
+
+        goals:
+            'The department aims to prepare CSE graduates for successful professional careers with ethical values, communication and leadership skills, lifelong learning, and relevant professional competencies.',
+
         hodMessage: {
-            name: 'Dr. K. Subba Rao',
-            designation: 'Head of the Department, CSE',
-            message: 'The Department of Computer Science & Engineering at SRIT is committed to providing an environment that fosters academic excellence and innovation. We focus on developing competent professionals who can contribute meaningfully to the society through technology. Our faculty members are dedicated to nurturing talent and guiding students towards successful careers in the ever-evolving field of computer science.',
+            name: 'Dr. P. Veera Prakash',
+            designation: 'Assistant Professor & HOD, CSE',
+            message:
+                'The Department of Computer Science & Engineering works to provide comprehensive teaching and learning practices, exposure to emerging technologies, industry interaction, and opportunities to work on real-time problems while developing professional ethics and social responsibility.',
             image: '',
         },
+
         faculty: [
             {
-                name: 'Dr. K. Subba Rao',
-                designation: 'Professor & Head',
-                specialization: 'Algorithms & Complexity Theory',
-                qualification: 'Ph.D.',
+                name: 'Dr. P. Veera Prakash',
+                designation: 'Assistant Professor & HOD (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
             },
             {
-                name: 'Dr. T. Venkateswara Rao',
-                designation: 'Professor',
-                specialization: 'Database Systems & Big Data',
-                qualification: 'Ph.D.',
+                name: 'Dr. G Venkata Narasimha Reddy',
+                designation: 'Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
             },
             {
-                name: 'Dr. G. Prasad',
-                designation: 'Associate Professor',
-                specialization: 'Software Engineering & DevOps',
-                qualification: 'Ph.D.',
+                name: 'Dr. B. Lakshmi Narayana',
+                designation: 'Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
             },
             {
-                name: 'Dr. A. Padmavathi',
-                designation: 'Associate Professor',
-                specialization: 'Computer Networks & Security',
-                qualification: 'Ph.D.',
+                name: 'Dr. M. Ranjit Reddy',
+                designation: 'Professor & TPO (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
             },
             {
-                name: 'Mr. B. Ravi Kumar',
-                designation: 'Assistant Professor',
-                specialization: 'Web Technologies & Full-Stack Development',
-                qualification: 'M.Tech',
+                name: 'Dr. G. Anil Kumar Reddy',
+                designation: 'Senior Director/General Manager',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
             },
             {
-                name: 'Ms. K. Swathi',
-                designation: 'Assistant Professor',
-                specialization: 'Machine Learning & Data Mining',
-                qualification: 'M.Tech',
+                name: 'M. Rama Krishna',
+                designation: 'Associated Developer, JP Morgan Services Pvt. Ltd.',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
             },
             {
-                name: 'Mr. Y. Rajesh',
-                designation: 'Assistant Professor',
-                specialization: 'Operating Systems & Cloud Computing',
-                qualification: 'M.Tech',
+                name: 'Dr. C. Sasikala',
+                designation: 'Associate Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
             },
             {
-                name: 'Ms. S. Divya',
-                designation: 'Assistant Professor',
-                specialization: 'Compiler Design & Programming Languages',
-                qualification: 'M.Tech',
+                name: 'Dr. T. Venkata Naga Jayudu',
+                designation: 'Associate Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
+            },
+            {
+                name: 'Dr. G. Hemanth Kumar Yadav',
+                designation: 'Associate Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
+            },
+            {
+                name: 'Dr. P. Chitralingappa',
+                designation: 'Associate Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
+            },
+            {
+                name: 'Dr. B. Harichandana',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., Ph.D.',
+            },
+            {
+                name: 'Mr. T. Murali Krishna',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mr. M. Narasimhulu',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mr. Suman Lingam',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mr. G. Chinnapullaiah',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mr. C. Sudheer Kumar',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mrs. M. Soumya',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mr. K. Kondanna',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mr. Nazeer Shaik',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech., (Ph.D)',
+            },
+            {
+                name: 'Mr. Sreedhar Boya',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mrs. P Manjeera Reddy',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mr. K. Venkatesh',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mrs. T. Kavitha',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mrs. T. Rohini',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mrs. G. Shabana',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mrs. N. Ushasree',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Ms. K. Shruthi',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mrs. V. Sujatha',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mr. B. Lokeshnath',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mrs. K. Umadevi',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mr. A. Bala Ankanna',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
+            },
+            {
+                name: 'Mr. A. Erriswamy Reddy',
+                designation: 'Assistant Professor (Regular)',
+                specialization: 'Computer Science & Engineering',
+                qualification: 'M.Tech.',
             },
         ],
+
         overview: [
-            { title: 'Vision & Mission', content: '<p>Content coming soon.</p>' },
-            { title: 'Course Expert Team', content: '<p>Content coming soon.</p>' },
-            { title: 'Department Academic Committee(DAC)', content: '<p>Content coming soon.</p>' },
-            { title: 'Program Assessment Committee( PAC)', content: '<p>Content coming soon.</p>' },
-            { title: 'Academic Audit', content: '<p>Content coming soon.</p>' },
-            { title: 'Board Of Studies', content: '<p>Content coming soon.</p>' },
-            { title: 'Achievements', content: '<p>Content coming soon.</p>' },
+            {
+                title: 'Vision & Mission',
+                content: `
+                <h4>VISION</h4>
+                <p>
+                    To evolve as a leading department by offering best comprehensive
+                    teaching and learning practices for students to be self-competent
+                    technocrats with professional ethics and social responsibilities.
+                </p>
+
+                <h4>MISSION</h4>
+
+                <p>
+                    <strong>DM1:</strong>
+                    Continuous enhancement of teaching-learning practices for theoretical
+                    and practical computer science knowledge.
+                </p>
+
+                <p>
+                    <strong>DM2:</strong>
+                    Training on emerging technologies, self-learning, ethics and social
+                    consciousness.
+                </p>
+
+                <p>
+                    <strong>DM3:</strong>
+                    Industry-Institute interaction and real-time problems for society.
+                </p>
+            `,
+            },
+
+            {
+                title: 'Course Expert Team',
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTd4THt-4X8lQQOHCsYDfWwEqHnQprnlWObI0es7f_BB8dN4u8HBqJ3oZlfI8okNQ/pubhtml?widget=true&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE Course Expert Team
+                    </a>
+                </p>
+            `,
+            },
+
+            {
+                title: 'Department Academic Committee (DAC)',
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9vFpYZrBacVzn03s8YQXd5R3H9Fwe-zJhbvb7eadRAqP5SBZG_bJS4aIhoCvW5A/pubhtml?widget=true&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE DAC
+                    </a>
+                </p>
+            `,
+            },
+
+            {
+                title: 'Program Assessment Committee (PAC)',
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6pFHH0H0hnlusqpmVmLq5Wxus_9NcdDGw-awBax7A4Momus12uVzEBZ8Kfes29VCIAnkHfn9mc9SP/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE PAC
+                    </a>
+                </p>
+            `,
+            },
+
+            {
+                title: 'Academic Audit',
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHPLZtZvyqQ6jvr_D8KrmLd4ZG81HJktdzwNt4okRPnT6gtmlg_aRrHmNPvYBKIw/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE Academic Audit
+                    </a>
+                </p>
+            `,
+            },
+
+            {
+                title: 'Board Of Studies',
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBIeJOA8XXpWY8ZzFF-lq2tu1vp_OPyLUrvqsqfhqsgZDBXm55qof3MeW2swITNA/pubhtml?widget=true&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE Board of Studies
+                    </a>
+                </p>
+            `,
+            },
+
+            {
+                title: 'Achievements',
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAbkdqHIMRvBWJAzzrrSqNuquO6i9pyEBLBFfIDrKb8EV3s8c3-BHM-LeRnGMibWzv94zzEQAAZDbx/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE Achievements
+                    </a>
+                </p>
+            `,
+            },
+
             {
                 title: 'News Letters',
-                content: `<iframe src="https://docs.google.com/spreadsheets/d/1gkjoLVHAgpkm0OEc1d34YPUxM7qy-lML/pubhtml?widget=true&amp;headers=false" width="100%" height="500" style="border: none; overflow: hidden;"></iframe>`
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTM8jIMbscJj8GZZrdzmXbA7WsUo4a_I0KfUjsV8ZRlg7jB-mxl8FigXaO4FPpWSQ/pubhtml?widget=true&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE News Letters
+                    </a>
+                </p>
+            `,
             },
-            { title: 'Technical Magazine', content: '<p>Content coming soon.</p>' }
+
+            {
+                title: 'Technical Magazine',
+                content: `
+                <p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqeJceBjIc-OBRJOGPRxtztNhfWMqwPQIwjlsQgaxnP9C7R-H1HpAydVQmng5Suw/pubhtml?widget=true&amp;headers=false"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Official CSE Technical Magazine
+                    </a>
+                </p>
+            `,
+            },
+
         ],
     },
     {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import type { DepartmentData } from '../../data/departments';
+import DepartmentAccordion from '../../components/common/DepartmentAccordion';
 
 interface DepartmentFacultyProps {
     dept: DepartmentData;
@@ -18,6 +19,18 @@ const avatarPlaceholder = (name: string) => {
 };
 
 const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
+    if (dept.slug === 'cse') {
+        const items = [
+            { title: 'Faculty Profiles' },
+            { title: 'Publications' },
+            { title: 'Patents' },
+            { title: 'Faculty Certifications' },
+            { title: "Faculty Development Program's" },
+            { title: 'Innovative Teaching Methods' },
+        ];
+        return <DepartmentAccordion title="FACULTY" items={items} />;
+    }
+
     return (
         <div className="bg-white py-12 lg:py-16 rounded-3xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="mb-16 text-center">
@@ -118,3 +131,4 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
 };
 
 export default DepartmentFaculty;
+
