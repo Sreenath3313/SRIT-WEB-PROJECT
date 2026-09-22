@@ -1,12 +1,15 @@
 import React from 'react';
 
-const CollegeBuildingOutline: React.FC<{ className?: string }> = ({ className }) => (
+type CollegeBuildingOutlineProps = React.SVGProps<SVGSVGElement>;
+
+const CollegeBuildingOutline: React.FC<CollegeBuildingOutlineProps> = ({ className, ...props }) => (
     <svg 
         viewBox="0 0 800 200" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
         className={className}
         preserveAspectRatio="xMaxYMax meet"
+        {...props}
     >
         <g stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" opacity="0.2">
             {/* Ground Line */}

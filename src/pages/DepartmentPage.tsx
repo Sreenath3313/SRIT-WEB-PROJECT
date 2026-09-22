@@ -253,9 +253,7 @@ const DepartmentPage: React.FC = () => {
 
             case 'outcome':
                 return (
-                    <DepartmentOutcome
-                        dept={dept}
-                    />
+                    <DepartmentOutcome />
                 );
 
             case 'e-content':

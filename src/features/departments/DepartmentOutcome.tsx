@@ -1,11 +1,6 @@
 import React from 'react';
-import type { DepartmentData } from '../../data/departments';
 
-interface DepartmentOutcomeProps {
-    dept: DepartmentData;
-}
-
-const DepartmentOutcome: React.FC<DepartmentOutcomeProps> = ({ dept }) => {
+const DepartmentOutcome: React.FC = () => {
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-2xl font-bold text-neutral-900 uppercase">
