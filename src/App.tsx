@@ -53,7 +53,7 @@ function ScrollToTop() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="w-full overflow-x-hidden flex flex-col min-h-screen">
+      <div className="w-full overflow-x-clip flex flex-col min-h-screen">
         <ScrollToTop />
         <Routes>
           <Route path="/about/overview" element={<OverviewPage />} />
