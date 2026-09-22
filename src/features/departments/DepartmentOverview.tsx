@@ -8,22 +8,7 @@ interface DepartmentOverviewProps {
     dept: DepartmentData;
 }
 
-interface CseRecord {
-    title: string;
-    url: string;
-    height?: number;
-}
 
-const cseOfficialRecords: CseRecord[] = [
-    { title: 'Course Expert Team', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTd4THt-4X8lQQOHCsYDfWwEqHnQprnlWObI0es7f_BB8dN4u8HBqJ3oZlfI8okNQ/pubhtml?widget=true&headers=false', height: 800 },
-    { title: 'Department Academic Committee (DAC)', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9vFpYZrBacVzn03s8YQXd5R3H9Fwe-zJhbvb7eadRAqP5SBZG_bJS4aIhoCvW5A/pubhtml?widget=true&headers=false', height: 500 },
-    { title: 'Program Assessment Committee (PAC)', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6pFHH0H0hnlusqpmVmLq5Wxus_9NcdDGw-awBax7A4Momus12uVzEBZ8Kfes29VCIAnkHfn9mc9SP/pubhtml?widget=true&chrome=false&headers=false', height: 750 },
-    { title: 'Academic Audit', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQHPLZtZvyqQ6jvr_D8KrmLd4ZG81HJktdzwNt4okRPnT6gtmlg_aRrHmNPvYBKIw/pubhtml?widget=true&chrome=false&headers=false', height: 700 },
-    { title: 'Board of Studies', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSBIeJOA8XXpWY8ZzFF-lq2tu1vp_OPyLUrvqsqfhqsgZDBXm55qof3MeW2swITNA/pubhtml?widget=true&headers=false', height: 580 },
-    { title: 'Achievements', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTAbkdqHIMRvBWJAzzrrSqNuquO6i9pyEBLBFfIDrKb8EV3s8c3-BHM-LeRnGMibWzv94zzEQAAZDbx/pubhtml?widget=true&chrome=false&headers=false', height: 650 },
-    { title: 'News Letters', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTM8jIMbscJj8GZZrdzmXbA7WsUo4a_I0KfUjsV8ZRlg7jB-mxl8FigXaO4FPpWSQ/pubhtml?widget=true&headers=false', height: 600 },
-    { title: 'Technical Magazine', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRqeJceBjIc-OBRJOGPRxtztNhfWMqwPQIwjlsQgaxnP9C7R-H1HpAydVQmng5Suw/pubhtml?widget=true&headers=false', height: 600 },
-]
 
 const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
