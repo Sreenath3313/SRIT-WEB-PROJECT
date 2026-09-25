@@ -79,33 +79,35 @@ const GoverningBodyPage: React.FC = () => {
                         onToggle={() => setOpenTab(openTab === 'members' ? null : 'members')}
                     >
                         <h4 className="font-semibold text-neutral-700 mb-4 text-center text-sm uppercase tracking-wide">Members of Governing Body</h4>
-                        <table className="w-full min-w-[500px] sm:min-w-full border-collapse text-sm">
-                            <thead>
-                                <tr className="bg-[#0A0903] text-white">
-                                    <th className="p-3 border border-neutral-700 font-semibold w-16 text-center">S. No.</th>
-                                    <th className="p-3 border border-neutral-700 font-semibold text-left">Name & Affiliation</th>
-                                    <th className="p-3 border border-neutral-700 font-semibold text-left w-1/3">Designation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {governingBodyMembers.map((m, i) => (
-                                    <motion.tr
-                                        key={i}
-                                        initial={{ opacity: 0, x: -10 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: i * 0.04 }}
-                                        className={`${i % 2 === 0 ? 'bg-white' : 'bg-neutral-50'} hover:bg-orange-50/50 transition-colors`}
-                                    >
-                                        <td className="p-3 border border-neutral-200 text-center font-medium text-[#FF5422]">{m.sNo}</td>
-                                        <td className="p-3 border border-neutral-200">
-                                            <span className="font-bold text-neutral-800">{m.name}</span>
-                                            <span className="text-neutral-500 block mt-0.5 text-xs">{m.affiliation}</span>
-                                        </td>
-                                        <td className="p-3 border border-neutral-200 text-neutral-600">{m.designation}</td>
-                                    </motion.tr>
-                                ))}
-                            </tbody>
-                        </table>
+                        <div className="w-full overflow-x-auto custom-scrollbar">
+                            <table className="w-full min-w-[500px] sm:min-w-full border-collapse text-sm">
+                                <thead>
+                                    <tr className="bg-[#0A0903] text-white">
+                                        <th className="p-3 border border-neutral-700 font-semibold w-16 text-center">S. No.</th>
+                                        <th className="p-3 border border-neutral-700 font-semibold text-left">Name & Affiliation</th>
+                                        <th className="p-3 border border-neutral-700 font-semibold text-left w-1/3">Designation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {governingBodyMembers.map((m, i) => (
+                                        <motion.tr
+                                            key={i}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: i * 0.04 }}
+                                            className={`${i % 2 === 0 ? 'bg-white' : 'bg-neutral-50'} hover:bg-orange-50/50 transition-colors`}
+                                        >
+                                            <td className="p-3 border border-neutral-200 text-center font-medium text-[#FF5422]">{m.sNo}</td>
+                                            <td className="p-3 border border-neutral-200">
+                                                <span className="font-bold text-neutral-800">{m.name}</span>
+                                                <span className="text-neutral-500 block mt-0.5 text-xs">{m.affiliation}</span>
+                                            </td>
+                                            <td className="p-3 border border-neutral-200 text-neutral-600">{m.designation}</td>
+                                        </motion.tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </AccordionPanel>
 
                     <AccordionPanel

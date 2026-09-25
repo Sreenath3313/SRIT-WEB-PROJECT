@@ -362,7 +362,7 @@ const DepartmentPage: React.FC = () => {
 
                         {/* LEFT SIDEBAR — CSE Reference Match */}
                         <aside
-                            className="w-[280px] shrink-0 sticky top-[62px] self-start h-[calc(100vh-62px)] flex flex-col overflow-hidden"
+                            className="hidden lg:flex w-[280px] shrink-0 sticky top-[62px] self-start h-[calc(100vh-62px)] flex-col overflow-hidden"
                             style={{ background: '#1C2133', boxShadow: '4px 0 20px rgba(0,0,0,0.25)' }}
                         >
 

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import AboutUsLayout from '../../features/about/components/AboutUsLayout';
 import { fadeUp, stagger } from '../../features/about/animations';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 const AFFILIATIONS = [
     {
@@ -168,15 +169,10 @@ const AffiliationsAccreditationsPage: React.FC = () => {
                                             className="overflow-hidden bg-white"
                                         >
                                             <div className="border border-t-0 border-neutral-200">
-                                                <iframe
+                                                <IframeWithLoader
                                                     src={item.url}
                                                     title={`${item.title} - Affiliations and Accreditations`}
-                                                    className="w-full border-0"
-                                                    style={{
-                                                        border: 'none',
-                                                        display: 'block',
-                                                        height: 'clamp(280px, 45vh, 600px)',
-                                                    }}
+                                                    style={{ height: 'clamp(280px, 45vh, 600px)' }}
                                                 />
                                             </div>
                                         </motion.div>

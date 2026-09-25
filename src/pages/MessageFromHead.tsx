@@ -9,7 +9,7 @@ const MessageFromHead: React.FC = () => {
         <div className="min-h-screen bg-neutral-50 flex flex-col font-sans">
             <Navbar />
 
-            <main className="flex-grow pt-[114px] lg:pt-32 pb-16 lg:pb-24">
+            <main className="flex-grow pt-[114px] lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
                 <div className="section-container">
 
                     {/* Header */}

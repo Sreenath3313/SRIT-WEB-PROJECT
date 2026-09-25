@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AboutUsLayout from '../../features/about/components/AboutUsLayout';
 import { fadeUp, stagger } from '../../features/about/animations';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 const StrategicPlanPage: React.FC = () => {
     const objectives = [
@@ -66,9 +67,8 @@ const StrategicPlanPage: React.FC = () => {
                             <p className="text-sm font-semibold text-white">Institutional Strategic Plan — Live Document</p>
                         </div>
                         <div style={{ height: 'clamp(400px, 60vh, 640px)' }}>
-                            <iframe
+                            <IframeWithLoader
                                 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRdfyI3JPB1Fs32c0x6dV9jui4wTdbz_-1blmmh5sPDc8jGvP60GLMqN6aaQlUCBQ/pubhtml?widget=true&headers=false"
-                                className="w-full h-full border-0"
                                 title="SRIT Institutional Strategic Plan"
                                 loading="lazy"
                             />

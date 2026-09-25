@@ -46,7 +46,6 @@ function useCounter(end: number, duration: number, start: boolean) {
 
     useEffect(() => {
         if (!start) return;
-        setCount(0);
         const startTime = performance.now();
 
         const tick = (now: number) => {

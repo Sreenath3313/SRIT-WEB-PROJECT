@@ -231,8 +231,7 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 DEPARTMENT NAVIGATION
             ===================================================== */}
 
-            {dept.slug !== 'cse' && (
-            <div className="bg-white border-b border-[#FF5422]/20 shadow-sm relative z-20">
+            <div className={`bg-white border-b border-[#FF5422]/20 shadow-sm relative z-20 ${dept.slug === 'cse' ? 'lg:hidden' : ''}`}>
 
                 <div className="max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-10">
 
@@ -240,7 +239,8 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                         className="
                             flex
                             items-center
-                            justify-center
+                            justify-start
+                            lg:justify-center
                             gap-1
                             sm:gap-2
                             lg:gap-6
@@ -365,12 +365,10 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                     </nav>
                 </div>
             </div>
-            )}
 
 
             {/* MOBILE SCROLL INDICATOR */}
-            {dept.slug !== 'cse' && (
-            <div className="lg:hidden pointer-events-none absolute right-0 bottom-0 h-[54px] sm:h-[60px] w-8 sm:w-10 bg-gradient-to-l from-white to-transparent flex items-center justify-end pr-2 z-30">
+            <div className={`pointer-events-none absolute right-0 bottom-0 h-[54px] sm:h-[60px] w-8 sm:w-10 bg-gradient-to-l from-white to-transparent flex items-center justify-end pr-2 z-30 ${dept.slug === 'cse' ? 'lg:hidden' : 'lg:hidden'}`}>
 
                 <ChevronRight
                     size={14}
@@ -378,7 +376,6 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 />
 
             </div>
-            )}
 
         </header>
     );

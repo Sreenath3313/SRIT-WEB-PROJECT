@@ -168,9 +168,11 @@ const Navbar: React.FC = () => {
         if (closeTimeoutRef.current) {
             clearTimeout(closeTimeoutRef.current);
         }
-        setOpenDropdown(null);
-        setMobileOpen(false);
-        setMobileSubmenuOpen(null);
+        setTimeout(() => {
+            setOpenDropdown(null);
+            setMobileOpen(false);
+            setMobileSubmenuOpen(null);
+        }, 0);
     }, [location.pathname]);
 
     useEffect(() => {
@@ -185,14 +187,14 @@ const Navbar: React.FC = () => {
         <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col bg-white shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
 
             {/* TOP UTILITY BAR */}
-            <div className="hidden lg:flex w-full bg-[#FF5422] text-white h-[28px] items-center justify-center">
-                <div className="flex items-center justify-center h-full px-4 gap-2 md:gap-3 xl:gap-4 max-w-[1600px] w-full flex-wrap">
+            <div className="w-full bg-[#FF5422] text-white py-1.5 lg:py-0 lg:h-[28px] flex items-center justify-center relative z-50">
+                <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1600px] px-2 gap-1.5 lg:gap-4 lg:h-full">
 
-                    <div className="flex items-center justify-center h-full gap-2 xl:gap-3 flex-wrap">
+                    <div className="flex items-center justify-center gap-2 xl:gap-3 flex-wrap lg:h-full">
 
                         <a
                             href="tel:+919515611111"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Phone className="w-3 h-3" />
                             +91 951 561 1111
@@ -202,47 +204,47 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="mailto:hr@srit.ac.in"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Mail className="w-3 h-3" />
                             hr@srit.ac.in
                         </a>
 
-                        <span className="w-px h-3 bg-white/35" />
+                        <span className="hidden lg:block w-px h-3 bg-white/35" />
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="hidden lg:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <UserCheck className="w-3 h-3" />
                             Faculty Login
                         </a>
 
-                        <span className="w-px h-3 bg-white/35" />
+                        <span className="hidden lg:block w-px h-3 bg-white/35" />
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="hidden lg:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <User className="w-3 h-3" />
                             Student Login
                         </a>
 
-                        <span className="w-px h-3 bg-white/35" />
+                        <span className="hidden lg:block w-px h-3 bg-white/35" />
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="hidden lg:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <GraduationCap className="w-3 h-3" />
                             Degree Verification
                         </a>
-
-                        <span className="w-px h-3 bg-white/35" />
-
+                    </div>
+                    
+                    <div className="hidden lg:flex items-center justify-center gap-2 xl:gap-3 flex-wrap lg:h-full">
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Users className="w-3 h-3" />
                             Alumni
@@ -252,20 +254,17 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Users className="w-3 h-3" />
                             EAPCET/ECET Ranks
                         </a>
-                    </div>
-
-                    <div className="flex items-center justify-center h-full gap-3 xl:gap-4 flex-wrap">
 
                         <span className="w-px h-3 bg-white/35" />
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Download className="w-3 h-3" />
                             Downloads
@@ -275,7 +274,7 @@ const Navbar: React.FC = () => {
 
                         <a
                             href="/#contact"
-                            className="flex items-center gap-1 text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <Contact className="w-3 h-3" />
                             Contact Us
@@ -407,8 +406,17 @@ const Navbar: React.FC = () => {
             {/* MOBILE DROPDOWN */}
             <AnimatePresence>
                 {mobileOpen && (
-                    <motion.div
-                        initial={{
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="lg:hidden absolute top-full left-0 right-0 h-screen bg-black/50 -z-10"
+                            onClick={() => setMobileOpen(false)}
+                        />
+                        <motion.div
+                            initial={{
                             height: 0,
                             opacity: 0,
                         }}
@@ -479,9 +487,34 @@ const Navbar: React.FC = () => {
                                     )}
                                 </div>
                             ))}
+                            
+                            {/* Mobile Quick Links from Utility Bar */}
+                            <div className="mt-4 pt-4 border-t border-neutral-200 flex flex-col gap-3">
+                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                    <UserCheck className="w-4 h-4 text-primary" />
+                                    Faculty Login
+                                </a>
+                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                    <User className="w-4 h-4 text-primary" />
+                                    Student Login
+                                </a>
+                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                    <GraduationCap className="w-4 h-4 text-primary" />
+                                    Degree Verification
+                                </a>
+                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                    <Download className="w-4 h-4 text-primary" />
+                                    Downloads
+                                </a>
+                                <a href="/#contact" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                    <Contact className="w-4 h-4 text-primary" />
+                                    Contact Us
+                                </a>
+                            </div>
 
                         </div>
                     </motion.div>
+                    </>
                 )}
             </AnimatePresence>
 

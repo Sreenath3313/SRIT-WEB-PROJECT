@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import AboutUsLayout from '../../features/about/components/AboutUsLayout';
 import { fadeUp, stagger } from '../../features/about/animations';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 const FINANCE_COMMITTEE_SHEET_1 =
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vSbYJW5HW-VyLUW_Yh9lr4DAcO6Nw2DxyHeeezJSwafyvFq3-mqnWKe8kP6KsFU0TGBYfU_9ex5N1gN/pubhtml?widget=true&chrome=false&headers=false';
@@ -70,15 +71,10 @@ const FinanceCommitteePage: React.FC = () => {
                                     className="overflow-hidden bg-white"
                                 >
                                     <div className="border border-t-0 border-neutral-200">
-                                        <iframe
+                                        <IframeWithLoader
                                             src={FINANCE_COMMITTEE_SHEET_1}
                                             title="Finance Committee Members"
-                                            className="w-full border-0"
-                                            style={{
-                                                border: 'none',
-                                                display: 'block',
-                                                height: 'clamp(300px, 50vh, 600px)',
-                                            }}
+                                            style={{ height: 'clamp(300px, 50vh, 600px)' }}
                                         />
                                     </div>
                                 </motion.div>
@@ -117,15 +113,10 @@ const FinanceCommitteePage: React.FC = () => {
                                     className="overflow-hidden bg-white"
                                 >
                                     <div className="border border-t-0 border-neutral-200">
-                                        <iframe
+                                        <IframeWithLoader
                                             src={FINANCE_COMMITTEE_SHEET_2}
                                             title="Finance Committee Additional Details"
-                                            className="w-full border-0"
-                                            style={{
-                                                border: 'none',
-                                                display: 'block',
-                                                height: 'clamp(300px, 50vh, 600px)',
-                                            }}
+                                            style={{ height: 'clamp(300px, 50vh, 600px)' }}
                                         />
                                     </div>
                                 </motion.div>

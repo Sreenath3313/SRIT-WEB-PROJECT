@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import IframeWithLoader from '../components/common/IframeWithLoader';
 
 const accordionData = [
     {
@@ -44,15 +45,15 @@ const accordionData = [
     },
     {
         title: 'Team',
-        content: `<p><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR7isFjzECoiKy5hlmRb4PwqrgCgFwYoZlPHH9pUZy3XBgjrWffpm-GdY2ZDVz-rrhu7rfMIVdd1go5/pubhtml?widget=true&amp;headers=false" width="100%" height="600" style="border: none; width: 100%; height: 600px; overflow: hidden;"></iframe></p>`
+        content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR7isFjzECoiKy5hlmRb4PwqrgCgFwYoZlPHH9pUZy3XBgjrWffpm-GdY2ZDVz-rrhu7rfMIVdd1go5/pubhtml?widget=true&amp;headers=false" style={{ width: '100%', height: '600px' }} />
     },
     {
         title: 'Minutes of Meeting',
-        content: `<p><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSo7_RQeABudRCQF1kxjmbqICYuYN11SVgLifTRC-qKoF_B_8WXe_2V2k0ZuN2KnqGFRqdtVDuw-mHo/pubhtml?widget=true&amp;headers=false" width="100%" height="800" style="border: none; width: 100%; height: 800px; overflow: hidden;"></iframe></p>`
+        content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSo7_RQeABudRCQF1kxjmbqICYuYN11SVgLifTRC-qKoF_B_8WXe_2V2k0ZuN2KnqGFRqdtVDuw-mHo/pubhtml?widget=true&amp;headers=false" style={{ width: '100%', height: '800px' }} />
     },
     {
         title: 'Activities',
-        content: `<p><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRn36sCqqPKx0JXz7g4dVDgm-P2NpThC3_IojCKHaHG0c50DhIqrgsW70II9VXI3DLS4niNeGa_BjpB/pubhtml?widget=true&amp;headers=false" width="100%" height="600" style="border: none; width: 100%; height: 600px; overflow: hidden;"></iframe></p>`
+        content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRn36sCqqPKx0JXz7g4dVDgm-P2NpThC3_IojCKHaHG0c50DhIqrgsW70II9VXI3DLS4niNeGa_BjpB/pubhtml?widget=true&amp;headers=false" style={{ width: '100%', height: '600px' }} />
     },
     {
         title: 'Contact',
@@ -136,10 +137,13 @@ const WomenEmpowermentCellPage: React.FC = () => {
                                             transition={{ duration: 0.3 }}
                                             className="overflow-hidden"
                                         >
-                                            <div
-                                                className="p-6 sm:p-8 prose prose-neutral max-w-none w-full"
-                                                dangerouslySetInnerHTML={{ __html: item.content }}
-                                            />
+                                            <div className="p-6 sm:p-8 prose prose-neutral max-w-none w-full">
+                                                {typeof item.content === 'string' ? (
+                                                    <div dangerouslySetInnerHTML={{ __html: item.content }} />
+                                                ) : (
+                                                    item.content
+                                                )}
+                                            </div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>

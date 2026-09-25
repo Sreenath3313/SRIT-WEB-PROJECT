@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AboutUsLayout from '../../features/about/components/AboutUsLayout';
 import { fadeUp, stagger } from '../../features/about/animations';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 const ACADEMIC_COUNCIL_SHEET_1 =
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vQKllMwqutN74q-Fde4ZKetiJcLIo98grj6aDlKaa7PPfqnZ1cLPtPBuGOflBwsAWKoQoJt_4axNpHL/pubhtml?widget=true&headers=false';
@@ -33,15 +34,10 @@ const AcademicCouncilPage: React.FC = () => {
                     className="rounded-2xl border border-neutral-200 overflow-hidden shadow-sm bg-white"
                 >
                     <div className="w-full overflow-hidden">
-                        <iframe
+                        <IframeWithLoader
                             src={ACADEMIC_COUNCIL_SHEET_1}
                             title="Academic Council - Sheet 1"
-                            className="w-full border-0"
-                            style={{
-                                border: 'none',
-                                display: 'block',
-                                height: 'clamp(280px, 45vh, 600px)',
-                            }}
+                            style={{ height: 'clamp(280px, 45vh, 600px)' }}
                         />
                     </div>
                 </motion.div>
@@ -52,15 +48,10 @@ const AcademicCouncilPage: React.FC = () => {
                     className="rounded-2xl border border-neutral-200 overflow-hidden shadow-sm bg-white"
                 >
                     <div className="w-full overflow-hidden">
-                        <iframe
+                        <IframeWithLoader
                             src={ACADEMIC_COUNCIL_SHEET_2}
                             title="Academic Council - Sheet 2"
-                            className="w-full border-0"
-                            style={{
-                                border: 'none',
-                                display: 'block',
-                                height: 'clamp(280px, 45vh, 600px)',
-                            }}
+                            style={{ height: 'clamp(280px, 45vh, 600px)' }}
                         />
                     </div>
                 </motion.div>

@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 // To display a live Instagram feed without complex backend authentication or paid third-party tools, 
 // a free customized widget must be created by the account owner on platforms like Curator.io, Elfsight, or Taggbox.
@@ -94,7 +95,7 @@ const SocialMediaFeeds: React.FC = () => {
                                 </a>
                             </div>
                             <div className="flex-1 w-full bg-white relative overflow-hidden mt-2 flex justify-center items-start pt-2">
-                                <iframe
+                                <IframeWithLoader
                                     src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsritatp%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
                                     width="340"
                                     height="500"
@@ -103,7 +104,7 @@ const SocialMediaFeeds: React.FC = () => {
                                     allowFullScreen={true}
                                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                                     className="max-w-full"
-                                ></iframe>
+                                />
                             </div>
                         </div>
                     </motion.div>

@@ -27,7 +27,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 85%; /* Scaled down for 90% zoom effect */
-  overflow-x: clip;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -56,7 +55,6 @@ body {
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
   width: 100%;
 }
 

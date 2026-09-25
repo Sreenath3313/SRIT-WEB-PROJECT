@@ -3,6 +3,7 @@ import type { DepartmentData } from '../../data/departments';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SpreadsheetTable from '../../components/common/SpreadsheetTable';
+import ContentRenderer from '../../components/common/ContentRenderer';
 
 interface DepartmentOverviewProps {
     dept: DepartmentData;
@@ -137,8 +138,9 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
                                                     prose-td:border prose-td:border-neutral-200 prose-td:p-3.5 prose-td:text-[16px]
                                                     prose-iframe:w-full prose-iframe:min-h-[500px] prose-iframe:rounded-xl prose-iframe:border prose-iframe:border-neutral-200
                                                     "
-                                                    dangerouslySetInnerHTML={{ __html: item.content }}
-                                                />
+                                                >
+                                                    <ContentRenderer content={item.content} />
+                                                </div>
                                             )}
                                         </motion.div>
                                     )}

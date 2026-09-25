@@ -67,7 +67,7 @@ const iconFor = (category: string) => category === 'admissions' || category === 
 export default function InformationPage() {
   const { category = '', page = '' } = useParams()
   const categoryTitle = categoryLabels[category] || readable(category)
-  const Icon = iconFor(category)
+  const IconComponent = iconFor(category)
   const navGroup = navLinks.find((item) => item.label.toLowerCase().replace(/\s+/g, '-') === category)
   const sourceItem = navGroup?.subItems?.find((item) => item.href === `/${category}/${page}`)
   const title = sourceItem?.label || categoryLabels[page] || readable(page)
@@ -88,8 +88,11 @@ export default function InformationPage() {
 
   useEffect(() => {
     let active = true
-    setLoading(true)
-    setOfficialContent(null)
+    setTimeout(() => {
+      setLoading(true)
+      setOfficialContent(null)
+    }, 0)
+
     if (isExternalService) { setLoading(false); return () => { active = false } }
     fetch(`https://www.srit.ac.in/wp-json/wp/v2/pages?slug=${encodeURIComponent(officialSlug)}`)
       .then((response) => response.ok ? response.json() : [])
@@ -107,7 +110,7 @@ export default function InformationPage() {
       <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: 'linear-gradient(#FF5422 1px,transparent 1px),linear-gradient(90deg,#FF5422 1px,transparent 1px)', backgroundSize: '52px 52px' }} />
       <div className="max-w-[1100px] mx-auto px-4 sm:px-6 relative">
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-neutral-400"><Link to="/" className="hover:text-primary">Home</Link><span>•</span><span className="text-primary">{categoryTitle}</span></div>
-        <div className="mt-6 flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-xl bg-primary text-white"><Icon size={23} /></span><h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{title}</h1></div>
+        <div className="mt-6 flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-xl bg-primary text-white"><IconComponent size={23} /></span><h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{title}</h1></div>
       </div>
     </header>
     <main className="max-w-[1100px] w-full mx-auto px-4 sm:px-6 py-10 lg:py-16 flex-1">
