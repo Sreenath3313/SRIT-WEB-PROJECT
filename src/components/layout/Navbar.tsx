@@ -289,6 +289,14 @@ const Navbar: React.FC = () => {
 
                     {/* DESKTOP NAVIGATION */}
                     <div className="hidden lg:flex relative items-center justify-center h-full gap-0.5 xl:gap-1 2xl:gap-1.5 w-full max-w-[1500px] overflow-visible">
+                        <Link
+                            to="/"
+                            className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-[#FF5422] hover:text-white transition-all duration-200 mr-1 shrink-0 overflow-hidden border border-neutral-200 shadow-sm"
+                            title="Home"
+                        >
+                            <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" />
+                        </Link>
+                        
                         {navLinks.map((link) => (
                             <NavItem
                                 key={link.label}

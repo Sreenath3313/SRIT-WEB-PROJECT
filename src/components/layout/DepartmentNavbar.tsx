@@ -114,11 +114,20 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                             >
                                 {/* CIRCULAR BACK BUTTON */}
                                 <Link
-                                    to="/"
-                                    title="Back to SRIT"
-                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-[#FF5422]/10 text-[#FF5422] border border-[#FF5422]/20 hover:bg-[#FF5422]/20 transition-all duration-200 shrink-0 group shadow-sm"
+                                    to="/departments"
+                                    title="All Departments"
+                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md mr-2 relative z-20"
                                 >
                                     <ArrowLeft size={16} strokeWidth={2} className="transition-transform duration-200 group-hover:-translate-x-0.5" />
+                                </Link>
+
+                                {/* HOME BUTTON */}
+                                <Link
+                                    to="/"
+                                    title="Home"
+                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md relative z-20 overflow-hidden"
+                                >
+                                    <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" />
                                 </Link>
 
                                 {/* DIVIDER */}
@@ -140,9 +149,9 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.25, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                                className="hidden lg:flex items-center shrink-0 ml-8"
+                                className="hidden lg:flex items-center shrink-0 ml-8 relative z-20"
                             >
-                                <span className="text-[12px] lg:text-[13px] font-semibold tracking-wide text-[#FF5422]">
+                                <span className="text-[12px] lg:text-[13px] font-semibold tracking-wide text-[#FF5422] bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-neutral-100">
                                     Srinivasa Ramanujan Institute of Technology
                                 </span>
                             </motion.div>
@@ -165,11 +174,20 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                             >
                                 {/* BACK BUTTON */}
                                 <Link
-                                    to="/"
-                                    title="Back to SRIT"
-                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white/10 border border-white/10 hover:bg-white/20 transition-all duration-200 shrink-0 group"
+                                    to="/departments"
+                                    title="All Departments"
+                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md mr-2 relative z-20"
                                 >
                                     <ArrowLeft size={16} strokeWidth={2} className="transition-transform duration-200 group-hover:-translate-x-0.5" />
+                                </Link>
+
+                                {/* HOME BUTTON */}
+                                <Link
+                                    to="/"
+                                    title="Home"
+                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md relative z-20 overflow-hidden"
+                                >
+                                    <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" />
                                 </Link>
 
                                 {/* DIVIDER */}

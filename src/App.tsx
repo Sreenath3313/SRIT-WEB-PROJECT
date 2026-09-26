@@ -23,6 +23,13 @@ import AffiliationsAccreditationsPage from './pages/about/AffiliationsAccreditat
 import MilestonesPage from './pages/about/MilestonesPage';
 import SopPage from './pages/about/SopPage';
 import StrategicPlanPage from './pages/about/StrategicPlanPage';
+import AcademicRegulationsPage from './pages/AcademicRegulationsPage';
+import AcademicCalendarsPage from './pages/AcademicCalendarsPage';
+import NotificationsPage from './pages/NotificationsPage';
+import EvaluationProcedurePage from './pages/EvaluationProcedurePage';
+import RecountingProcedurePage from './pages/RecountingProcedurePage';
+import MalpracticeRulesPage from './pages/MalpracticeRulesPage';
+import ExaminationTeamPage from './pages/ExaminationTeamPage';
 import InformationPage from './pages/InformationPage'
 
 function ScrollToTop() {
@@ -79,6 +86,15 @@ function App() {
           <Route path="/ndli-club" element={<NdliClubPage />} />
           <Route path="/women-empowerment-cell" element={<WomenEmpowermentCellPage />} />
           <Route path="/women-empowerment" element={<WomenEmpowermentCellPage />} />
+          <Route path="/admissions/academic-regulations" element={<AcademicRegulationsPage />} />
+          <Route path="/examination/academic-regulations" element={<AcademicRegulationsPage />} />
+          <Route path="/admissions/academic-calendars" element={<AcademicCalendarsPage />} />
+          <Route path="/examination/academic-calendars" element={<AcademicCalendarsPage />} />
+          <Route path="/examination/notifications-and-results" element={<NotificationsPage />} />
+          <Route path="/examination/evaluation-procedure" element={<EvaluationProcedurePage />} />
+          <Route path="/examination/recounting-and-re-evaluation-procedure" element={<RecountingProcedurePage />} />
+          <Route path="/examination/malpractice-rules" element={<MalpracticeRulesPage />} />
+          <Route path="/examination/team-members" element={<ExaminationTeamPage />} />
           <Route path="/:category/:page" element={<InformationPage />} />
         </Routes>
       </div>
