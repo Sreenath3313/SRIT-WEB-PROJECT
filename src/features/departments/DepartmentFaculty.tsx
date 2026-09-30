@@ -63,7 +63,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
     }
 
     return (
-        <div className="bg-white py-12 lg:py-16 rounded-3xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="bg-white py-12 lg:py-16 rounded-xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="mb-16 text-center">
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-neutral-dark mb-4 relative inline-block">
                     Our Faculty
@@ -88,7 +88,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                                         src={faculty.image}
                                         alt={faculty.name}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
+                                    loading="lazy" />
                                 ) : (
                                     <div
                                         className="w-full h-full flex items-center justify-center text-4xl font-serif font-bold transition-transform duration-700 group-hover:scale-105"

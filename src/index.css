@@ -73,11 +73,7 @@ h6 {
   color: white;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
 
 .gpu-accelerated {
   transform: translate3d(0, 0, 0);

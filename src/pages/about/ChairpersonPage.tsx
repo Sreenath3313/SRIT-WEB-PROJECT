@@ -12,14 +12,14 @@ const ProfilePage: React.FC<{
 }> = ({ name, role, imageSrc, email, paragraphs }) => (
     <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col lg:flex-row gap-10 items-start">
         {/* Image */}
-        <motion.div variants={slideLeft} className="w-full lg:w-[260px] shrink-0">
+        <motion.div variants={slideLeft} className="w-full lg:w-[360px] xl:w-[400px] shrink-0">
             <div className="relative">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
+                <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
                 <img
                     src={imageSrc}
                     alt={name}
-                    className="relative w-full rounded-2xl shadow-xl border-2 border-white object-cover"
-                />
+                    className="relative w-full rounded-xl shadow-xl border-2 border-white object-cover"
+                loading="lazy" />
             </div>
             <motion.div
                 variants={fadeUp}

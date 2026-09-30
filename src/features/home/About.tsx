@@ -18,7 +18,7 @@ const About: React.FC = () => {
                         transition={{ duration: 0.8 }}
                     >
                         {/* Accent bar */}
-                        <div className="w-12 lg:w-20 h-[3px] bg-primary mb-4 lg:mb-5" />
+                        
 
                         <p className="label-caps text-primary text-xs lg:text-sm font-bold tracking-[0.25em] mb-3 lg:mb-5">
                             About SRIT
@@ -83,7 +83,7 @@ const About: React.FC = () => {
                             ].map((img, index) => (
                                 <motion.div
                                     key={index}
-                                    className="relative overflow-hidden rounded-2xl shadow-xl border border-neutral-100 bg-white group flex-shrink-0 cursor-pointer w-[260px] sm:w-[300px] md:w-[340px] lg:w-full h-[180px] sm:h-[240px] md:h-[300px] lg:h-full"
+                                    className="relative overflow-hidden rounded-xl shadow-xl border border-neutral-100 bg-white group flex-shrink-0 cursor-pointer w-[260px] sm:w-[300px] md:w-[340px] lg:w-full h-[180px] sm:h-[240px] md:h-[300px] lg:h-full"
                                     whileHover={{
                                         scale: 1.05,
                                         zIndex: 50,

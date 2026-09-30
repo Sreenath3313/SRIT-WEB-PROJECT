@@ -51,7 +51,7 @@ const CSRActivities: React.FC = () => {
                             whileHover={{ y: -8 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative h-[380px] sm:h-[400px] lg:h-[420px] w-full overflow-hidden rounded-2xl shadow-xl bg-neutral-200"
+                            className="group relative h-[380px] sm:h-[400px] lg:h-[420px] w-full overflow-hidden rounded-xl shadow-xl bg-neutral-200"
                             style={{ position: 'relative' }}
                         >
                             <img
@@ -68,7 +68,7 @@ const CSRActivities: React.FC = () => {
                                     objectPosition: 'center',
                                     display: 'block'
                                 }}
-                            />
+                            loading="lazy" />
                             <div 
                                 className="flex flex-col justify-end p-6 z-10 transition-all duration-300"
                                 style={{

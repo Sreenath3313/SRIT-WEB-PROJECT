@@ -15,14 +15,14 @@ const SecretaryPage: React.FC = () => {
         <AboutUsLayout title="About Secretary">
             <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col lg:flex-row gap-10 items-start">
                 {/* Image */}
-                <motion.div variants={slideLeft} className="w-full lg:w-[260px] shrink-0">
+                <motion.div variants={slideLeft} className="w-full lg:w-[360px] xl:w-[400px] shrink-0">
                     <div className="relative">
-                        <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
+                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
                         <img
                             src="https://www.srit.ac.in/wp-content/uploads/2021/07/samba-siva.jpeg"
                             alt="Aluru Sambasiva Reddy"
-                            className="relative w-full rounded-2xl shadow-xl border-2 border-white object-cover"
-                        />
+                            className="relative w-full rounded-xl shadow-xl border-2 border-white object-cover"
+                        loading="lazy" />
                     </div>
                     <motion.div variants={fadeUp} className="mt-4 bg-gradient-to-br from-[#0A0903] to-neutral-800 rounded-xl p-4 text-center shadow">
                         <p className="text-white font-bold text-lg">Aluru Sambasiva Reddy</p>
@@ -106,7 +106,7 @@ const SecretaryPage: React.FC = () => {
                                 },
                             },
                         }}
-                        className="space-y-4 text-neutral-600 leading-relaxed"
+                        className="space-y-6 text-neutral-600 leading-loose text-[15px] sm:text-base"
                     >
                         {[
                             "Aluru Sambasiva Reddy, the Founder Secretary of SRIT, is the youngest son of Sri. Aluru Sunki Reddy and Late Smt. Aluru Narayanamma. He completed his schooling at the local Govt. High School. His dream was to pursue an engineering degree at the university campus.",

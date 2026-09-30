@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { ExternalLink, FileText, GraduationCap, Landmark, Users } from 'lucide-react'
+import { ExternalLink, FileText } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import { navLinks } from '../data/navigation'
+import PageHeader from '../components/common/PageHeader';
 
 const readable = (value = '') => value
   .replace(/-/g, ' ')
@@ -61,14 +62,12 @@ function extractOfficialContent(html: string) {
   return { blocks, documents: documents.slice(0, 40) }
 }
 
-const iconFor = (category: string) => category === 'admissions' || category === 'academics'
-  ? GraduationCap : category === 'committees' ? Users : category === 'examination' ? FileText : Landmark
+
 
 export default function InformationPage() {
   const { category = '', page = '' } = useParams()
   const categoryTitle = categoryLabels[category] || readable(category)
-  const IconComponent = iconFor(category)
-  const navGroup = navLinks.find((item) => item.label.toLowerCase().replace(/\s+/g, '-') === category)
+    const navGroup = navLinks.find((item) => item.label.toLowerCase().replace(/\s+/g, '-') === category)
   const sourceItem = navGroup?.subItems?.find((item) => item.href === `/${category}/${page}`)
   const title = sourceItem?.label || categoryLabels[page] || readable(page)
   const content = highlights[page]
@@ -106,32 +105,21 @@ export default function InformationPage() {
 
   return <div className="min-h-screen bg-neutral-50 flex flex-col font-sans">
     <Navbar />
-    <header className="relative overflow-hidden pt-[122px] lg:pt-[140px] pb-14 bg-[#0A0903]">
-      <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: 'linear-gradient(#FF5422 1px,transparent 1px),linear-gradient(90deg,#FF5422 1px,transparent 1px)', backgroundSize: '52px 52px' }} />
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 relative">
-        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-neutral-400"><Link to="/" className="hover:text-primary">Home</Link><span>•</span><span className="text-primary">{categoryTitle}</span></div>
-        <div className="mt-6 flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-xl bg-primary text-white"><IconComponent size={23} /></span><h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{title}</h1></div>
-      </div>
-    </header>
-    <main className="max-w-[1100px] w-full mx-auto px-4 sm:px-6 py-10 lg:py-16 flex-1">
-      <div className="grid gap-8 lg:grid-cols-[1fr_220px]">
-        <article className="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-9 shadow-sm">
+    <PageHeader title={title} categoryTitle={categoryTitle} icon={<FileText size={26} />} />
+    <main className="max-w-[1300px] w-full mx-auto px-4 sm:px-6 py-10 lg:py-16 flex-1">
+      <div className="flex flex-col gap-8 w-full">
+        <article className="rounded-xl border border-neutral-200 bg-white p-6 sm:p-9 shadow-sm">
           <p className="text-primary text-xs font-bold tracking-[.16em] uppercase">{categoryTitle}</p>
           <h2 className="mt-3 font-serif text-2xl font-bold text-neutral-900">{title}</h2>
           {loading && <p className="mt-6 text-[15px] text-neutral-500">Loading current official SRIT information…</p>}
-          {!loading && officialContent?.blocks.length ? <div className="mt-6 space-y-4 text-[15px] leading-8 text-neutral-700">{officialContent.blocks.map((block, index) => block.kind === 'heading' ? <h3 key={`${block.text}-${index}`} className="pt-3 font-serif text-xl font-bold leading-tight text-neutral-900">{block.text}</h3> : block.kind === 'item' ? <li key={`${block.text}-${index}`} className="ml-5 pl-1">{block.text}</li> : <p key={`${block.text}-${index}`}>{block.text}</p>)}</div> : !loading && (content ? <div className="mt-6 space-y-4 text-[15px] leading-8 text-neutral-700">{content.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : <p className="mt-6 text-[15px] leading-8 text-neutral-700">The official SRIT source has no separately published page content for this item. Use the official source below for the current notice, document or service.</p>)}
+          {!loading && officialContent?.blocks.length ? <div className="mt-6 space-y-6 text-[15.5px] leading-[1.8] tracking-[0.01em] text-neutral-700">{officialContent.blocks.map((block, index) => block.kind === 'heading' ? <h3 key={`${block.text}-${index}`} className="pt-3 font-serif text-xl font-bold leading-tight text-neutral-900">{block.text}</h3> : block.kind === 'item' ? <li key={`${block.text}-${index}`} className="ml-5 pl-1">{block.text}</li> : <p key={`${block.text}-${index}`}>{block.text}</p>)}</div> : !loading && (content ? <div className="mt-6 space-y-6 text-[15.5px] leading-[1.8] tracking-[0.01em] text-neutral-700">{content.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : <p className="mt-6 text-[15.5px] leading-[1.8] tracking-[0.01em] text-neutral-700">The official SRIT source has no separately published page content for this item. Use the official source below for the current notice, document or service.</p>)}
           {officialContent?.documents.length ? <section className="mt-8 border-t border-neutral-100 pt-6"><h3 className="font-serif text-lg font-bold text-neutral-900">Official links and documents</h3><div className="mt-3 grid gap-2 sm:grid-cols-2">{officialContent.documents.map((document) => <a key={document.href} href={document.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-700 hover:border-primary hover:text-primary"><FileText size={15} className="shrink-0" />{document.label}<ExternalLink size={13} className="ml-auto shrink-0" /></a>)}</div></section> : null}
           <a href={isExternalService ? 'https://sritexams.in/' : `https://www.srit.ac.in/${officialSlug}/`} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
             {isExternalService ? 'Open external SRIT service' : 'View official SRIT source'} <ExternalLink size={16} />
           </a>
           {isExternalService && <p className="mt-3 text-xs text-neutral-500">This opens an external SRIT service in a new tab.</p>}
         </article>
-        <aside className="rounded-2xl border border-neutral-200 bg-white p-5 h-fit">
-          <h2 className="font-serif text-lg font-bold text-neutral-900">Explore {categoryTitle}</h2>
-          <nav className="mt-3 divide-y divide-neutral-100">
-            {navGroup?.subItems?.map((item) => <Link key={item.href} to={item.href} className="block py-2.5 text-sm text-neutral-600 hover:text-primary">{item.label}</Link>)}
-          </nav>
-        </aside>
+        
       </div>
     </main>
     <Footer />

@@ -31,7 +31,7 @@ const AcademicCouncilPage: React.FC = () => {
                 {/* Academic Council Sheet 1 */}
                 <motion.div
                     variants={fadeUp}
-                    className="rounded-2xl border border-neutral-200 overflow-hidden shadow-sm bg-white"
+                    className="rounded-xl border border-neutral-200 overflow-hidden shadow-sm bg-white"
                 >
                     <div className="w-full overflow-hidden">
                         <IframeWithLoader
@@ -45,7 +45,7 @@ const AcademicCouncilPage: React.FC = () => {
                 {/* Academic Council Sheet 2 */}
                 <motion.div
                     variants={fadeUp}
-                    className="rounded-2xl border border-neutral-200 overflow-hidden shadow-sm bg-white"
+                    className="rounded-xl border border-neutral-200 overflow-hidden shadow-sm bg-white"
                 >
                     <div className="w-full overflow-hidden">
                         <IframeWithLoader

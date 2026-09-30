@@ -94,10 +94,11 @@ const CampusLife: React.FC = () => {
                             <div
                                 key={item.id}
                                 onClick={() => setActiveIndex(index)}
+                                onMouseEnter={() => setActiveIndex(index)}
                                 className="relative overflow-hidden cursor-pointer rounded-sm"
                                 style={{
                                     flex: isActive ? '5 1 0%' : '0.6 1 0%',
-                                    transition: 'flex 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+                                    transition: 'flex 0.85s cubic-bezier(0.22, 1, 0.36, 1)',
                                     minWidth: '0',
                                     minHeight: isActive ? '200px' : '60px',
                                     maxHeight: '100%',
@@ -119,7 +120,7 @@ const CampusLife: React.FC = () => {
                                         objectPosition: 'center',
                                         filter: isActive ? 'brightness(1) contrast(1)' : 'brightness(0.8) contrast(1.1)',
                                         transform: isActive ? 'scale(1.03)' : 'scale(1)',
-                                        transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+                                        transition: 'transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), filter 0.85s cubic-bezier(0.22, 1, 0.36, 1)',
                                     }}
                                 />
 
@@ -134,7 +135,7 @@ const CampusLife: React.FC = () => {
                                         background: isActive
                                             ? 'linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%)'
                                             : 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.3) 100%)',
-                                        transition: 'background 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+                                        transition: 'background 0.85s cubic-bezier(0.22, 1, 0.36, 1)',
                                     }}
                                 />
 
@@ -156,8 +157,8 @@ const CampusLife: React.FC = () => {
                                     className="absolute inset-x-4 bottom-6 md:inset-x-8 md:bottom-10 z-10 flex flex-col justify-end"
                                     style={{
                                         opacity: isActive ? 1 : 0,
-                                        transform: isActive ? 'translateY(0)' : 'translateY(20px)',
-                                        transition: 'opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s',
+                                        transform: isActive ? 'translateY(0)' : 'translateY(12px)',
+                                        transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s',
                                         pointerEvents: isActive ? 'auto' : 'none',
                                     }}
                                 >
@@ -174,7 +175,7 @@ const CampusLife: React.FC = () => {
                                     className="absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-10 flex items-center justify-center"
                                     style={{
                                         opacity: isActive ? 0 : 1,
-                                        transition: 'opacity 0.4s ease',
+                                        transition: 'opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1)',
                                         pointerEvents: isActive ? 'none' : 'auto',
                                     }}
                                 >

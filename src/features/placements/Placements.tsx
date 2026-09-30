@@ -30,10 +30,22 @@ const stats = [
 ];
 
 const recruiters = [
-    'TCS', 'Cognizant', 'HCL', 'Infosys',
-    'Lumen Technologies', 'Foxconn', 'Cadsys', 'Playto Labs',
-    'IOpex Tech', 'Snovasys', 'INDO-MIM', 'IRMAI',
-    'Calix', 'Wayvo.AI', 'IndiGrid', 'Bonito Designs'
+    { name: 'TCS', logo: 'https://icons.duckduckgo.com/ip3/tcs.com.ico' },
+    { name: 'Cognizant', logo: '/logos/cognizant.png' },
+    { name: 'HCL', logo: 'https://icons.duckduckgo.com/ip3/hcltech.com.ico' },
+    { name: 'Infosys', logo: '/logos/infosys.png' },
+    { name: 'Lumen Technologies', logo: '/logos/lumen_technologies.png' },
+    { name: 'Foxconn', logo: '/logos/foxconn.png' },
+    { name: 'Cadsys', logo: 'https://icons.duckduckgo.com/ip3/cadsys.com.ico' },
+    { name: 'Playto Labs', logo: '/logos/playto_labs.png' },
+    { name: 'IOpex Tech', logo: '/logos/iopex_tech.png' },
+    { name: 'Snovasys', logo: 'https://icons.duckduckgo.com/ip3/snovasys.com.ico' },
+    { name: 'INDO-MIM', logo: '/logos/indo_mim.png' },
+    { name: 'IRMAI', logo: 'https://icons.duckduckgo.com/ip3/irmai.in.ico' },
+    { name: 'Calix', logo: '/logos/calix.png' },
+    { name: 'Wayvo.AI', logo: '/logos/wayvo_ai.png' },
+    { name: 'IndiGrid', logo: '/logos/indigrid.png' },
+    { name: 'Bonito Designs', logo: '/logos/bonito_designs.png' }
 ];
 
 const Placements: React.FC = () => {
@@ -133,10 +145,21 @@ const Placements: React.FC = () => {
                                     key={idx}
                                     whileHover={{ scale: 1.05, y: -2 }}
                                     transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                                    className="border border-neutral-200/60 bg-white p-2 flex items-center justify-center text-center hover:border-[#FF5422] hover:bg-[#FF5422] transition-all duration-300 rounded-sm min-h-[50px] lg:min-h-[55px] cursor-pointer group hover:shadow-lg hover:shadow-orange-500/10"
+                                    className="border border-neutral-200/60 bg-white p-3 flex items-center justify-center text-center hover:border-neutral-300 transition-all duration-300 rounded-sm min-h-[70px] lg:min-h-[80px] cursor-pointer group hover:shadow-md"
                                 >
-                                    <span className="text-[13px] lg:text-sm font-bold text-neutral-700 group-hover:text-white transition-colors duration-300">
-                                        {recruiter}
+                                    {recruiter.logo ? (
+                                        <img 
+                                            src={recruiter.logo} 
+                                            alt={recruiter.name} 
+                                            className="max-h-[35px] max-w-full object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                                            onError={(e) => {
+                                                e.currentTarget.style.display = 'none';
+                                                e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                                            }}
+                                        />
+                                    ) : null}
+                                    <span className={`text-[13px] lg:text-sm font-bold text-neutral-700 group-hover:text-primary transition-colors duration-300 ${recruiter.logo ? 'hidden' : ''}`}>
+                                        {recruiter.name}
                                     </span>
                                 </motion.div>
                             ))}

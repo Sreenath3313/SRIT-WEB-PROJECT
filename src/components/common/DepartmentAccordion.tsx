@@ -23,7 +23,7 @@ const DepartmentAccordion: React.FC<DepartmentAccordionProps> = ({ title, items,
                     {title}
                 </h2>
 
-                <div className="divide-y divide-neutral-200/60 bg-white rounded-2xl border border-neutral-200/60 shadow-sm overflow-hidden">
+                <div className="divide-y divide-neutral-200/60 bg-white rounded-xl border border-neutral-200/60 shadow-sm overflow-hidden">
                     {items.map((item, index) => {
                         const isOpen = openIndex === index;
 

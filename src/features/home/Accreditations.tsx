@@ -27,7 +27,7 @@ const Accreditations: React.FC = () => {
     const isInView = useInView(ref, { once: true, margin: '-50px' });
 
     return (
-        <div ref={ref} className="w-full h-full bg-white rounded-2xl border border-neutral-200/80 shadow-xl shadow-neutral-100/50 p-6 md:p-8 flex flex-col">
+        <div ref={ref} className="w-full h-full bg-white rounded-xl border border-neutral-200/80 shadow-xl shadow-neutral-100/50 p-6 md:p-8 flex flex-col">
             {/* Title with decorative lines */}
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -42,7 +42,7 @@ const Accreditations: React.FC = () => {
                     </h3>
                     <div className="h-[1px] bg-neutral-200 flex-1" />
                 </div>
-                <div className="w-12 h-[3px] bg-primary mt-3 rounded-full animate-pulse" />
+                
             </motion.div>
 
             {/* Vertical List */}

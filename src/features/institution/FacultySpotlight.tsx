@@ -27,7 +27,7 @@ const FacultySpotlight: React.FC = () => {
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.8 }}
                         >
-                            <div className="w-16 h-1 bg-primary mb-8" />
+                            
                             <p className="label-caps text-primary tracking-[0.25em] mb-4">
                                 Academic Leadership
                             </p>
@@ -53,7 +53,7 @@ const FacultySpotlight: React.FC = () => {
                                     initial={{ opacity: 0, y: 40 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                                     transition={{ duration: 0.6, delay: i * 0.15 }}
-                                    className="group bg-white border border-neutral-200 rounded-3xl p-8 text-center flex flex-col items-center justify-between hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 shadow-sm"
+                                    className="group bg-white border border-neutral-200 rounded-xl p-8 text-center flex flex-col items-center justify-between hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 shadow-sm"
                                 >
                                     <div className="flex flex-col items-center w-full">
                                         {/* Circular Image wrapper */}
@@ -62,7 +62,7 @@ const FacultySpotlight: React.FC = () => {
                                                 src={faculty.image}
                                                 alt={faculty.name}
                                                 className="w-full h-full object-cover"
-                                            />
+                                            loading="lazy" />
                                         </div>
                                         <h3 className="font-serif text-2xl font-bold text-neutral-900 mb-1">
                                             {faculty.name}

@@ -60,7 +60,7 @@ const StrategicPlanPage: React.FC = () => {
                     </p>
                     <motion.div
                         whileHover={{ scale: 1.005 }}
-                        className="w-full overflow-hidden rounded-2xl border border-neutral-200 shadow-md bg-white"
+                        className="w-full overflow-hidden rounded-xl border border-neutral-200 shadow-md bg-white"
                     >
                         <div className="bg-gradient-to-r from-[#0A0903] to-neutral-700 px-6 py-3 flex items-center gap-2">
                             <div className="w-2 h-2 rounded-full bg-[#FF5422]" />

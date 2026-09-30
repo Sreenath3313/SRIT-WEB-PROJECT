@@ -21,8 +21,8 @@ const VisionMissionPage: React.FC = () => {
             >
                 {/* Vision */}
                 <motion.div variants={fadeUp}>
-                    <div className="relative bg-gradient-to-br from-[#0A0903] to-neutral-800 rounded-2xl p-8 overflow-hidden shadow-lg">
-                        <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#FF5422]/10 rounded-full blur-2xl" />
+                    <div className="relative bg-gradient-to-br from-[#0A0903] to-neutral-800 rounded-xl p-8 overflow-hidden shadow-lg">
+                        
 
                         <div className="relative z-10">
                             <div className="flex items-center gap-3 mb-5">

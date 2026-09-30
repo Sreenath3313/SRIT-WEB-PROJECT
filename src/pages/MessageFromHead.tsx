@@ -47,7 +47,7 @@ const MessageFromHead: React.FC = () => {
                                         src="/principal.jpg"
                                         alt="Principal Portrait"
                                         className="w-full h-full object-cover"
-                                    />
+                                    loading="lazy" />
                                 </div>
                             </div>
                             <div>
@@ -55,7 +55,7 @@ const MessageFromHead: React.FC = () => {
                                 <p className="text-primary font-semibold text-sm mt-1">Principal, SRIT</p>
                             </div>
 
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+                            <div className="bg-white p-8 rounded-xl shadow-sm border border-neutral-100">
                                 <h4 className="font-bold text-neutral-900 mb-6 uppercase tracking-wider text-sm">Contact Information</h4>
                                 <ul className="flex flex-col gap-4 text-neutral-600">
                                     <li className="flex items-center gap-3">

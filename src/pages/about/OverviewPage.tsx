@@ -34,7 +34,7 @@ const OverviewPage: React.FC = () => {
                         src="https://www.srit.ac.in/wp-content/uploads/2021/12/grd-img.jpg"
                         alt="SRIT Campus"
                         className="w-full h-[240px] sm:h-[280px] object-cover"
-                    />
+                    loading="lazy" />
 
                     <div className="absolute bottom-0 left-0 bg-[#FF5422] px-8 py-4">
                         <h2 className="text-white text-2xl font-bold font-serif">
@@ -205,7 +205,7 @@ const OverviewPage: React.FC = () => {
                             src="https://www.srit.ac.in/wp-content/uploads/2021/12/srini-ramanuj-img-main.jpeg"
                             alt="Srinivasa Ramanujan"
                             className="w-full h-auto object-cover"
-                        />
+                        loading="lazy" />
                     </motion.div>
                 </motion.div>
             </motion.div>

@@ -1,0 +1,30 @@
+[
+  {
+    "department": "CIVIL ENGINEERING",
+    "iframeSrc": "https://docs.google.com/spreadsheets/d/1v2lpGfxe6pYXCMsH_Syv_aOtIl2_kxtI/pubhtml?widget=true&chrome=false&headers=false"
+  },
+  {
+    "department": "ELECTRICAL & ELECTRONICS  ENGINEERING",
+    "iframeSrc": "https://docs.google.com/spreadsheets/d/1OokAzGNogY18NKAwe3VW4KewuvncAbcP/pubhtml?widget=true&chrome=false&headers=false"
+  },
+  {
+    "department": "MECHANICAL ENGINEERING",
+    "iframeSrc": "https://docs.google.com/spreadsheets/d/1XIQBSaDYyFwOMhrB_7VjL5jhQZz01nG4/pubhtml?widget=true&chrome=false&headers=false"
+  },
+  {
+    "department": "ELECTRONICS & COMMUNICATION ENGINEERING",
+    "iframeSrc": "https://docs.google.com/spreadsheets/d/1vgTO6JrTPOg0DU2UTO-sIYtKndPrX9KY/pubhtml?widget=true&chrome=false&headers=false"
+  },
+  {
+    "department": "COMPUTER SCIENCE & ENGINEERING",
+    "iframeSrc": "https://docs.google.com/spreadsheets/d/1RQaDbxYiADSCsI5AvJN_6evEKbzPyK5N/pubhtml?widget=true&chrome=false&headers=false"
+  },
+  {
+    "department": "COMPUTER SCIENCE & ENGINEERING ( DATA SCIENCE)",
+    "iframeSrc": "https://docs.google.com/spreadsheets/d/1NsrA-uzN0Ieyesq-vY71BzVNv-4_uEVa/pubhtml?widget=true&chrome=false&headers=false"
+  },
+  {
+    "department": "COMPUTER SCIENCE & ENGINEERING ( AI & ML)",
+    "iframeSrc": "https://docs.google.com/spreadsheets/d/16p339wZhjf7UVhJSu1yUAqyI1CTbgk10/pubhtml?widget=true&chrome=false&headers=false"
+  }
+]

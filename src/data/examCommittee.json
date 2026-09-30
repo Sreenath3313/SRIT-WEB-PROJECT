@@ -1,0 +1,237 @@
+[
+  {
+    "academicYear": "AY 2026-27",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. G. Balakrishna , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. D. Sai Chaitanya Kishore, Prof. of ME & Director-IQAC",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Dr. T. V. Naga Jayudu, Professor of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      },
+      {
+        "sno": "5",
+        "details": "Mr. C. Sudheer Kumar, Assistant. Prof. of CSE & Additional Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  },
+  {
+    "academicYear": "AY 2025-26",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. G. Balakrishna , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. D. Sai Chaitanya Kishore, Prof. of ME & Director-IQAC",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Dr. T. V. Naga Jayudu, Professor of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      },
+      {
+        "sno": "5",
+        "details": "Mr. C. Sudheer Kumar, Assistant. Prof. of CSE & Additional Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  },
+  {
+    "academicYear": "AY 2024-25",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. G. Balakrishna , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. D. Sai Chaitanya Kishore, Prof. of ME & Director-IQAC",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Dr. T. V. Naga Jayudu, Professor of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      },
+      {
+        "sno": "5",
+        "details": "Dr. U. Mahesh Kumar, Assoc. Prof. of Physics & Additional Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  },
+  {
+    "academicYear": "AY 2023-24",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. G. Balakrishna , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. D. Sai Chaitanya Kishore, Prof. of ME & Director-IQAC",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Dr. T. V. Naga Jayudu, Professor of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      },
+      {
+        "sno": "5",
+        "details": "Dr. U. Mahesh Kumar, Assoc. Prof. of Physics & Additional Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  },
+  {
+    "academicYear": "AY 2022-23",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. G. Balakrishna , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. D. Sai Chaitanya Kishore, , Prof. of ME & Director-IQAC",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Dr. T. V. Naga Jayudu, , Assoc. Prof. of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      },
+      {
+        "sno": "5",
+        "details": "Dr. U. Mahesh Kumar, , Assoc. Prof. of Physics & Additional Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  },
+  {
+    "academicYear": "AY 2021-22",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. G. Balakrishna , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. D. Sai Chaitanya Kishore, , Prof. of ME & Director-IQAC",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Mr. T. V. Naga Jayudu, , Assoc. Prof. of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      },
+      {
+        "sno": "5",
+        "details": "Dr. U. Mahesh Kumar, , Assoc. Prof. of Physics & Additional Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  },
+  {
+    "academicYear": "AY 2020-21",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. T. Hitendra Sarma , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. G. Balakrishna, Professor and Head of EEE",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Mr. T. V. Naga Jayudu, Assoc. Prof. of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      },
+      {
+        "sno": "5",
+        "details": "Dr. U. Mahesh Kumar, Assoc. Prof. of Physics & Additional Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  },
+  {
+    "academicYear": "AY 2019-20",
+    "members": [
+      {
+        "sno": "1",
+        "details": "Dr. T. Hitendra Sarma , Principal",
+        "role": "Chairman"
+      },
+      {
+        "sno": "2",
+        "details": "Dr. M. Ranjit Reddy, , Prof. of CSE & Controller of Examinations",
+        "role": "Convener"
+      },
+      {
+        "sno": "3",
+        "details": "Dr. G. Balakrishna, Professor and Head of EEE",
+        "role": "Member"
+      },
+      {
+        "sno": "4",
+        "details": "Mr. T. V. Naga Jayudu, Assoc. Prof. of CSE & Deputy Controller of Examinations",
+        "role": "Member"
+      }
+    ]
+  }
+]

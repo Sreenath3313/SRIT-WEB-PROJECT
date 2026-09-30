@@ -8,7 +8,8 @@ const years = ['2025-26', '2024-25', '2023-24', '2022-23', '2021-22'];
 /* ── Section data ──────────────────────────────────────── */
 interface TableRow {
     sno: number;
-    [key: string]: string | number;
+    logo?: string;
+    [key: string]: string | number | undefined;
 }
 
 interface SectionData {
@@ -117,6 +118,19 @@ const sections: SectionData[] = [
             '2023-24': [
                 { sno: 1, name: 'Deepak R', event: 'HCL Technologies', type: 'Software Testing', venue: '4 Months', prize: 'Completed' },
             ],
+            '2022-23': [],
+            '2021-22': [],
+        },
+    },
+    {
+        key: 'certificates',
+        title: 'Student Certificates',
+        subtitle: 'Student Certification Records',
+        columns: ['S. No', 'Student Name', 'Certificate Name', 'Issuing Authority', 'Year'],
+        data: {
+            '2025-26': [],
+            '2024-25': [],
+            '2023-24': [],
             '2022-23': [],
             '2021-22': [],
         },
@@ -383,12 +397,21 @@ const DepartmentStudents: React.FC = () => {
                                                             ))
                                                             // Render Static Fallback Rows
                                                             : staticRows.map((rowObj, ri) => {
-                                                                const values = Object.values(rowObj);
+                                                                const { logo, sno, ...rest } = rowObj;
+                                                                const values = [sno, ...Object.values(rest)];
                                                                 return (
                                                                     <tr key={`stat-${ri}`} className={`transition-colors duration-200 hover:bg-primary/5 ${ri % 2 === 0 ? 'bg-[rgba(255,250,243,0.5)]' : 'bg-white'}`}>
                                                                         {values.map((val, vi) => (
                                                                             <td key={vi} className="px-3 py-3 text-[15px] text-neutral-700 whitespace-nowrap border-b border-primary/5">
-                                                                                {String(val)}
+                                                                                {/* If this is the company/event column (vi===2) and we have a logo, render it */}
+                                                                                {vi === 2 && logo ? (
+                                                                                    <div className="flex items-center gap-3">
+                                                                                        <img src={logo} alt="Company Logo" className="h-6 w-auto object-contain rounded" loading="lazy" />
+                                                                                        <span>{String(val)}</span>
+                                                                                    </div>
+                                                                                ) : (
+                                                                                    String(val)
+                                                                                )}
                                                                             </td>
                                                                         ))}
                                                                     </tr>

@@ -16,7 +16,7 @@ const DepartmentStudentChapters: React.FC<DepartmentStudentChaptersProps> = ({ d
     }
 
     return (
-        <div className="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+        <div className="bg-white p-8 rounded-xl shadow-sm border border-neutral-100">
             <h2 className="text-2xl font-bold font-serif mb-4 text-[#FF5422] uppercase">
                 Students Chapters
             </h2>

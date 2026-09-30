@@ -167,7 +167,7 @@ const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
                                 src={img.src}
                                 alt={img.caption}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
+                            loading="lazy" />
                             {/* Overlay on hover */}
                             <div
                                 className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -206,7 +206,7 @@ const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.85, opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="relative max-w-4xl max-h-[80vh] rounded-2xl overflow-hidden"
+                            className="relative max-w-4xl max-h-[80vh] rounded-xl overflow-hidden"
                             style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}
                             onClick={(e) => e.stopPropagation()}
                         >
@@ -215,7 +215,7 @@ const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
                                 alt={selectedImage.caption}
                                 className="w-full h-full object-contain"
                                 style={{ maxHeight: '70vh' }}
-                            />
+                            loading="lazy" />
                             <div
                                 className="absolute bottom-0 left-0 right-0 px-6 py-4"
                                 style={{ background: 'linear-gradient(to top, rgba(10, 9, 3, 0.9) 0%, transparent 100%)' }}

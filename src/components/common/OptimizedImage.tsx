@@ -25,7 +25,7 @@ function OptimizedImage({
         return (
             // <picture> is inline by default — force it to block so className
             // (e.g. "absolute inset-0 w-full h-full") applies correctly.
-            // Visual styles (filter, transition) live on the <img> itself.
+            // Visual styles (filter, transition) live on the <img loading="lazy"> itself.
             <picture className={className} style={{ display: 'block' }}>
                 <source srcSet={webpSrc} type="image/webp" />
                 <img

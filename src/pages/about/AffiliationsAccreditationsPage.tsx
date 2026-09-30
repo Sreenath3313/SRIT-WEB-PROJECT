@@ -191,13 +191,13 @@ const AffiliationsAccreditationsPage: React.FC = () => {
                         bg-gradient-to-br
                         from-[#0A0903]
                         to-neutral-800
-                        rounded-2xl
+                        rounded-xl
                         p-8
                         overflow-hidden
                         shadow-lg
                     "
                 >
-                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#FF5422]/10 rounded-full blur-2xl" />
+                    
 
                     <div className="relative z-10">
                         <h3 className="text-2xl font-serif font-bold text-white mb-3">

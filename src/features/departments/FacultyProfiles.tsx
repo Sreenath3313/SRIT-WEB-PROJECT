@@ -102,39 +102,24 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                         return (
                             <div
                                 key={index}
-                                className="bg-white rounded-2xl sm:rounded-3xl border border-neutral-200/90 shadow-[0_8px_28px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(255,84,34,0.16)] overflow-hidden flex flex-col justify-between h-[480px] sm:h-[520px] md:h-[550px] transition-all duration-300 hover:-translate-y-2 group"
+                                className="bg-white rounded-xl sm:rounded-xl border border-neutral-200/90 shadow-[0_8px_28px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(255,84,34,0.16)] overflow-hidden flex flex-col justify-between h-[480px] sm:h-[520px] md:h-[550px] transition-all duration-300 hover:-translate-y-2 group"
                             >
-                                {/* Large Diamond-Cut Photo Container */}
-                                <div className="relative w-full h-[240px] sm:h-[270px] md:h-[290px] bg-neutral-100 overflow-hidden shrink-0">
+                                {/* Perfectly Circular Photo Container */}
+                                <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full overflow-hidden mx-auto mt-6 border-4 border-white shadow-md bg-neutral-50 flex items-center justify-center shrink-0 transition-transform duration-500 group-hover:scale-105 relative z-10">
                                     {member.image ? (
                                         <img
                                             src={member.image}
                                             alt={member.name}
-                                            className="w-full h-full object-cover object-[center_22%] transition-transform duration-500 group-hover:scale-105"
+                                            className="w-full h-full object-cover object-center"
                                             loading="lazy"
                                         />
                                     ) : (
                                         <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-neutral-100 via-orange-50/40 to-neutral-200 text-[#FF5422]">
-                                            <div className="w-24 h-24 rounded-full bg-white shadow-md flex items-center justify-center text-3xl font-serif font-bold text-[#FF5422] border-2 border-orange-200">
+                                            <div className="w-full h-full rounded-full flex items-center justify-center text-3xl font-serif font-bold text-[#FF5422]">
                                                 {avatarPlaceholder(member.name)}
                                             </div>
                                         </div>
                                     )}
-
-                                    {/* Balanced Orange Diamond Cut / Chevron Divider - cleanly framing chest/shoulders without cutting neck */}
-                                    <svg
-                                        className="absolute bottom-0 left-0 w-full h-10 sm:h-11 pointer-events-none drop-shadow-sm z-10"
-                                        viewBox="0 0 400 60"
-                                        preserveAspectRatio="none"
-                                    >
-                                        <path d="M 0,60 L 0,22 L 200,48 L 400,22 L 400,60 Z" fill="#ffffff" />
-                                        <path d="M 0,22 L 200,48 L 400,22" fill="none" stroke="#FF5422" strokeWidth="3.2" strokeLinejoin="round" />
-                                    </svg>
-
-                                    {/* Center Orange Badge at the Diamond Apex */}
-                                    <div className="absolute bottom-[2px] left-1/2 -translate-x-1/2 translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#FF5422] border-2 border-white shadow-md flex items-center justify-center text-white">
-                                        <GraduationCap className="w-4 h-4 text-white" strokeWidth={2.4} />
-                                    </div>
                                 </div>
 
                                 {/* Content Details */}
@@ -203,7 +188,7 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                     return (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl sm:rounded-3xl border border-neutral-200/80 hover:border-[#FF5422]/40 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(255,84,34,0.12)] p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 relative overflow-hidden group"
+                            className="bg-white rounded-xl sm:rounded-xl border border-neutral-200/80 hover:border-[#FF5422]/40 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(255,84,34,0.12)] p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 relative overflow-hidden group"
                         >
                             {/* Subtle Top Accent */}
                             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF5422]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -215,7 +200,7 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                                         <img
                                             src={member.image}
                                             alt={member.name}
-                                            className="w-full h-full object-cover object-top"
+                                            className="w-full h-full object-cover object-center"
                                             loading="lazy"
                                         />
                                     ) : (

@@ -114,7 +114,7 @@ const MilestonesPage: React.FC = () => (
                             <div className="absolute left-0 top-2 sm:top-3 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-[2px] sm:border-[3px] border-[#FF5422] bg-white group-hover:bg-[#FF5422] transition-colors shadow-md shadow-orange-100 z-10" />
 
                             {/* Milestone Card */}
-                            <div className="flex-1 bg-white border border-neutral-200 rounded-xl sm:rounded-2xl p-3 sm:p-5 shadow-sm group-hover:shadow-md group-hover:border-[#FF5422]/30 transition-all text-sm sm:text-base">
+                            <div className="flex-1 bg-white border border-neutral-200 rounded-xl sm:rounded-xl p-3 sm:p-5 shadow-sm group-hover:shadow-md group-hover:border-[#FF5422]/30 transition-all text-sm sm:text-base">
                                 {/* Year */}
                                 <span className="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-[#FF5422] to-orange-400 text-white text-[10px] sm:text-xs font-bold rounded-full mb-2 sm:mb-3 shadow-sm">
                                     {milestone.year}

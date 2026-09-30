@@ -48,9 +48,36 @@ export const navLinks: NavLink[] = [
             { label: 'H&S', href: '/academics/h-and-s' }
         ]
     },
-    { label: 'Campus Life', href: '/campus-life/campus', hasDropdown: true, subItems: items('/campus-life', ['Campus', 'Library', 'Transport', 'Hostel', 'Internet', 'Cafeteria', 'Labs', 'Sustainable Campus', 'Sports', 'Computer Center', 'AARAMBH (Orientation Day)', 'SYMPHONY (Annual Day)', 'UDBHAVAAN (Graduation Day)', 'ABHIGYAAN (Achievers Day)', 'Mathematics Day', 'Prabhava (Freshers Day)']) },
+    { 
+        label: 'Campus Life', 
+        href: '/campus-life/campus', 
+        hasDropdown: true, 
+        subItems: [
+            { label: 'Campus', href: '/campus-life/campus' },
+            { label: 'Library', href: '/campus-life/library' },
+            { label: 'Transport', href: '/campus-life/transport' },
+            { label: 'Hostels', href: '/campus-life/hostels' },
+            { label: 'Internet', href: '/campus-life/internet' },
+            { label: 'Cafeteria', href: '/campus-life/cafeteria' },
+            { label: 'Labs', href: '/campus-life/labs' },
+            { label: 'Sustainable Campus', href: '/campus-life/sustainable-campus' },
+            { label: 'Sports', href: '/campus-life/sports' },
+            { label: 'Computer Center', href: '/campus-life/computer-center' },
+            { label: 'Campus Drives', href: '/campus-life/campus-drives' },
+            { label: 'AARAMBH (Orientation Day)', href: '/campus-life/aarambh' },
+            { label: 'SYMPHONY (Annual Day)', href: '/campus-life/symphony' },
+            { label: 'UDBHAVAAN (Graduation Day)', href: '/campus-life/udbhavaan' },
+            { label: 'ABHIGYAAN (Achievers Day)', href: '/campus-life/abhigyaan' },
+            { label: 'Mathematics Day', href: '/campus-life/mathematics-day' },
+            { label: 'Prabhava (Freshers Day)', href: '/campus-life/prabhava' }
+        ] 
+    },
     { label: 'Student Chapters', href: '/student-chapters/chairman-s-club', hasDropdown: true, subItems: items('/student-chapters', ["CHAIRMAN'S CLUB", 'IEI', 'INTERNET SOCIETY', 'IETE', 'ICI', 'ISTE', 'SAE', 'TOASTMASTERS INTERNATIONAL CLUB', 'ENGLISH LANGUAGE CLUB', 'NDLI CLUB', 'PROGRAMMERS CLUB', 'MCCARTHY CLUB']) },
-    { label: 'Examination', href: '/examination/team-members', hasDropdown: true, subItems: items('/examination', ['Team Members', 'Academic Regulations', 'Academic Calendars', 'Notifications & Results', 'Evaluation Procedure', 'Recounting & Re-Evaluation Procedure', 'Malpractice Rules', 'e-Services', 'Exam Committee', 'Results Committee', 'Annual Examination Reports', 'Graduation Day Reports', 'DigiLocker-Marks Memos', 'Previous Question Papers', 'Downloads']) },
+    { label: 'Examination', href: '/examination/team-members', hasDropdown: true, subItems: [
+        ...items('/examination', ['Team Members', 'Academic Regulations', 'Academic Calendars', 'Notifications & Results', 'Evaluation Procedure', 'Recounting & Re-Evaluation Procedure', 'Malpractice Rules']),
+        { label: 'e-Services', href: 'https://sritexams.in/' },
+        ...items('/examination', ['Exam Committee', 'Results Committee', 'Annual Examination Reports', 'Graduation Day Reports', 'DigiLocker-Marks Memos', 'Previous Question Papers', 'Downloads'])
+    ]},
     { label: 'Placements', href: '/placements/about-t-and-p', hasDropdown: true, subItems: items('/placements', ['About T & P', 'Team Members', 'T & P Annual Calendar', 'Training Programs', 'Campus Drives', 'MOUs & Collaborations', 'Placement Statistics', 'e-Learning', 'Internships']) },
     { label: 'Committees', href: '/committees/iqac', hasDropdown: true, subItems: items('/committees', ['IQAC', 'Anti-Ragging Committee', 'Students Grievance Redressal Committee (SGRC)', 'NPTEL- Local Chapter', 'SC & ST Cell', 'College Academic Committee', 'Research & Consultancy Cell', 'Innovations & Entrepreneurship Development Cell', 'Industry Institute Interaction Cell', 'Women Empowerment Cell', 'E-Content Development Cell', 'Internal Complaint Committee', 'Library Committee', 'Student Welfare Committee', 'Extra Curricular Activities Cell', 'Career Guidance and Higher Education Cell', 'Games and Sports Cell']) },
     { label: 'Community Services', href: '/community-services/srit-social-responsibility', hasDropdown: true, subItems: items('/community-services', ['SRIT Social Responsibility', 'NCC', 'NSS', 'Rotaract Club', 'Indian Redcross Society', 'Unnath Bharth Abhiyan', 'Ek Bharat Shreshtha Bharat', 'Viksit Bharat @2047']) },

@@ -59,7 +59,7 @@ const Infrastructure: React.FC = () => {
                                         {item.name}
                                     </h3>
                                     {/* Short line accent */}
-                                    <div className="w-10 h-1 bg-primary mb-3" />
+                                    
                                     <p className="text-white/70 text-[14px] leading-relaxed max-w-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                                         {item.description}
                                     </p>

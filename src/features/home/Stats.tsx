@@ -116,7 +116,7 @@ const Stats: React.FC = () => {
     const isInView = useInView(ref, { once: true, margin: '-80px' });
 
     return (
-        <div ref={ref} className="w-full h-full bg-white rounded-2xl border border-neutral-200/80 shadow-xl shadow-neutral-100/50 p-6 md:p-8 relative flex flex-col">
+        <div ref={ref} className="w-full h-full bg-white rounded-xl border border-neutral-200/80 shadow-xl shadow-neutral-100/50 p-6 md:p-8 relative flex flex-col">
             <div className="flex-1 flex flex-col divide-y divide-neutral-100">
                 {stats.map((stat, i) => (
                     <CounterCard

@@ -16,7 +16,7 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
 
     if (!dept.overview || dept.overview.length === 0) {
         return (
-            <div className="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm text-center">
+            <div className="bg-white rounded-xl p-8 border border-neutral-200/60 shadow-sm text-center">
                 <p className="text-neutral-500">Overview information is not available for this department yet.</p>
             </div>
         );
@@ -29,7 +29,7 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
 
                 {/* Peach/orange numbered accordion — matches reference image */}
                 <div
-                    className="rounded-2xl overflow-hidden shadow-sm"
+                    className="rounded-xl overflow-hidden shadow-sm"
                     style={{ background: '#fdf0e6', border: '1px solid rgba(255,120,50,0.18)' }}
                 >
                     {dept.overview.map((item, index) => {

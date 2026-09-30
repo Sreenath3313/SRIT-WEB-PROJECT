@@ -33,7 +33,7 @@ const minutesOfMeeting = [
 
 const AccordionPanel: React.FC<{ title: string; isOpen: boolean; onToggle: () => void; children: React.ReactNode }> =
     ({ title, isOpen, onToggle, children }) => (
-        <div className="border border-neutral-200 rounded-2xl overflow-hidden shadow-sm">
+        <div className="border border-neutral-200 rounded-xl overflow-hidden shadow-sm">
             <button
                 onClick={onToggle}
                 className="w-full flex items-center justify-between p-5 bg-white hover:bg-orange-50/40 transition-colors text-left group"

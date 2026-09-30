@@ -15,14 +15,14 @@ const PrincipalPage: React.FC = () => {
         <AboutUsLayout title="About Principal">
             <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col lg:flex-row gap-10 items-start">
                 {/* Image & stats */}
-                <motion.div variants={slideLeft} className="w-full lg:w-[260px] shrink-0 space-y-4">
+                <motion.div variants={slideLeft} className="w-full lg:w-[360px] xl:w-[400px] shrink-0 space-y-4">
                     <div className="relative">
-                        <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
+                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
                         <img
                             src="https://www.srit.ac.in/wp-content/uploads/2021/07/princi-img.png"
                             alt="Dr. G. Balakrishna"
-                            className="relative w-full rounded-2xl shadow-xl border-2 border-white object-cover"
-                        />
+                            className="relative w-full rounded-xl shadow-xl border-2 border-white object-cover"
+                        loading="lazy" />
                     </div>
                     <div className="bg-gradient-to-br from-[#0A0903] to-neutral-800 rounded-xl p-4 text-center shadow">
                         <p className="text-white font-bold text-lg">Dr. G. Balakrishna</p>
@@ -124,7 +124,7 @@ const PrincipalPage: React.FC = () => {
                                 },
                             },
                         }}
-                        className="space-y-4 text-neutral-600 leading-relaxed"
+                        className="space-y-6 text-neutral-600 leading-loose text-[15px] sm:text-base"
                     >
                         {[
                             "Dr. G. Balakrishna, the Principal of SRIT, is one of the most distinguished faculty members in any technology institute. Even before he received his Ph.D in the faculty of Electrical & Electronics Engineering from Jawaharlal Nehru Technological University, Kakinada in 2016, he has been one of the leading researchers pushing the frontiers in electrical engineering. He has more than 21 years of experience as a teacher and 13 years in research. He has published 14 research articles in various peer-reviewed national/international journals and has presented 12 papers at various conferences.",

@@ -25,7 +25,7 @@ const itemVariants = {
 };
 
 const HERO_IMAGES = [
-    { src: "/CollegeMain.jpg", webpSrc: "/CollegeMain.webp", alt: "SRIT Main Building" },
+    { src: "/CollegeMain.jpg", webpSrc: undefined, alt: "SRIT Main Building" },
     { src: "/BasketBall.JPG", webpSrc: "/BasketBall.webp", alt: "SRIT Basketball Court" },
     { src: "/Campus.JPG", webpSrc: "/Campus.webp", alt: "SRIT Campus Architecture" },
     { src: "/library.jpg", webpSrc: "/library.webp", alt: "SRIT Central Library" },
@@ -46,13 +46,13 @@ const Hero: React.FC = () => {
     return (
         <section className="flex flex-col lg:grid relative min-h-[100svh] w-full bg-neutral-dark overflow-hidden">
             
-            {/* Background Image Carousel: 9:16 on mobile, Full Bleed on desktop */}
-            <div className="relative w-full aspect-[9/16] shrink-0 lg:aspect-auto lg:h-auto lg:col-start-1 lg:row-start-1 lg:w-full lg:h-full z-0 overflow-hidden">
+            {/* Background Image Carousel: 45vh on mobile, Full Bleed on desktop */}
+            <div className="relative w-full h-[45vh] min-h-[350px] shrink-0 lg:aspect-auto lg:h-auto lg:col-start-1 lg:row-start-1 lg:w-full lg:h-full z-0 overflow-hidden">
                 <AnimatePresence>
                     <motion.div
                         key={currentIndex}
-                        initial={{ opacity: 0, scale: 1.05 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.5, ease: "easeInOut" }}
                         className="absolute inset-0 w-full h-full"
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                             alt={HERO_IMAGES[currentIndex].alt}
                             eager={currentIndex === 0}
                             sizes="100vw"
-                            className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
+                            className="absolute inset-0 w-full h-full object-cover object-center"
                         />
                     </motion.div>
                 </AnimatePresence>
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
                 >
                     {/* Location Badge */}
                     <motion.div variants={itemVariants} className="flex items-center gap-4 mb-6 lg:mb-10 mt-12 lg:mt-0">
-                        <span className="w-12 h-1 bg-primary" />
+                        
                         <span className="text-white font-bold tracking-[0.25em] uppercase text-xs drop-shadow-sm">
                             Anantapur, AP
                         </span>

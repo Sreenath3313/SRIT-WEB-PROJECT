@@ -97,7 +97,7 @@ const LeadershipVision: React.FC = () => {
                         {...cardAnimation(0)}
                         className="
                             bg-white
-                            rounded-3xl
+                            rounded-xl
                             p-6
                             sm:p-7
                             border
@@ -126,7 +126,7 @@ const LeadershipVision: React.FC = () => {
                                     h-40
                                     sm:w-44
                                     sm:h-44
-                                    rounded-2xl
+                                    rounded-xl
                                     overflow-hidden
                                     border
                                     border-neutral-200
@@ -148,7 +148,7 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-center
                                     "
-                                />
+                                loading="lazy" />
                             </div>
 
 
@@ -222,7 +222,7 @@ const LeadershipVision: React.FC = () => {
                         {...cardAnimation(0.1)}
                         className="
                             bg-white
-                            rounded-3xl
+                            rounded-xl
                             p-6
                             sm:p-7
                             border
@@ -251,7 +251,7 @@ const LeadershipVision: React.FC = () => {
                                     h-40
                                     sm:w-44
                                     sm:h-44
-                                    rounded-2xl
+                                    rounded-xl
                                     overflow-hidden
                                     border
                                     border-neutral-200
@@ -273,7 +273,7 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-center
                                     "
-                                />
+                                loading="lazy" />
                             </div>
 
 
@@ -345,7 +345,7 @@ const LeadershipVision: React.FC = () => {
                         {...cardAnimation(0.2)}
                         className="
                             bg-white
-                            rounded-3xl
+                            rounded-xl
                             p-6
                             sm:p-7
                             border
@@ -374,7 +374,7 @@ const LeadershipVision: React.FC = () => {
                                     h-40
                                     sm:w-44
                                     sm:h-44
-                                    rounded-2xl
+                                    rounded-xl
                                     overflow-hidden
                                     border
                                     border-neutral-200
@@ -396,7 +396,7 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-center
                                     "
-                                />
+                                loading="lazy" />
                             </div>
 
 
@@ -468,7 +468,7 @@ const LeadershipVision: React.FC = () => {
                         {...cardAnimation(0.3)}
                         className="
                             bg-white
-                            rounded-3xl
+                            rounded-xl
                             p-6
                             sm:p-7
                             border
@@ -497,7 +497,7 @@ const LeadershipVision: React.FC = () => {
                                     h-40
                                     sm:w-44
                                     sm:h-44
-                                    rounded-2xl
+                                    rounded-xl
                                     overflow-hidden
                                     border
                                     border-neutral-200
@@ -519,7 +519,7 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-center
                                     "
-                                />
+                                loading="lazy" />
                             </div>
 
 

@@ -187,10 +187,10 @@ const Navbar: React.FC = () => {
         <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col bg-white shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
 
             {/* TOP UTILITY BAR */}
-            <div className="w-full bg-[#FF5422] text-white py-1.5 lg:py-0 lg:h-[28px] flex items-center justify-center relative z-50">
-                <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1600px] px-2 gap-1.5 lg:gap-4 lg:h-full">
+            <div className="w-full bg-[#FF5422] text-white py-1.5 min-h-[28px] flex items-center justify-center relative z-50">
+                <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1600px] px-2 gap-1.5 lg:gap-4 h-full flex-wrap">
 
-                    <div className="flex items-center justify-center gap-2 xl:gap-3 flex-wrap lg:h-full">
+                    <div className="flex items-center justify-center gap-2 xl:gap-3 flex-wrap h-full py-1">
 
                         <a
                             href="tel:+919515611111"
@@ -210,38 +210,38 @@ const Navbar: React.FC = () => {
                             hr@srit.ac.in
                         </a>
 
-                        <span className="hidden lg:block w-px h-3 bg-white/35" />
+                        <span className="hidden md:block w-px h-3 bg-white/35" />
 
                         <a
                             href="#"
-                            className="hidden lg:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="hidden md:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <UserCheck className="w-3 h-3" />
                             Faculty Login
                         </a>
 
-                        <span className="hidden lg:block w-px h-3 bg-white/35" />
+                        <span className="hidden md:block w-px h-3 bg-white/35" />
 
                         <a
                             href="#"
-                            className="hidden lg:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="hidden md:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <User className="w-3 h-3" />
                             Student Login
                         </a>
 
-                        <span className="hidden lg:block w-px h-3 bg-white/35" />
+                        <span className="hidden md:block w-px h-3 bg-white/35" />
 
                         <a
                             href="#"
-                            className="hidden lg:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="hidden md:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
                         >
                             <GraduationCap className="w-3 h-3" />
                             Degree Verification
                         </a>
                     </div>
                     
-                    <div className="hidden lg:flex items-center justify-center gap-2 xl:gap-3 flex-wrap lg:h-full">
+                    <div className="hidden md:flex items-center justify-center gap-2 xl:gap-3 flex-wrap h-full py-1">
                         <a
                             href="#"
                             className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
@@ -285,10 +285,10 @@ const Navbar: React.FC = () => {
 
             {/* MAIN NAVIGATION */}
             <div className="w-full bg-white relative z-50 flex justify-center border-b border-neutral-100">
-                <div className="flex items-center justify-center w-full max-w-[1500px] px-3 md:px-4 h-[46px]">
+                <div className="flex flex-wrap items-center justify-center w-full max-w-[1500px] px-3 md:px-4 min-h-[46px] py-1">
 
                     {/* DESKTOP NAVIGATION */}
-                    <div className="hidden lg:flex relative items-center justify-center h-full gap-0.5 xl:gap-1 2xl:gap-1.5 w-full max-w-[1500px] overflow-visible">
+                    <div className="hidden lg:flex relative items-center justify-center min-h-full gap-0.5 xl:gap-1 w-full max-w-[1500px] overflow-visible flex-wrap">
                         <Link
                             to="/"
                             className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-[#FF5422] hover:text-white transition-all duration-200 mr-1 shrink-0 overflow-hidden border border-neutral-200 shadow-sm"
@@ -307,10 +307,19 @@ const Navbar: React.FC = () => {
                         ))}
                     </div>
 
+                    {/* MOBILE LOGO */}
+                    <Link
+                        to="/"
+                        className="lg:hidden w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-700 transition-all duration-200 shrink-0 overflow-hidden border border-neutral-200 shadow-sm mr-auto"
+                        title="Home"
+                    >
+                        <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" />
+                    </Link>
+
                     {/* MOBILE MENU BUTTON */}
                     <button
                         onClick={() => setMobileOpen(!mobileOpen)}
-                        className="lg:hidden relative w-10 h-10 flex items-center justify-center text-slate-800 ml-auto"
+                        className="lg:hidden relative w-10 h-10 flex items-center justify-center text-slate-800"
                         aria-label="Toggle menu"
                     >
                         <span
@@ -345,7 +354,7 @@ const Navbar: React.FC = () => {
                         <div className="absolute -right-[10px] top-0 bottom-0 w-[20px] bg-[#E54817] transform -skew-x-[25deg]" />
                     </div>
 
-                    <div className="flex-1 h-full overflow-hidden relative group">
+                    <div className="flex-1 min-w-0 h-full overflow-hidden relative group">
                         <div className="flex h-full items-center whitespace-nowrap animate-marquee group-hover:[animation-play-state:paused] gap-8">
 
                             {[1, 2, 3].map((group) => (
@@ -420,7 +429,7 @@ const Navbar: React.FC = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="lg:hidden absolute top-full left-0 right-0 h-screen bg-black/50 -z-10"
+                            className="lg:hidden absolute top-full left-0 right-0 h-screen bg-black/50 z-30"
                             onClick={() => setMobileOpen(false)}
                         />
                         <motion.div
@@ -439,7 +448,7 @@ const Navbar: React.FC = () => {
                         transition={{
                             duration: 0.25,
                         }}
-                        className="lg:hidden overflow-hidden bg-white shadow-xl border-t border-neutral-100 absolute top-full left-0 right-0"
+                        className="lg:hidden overflow-hidden bg-white shadow-xl border-t border-neutral-100 absolute top-full left-0 right-0 z-40"
                     >
                         <div className="flex flex-col gap-1 pb-5 pt-2 px-4 max-h-[80vh] overflow-y-auto">
 
@@ -497,7 +506,7 @@ const Navbar: React.FC = () => {
                             ))}
                             
                             {/* Mobile Quick Links from Utility Bar */}
-                            <div className="mt-4 pt-4 border-t border-neutral-200 flex flex-col gap-3">
+                            <div className="mt-4 pt-4 border-t border-neutral-200 flex flex-col gap-3 md:hidden">
                                 <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
                                     <UserCheck className="w-4 h-4 text-primary" />
                                     Faculty Login

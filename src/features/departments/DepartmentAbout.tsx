@@ -24,8 +24,8 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                                 <span className="w-10 h-[3px] bg-primary rounded-full"></span>
                                 ABOUT THE DEPARTMENT
                             </h2>
-                            <div className="relative flex-1 rounded-2xl overflow-hidden shadow-md max-w-2xl min-h-[250px]">
-                                <img src="/cse_image.jpg" alt={dept.name} className="absolute inset-0 w-full h-full object-cover" />
+                            <div className="relative flex-1 rounded-xl overflow-hidden shadow-md max-w-2xl min-h-[250px]">
+                                <img src="/cse_image.jpg" alt={dept.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                                 <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 text-[#FF5422] text-[11px] font-bold tracking-[0.18em] uppercase rounded shadow-sm">
                                     FEATURED PROGRAM
                                 </span>
@@ -72,13 +72,13 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-6">
                         {/* Vision & Mission */}
                         <div className="flex flex-col gap-3">
-                            <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
                                 <h3 className="text-[#FF5422] font-black text-base lg:text-lg uppercase tracking-[0.2em] mb-2">Vision</h3>
                                 <p className="text-neutral-700 text-[15px] lg:text-[16px] leading-[1.7] text-justify">
                                     {dept.vision}
                                 </p>
                             </div>
-                            <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
                                 <h3 className="text-[#FF5422] font-black text-base lg:text-lg uppercase tracking-[0.2em] mb-2">Mission</h3>
                                 <div className="text-neutral-700 text-[15px] lg:text-[16px] leading-[1.7] space-y-4 text-justify">
                                     {dept.mission.map((m) => (
@@ -91,7 +91,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                         </div>
 
                         {/* Achievements */}
-                        <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100 h-full">
+                        <div className="bg-white rounded-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100 h-full">
                             <h3 className="font-serif text-2xl lg:text-3xl font-black flex items-center gap-3 mb-6 text-neutral-dark">
                                 <span className="w-2 h-2 rounded-full bg-primary"></span>
                                 ACHIEVEMENTS
@@ -112,13 +112,13 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                     {/* Bottom Section: HOD Profile & Contact Us Grid */}
                     <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] gap-4 lg:gap-6">
                         {/* HOD Profile */}
-                        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100 flex flex-col sm:flex-row gap-8 items-center sm:items-start h-full">
+                        <div className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100 flex flex-col sm:flex-row gap-8 items-center sm:items-start h-full">
                             {dept.hodMessage.image ? (
                                 <img
                                     src={dept.hodMessage.image}
                                     alt={dept.hodMessage.name}
                                     className="w-28 h-28 lg:w-40 lg:h-40 rounded-full object-cover shrink-0 shadow-lg"
-                                />
+                                loading="lazy" />
                             ) : (
                                 <div className="w-28 h-28 lg:w-40 lg:h-40 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 shadow-inner">
                                     <span className="text-5xl text-neutral-300 font-serif">{dept.hodMessage.name.charAt(0)}</span>
@@ -139,7 +139,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                         </div>
 
                         {/* Contact Us Card */}
-                        <div className="bg-primary text-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl shadow-primary/20 flex flex-col h-full justify-between">
+                        <div className="bg-primary text-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-xl shadow-primary/20 flex flex-col h-full justify-between">
                             <div>
                                 <h3 className="font-serif text-2xl lg:text-3xl font-black flex items-center gap-3 mb-8">
                                     <span className="w-2 h-2 rounded-full bg-white"></span>
@@ -187,9 +187,9 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                                 ABOUT THE DEPARTMENT
                             </h2>
 
-                            <div className="mt-6 mb-8 bg-white rounded-2xl shadow-md border border-neutral-100 overflow-hidden flex flex-col lg:flex-row">
+                            <div className="mt-6 mb-8 bg-white rounded-xl shadow-md border border-neutral-100 overflow-hidden flex flex-col lg:flex-row">
                                 <div className="lg:w-5/12 relative aspect-[4/3] lg:aspect-auto overflow-hidden">
-                                    <img src={dept.image} alt={dept.name} className="w-full h-full object-cover" />
+                                    <img src={dept.image} alt={dept.name} className="w-full h-full object-cover" loading="lazy" />
                                     <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase rounded shadow-sm">
                                         Featured Program
                                     </span>
@@ -252,7 +252,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                             </div>
                         </div>
 
-                        <div className="bg-neutral-100 rounded-3xl p-6 sm:p-8 lg:p-12">
+                        <div className="bg-neutral-100 rounded-xl p-6 sm:p-8 lg:p-12">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <div>
                                     <h3 className="text-primary font-black text-sm lg:text-[15px] uppercase tracking-[0.2em] mb-5">Vision</h3>
@@ -267,9 +267,9 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100 flex flex-col sm:flex-row gap-8 lg:gap-10 items-center sm:items-start">
+                        <div className="bg-white rounded-xl p-6 sm:p-8 lg:p-12 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100 flex flex-col sm:flex-row gap-8 lg:gap-10 items-center sm:items-start">
                             {dept.hodMessage.image ? (
-                                <img src={dept.hodMessage.image} alt={dept.hodMessage.name} className="w-32 h-32 lg:w-44 lg:h-44 rounded-full object-cover shrink-0 shadow-lg" />
+                                <img src={dept.hodMessage.image} alt={dept.hodMessage.name} className="w-32 h-32 lg:w-44 lg:h-44 rounded-full object-cover shrink-0 shadow-lg" loading="lazy" />
                             ) : (
                                 <div className="w-32 h-32 lg:w-44 lg:h-44 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 shadow-inner">
                                     <span className="text-6xl text-neutral-300 font-serif">{dept.hodMessage.name.charAt(0)}</span>
@@ -286,7 +286,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
 
                     {/* Right Column */}
                     <div className="space-y-8">
-                        <div className="bg-primary text-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl shadow-primary/30">
+                        <div className="bg-primary text-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-2xl shadow-primary/30">
                             <h3 className="font-serif text-2xl font-bold flex items-center gap-3 mb-10">
                                 <span className="w-2 h-2 rounded-full bg-white"></span>
                                 CONTACT US
@@ -319,7 +319,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                             </button>
                         </div>
 
-                        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
+                        <div className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
                             <h3 className="font-serif text-2xl font-bold flex items-center gap-3 mb-8 text-neutral-dark">
                                 <span className="w-2 h-2 rounded-full bg-primary"></span>
                                 ACHIEVEMENTS

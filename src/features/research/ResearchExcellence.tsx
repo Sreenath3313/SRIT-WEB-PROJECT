@@ -58,7 +58,7 @@ const ResearchExcellence: React.FC = () => {
                                     src={facility.image}
                                     alt={facility.title}
                                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
-                                />
+                                loading="lazy" />
                             </div>
                             <div className="p-8">
                                 <h3 className="font-serif text-xl font-semibold text-neutral-dark mb-3 group-hover:text-primary-dark transition-colors duration-300">

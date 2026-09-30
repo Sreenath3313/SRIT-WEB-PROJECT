@@ -49,7 +49,7 @@ const DepartmentProjects: React.FC<DepartmentProjectsProps> = ({ dept }) => {
                                 src={project.image}
                                 alt={project.title}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                            loading="lazy" />
                         </div>
                         <div className="p-6">
                             <div className="flex items-center justify-between mb-3">

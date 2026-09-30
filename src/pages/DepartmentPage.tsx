@@ -473,6 +473,9 @@ const DepartmentPage: React.FC = () => {
 
                         </aside>
 
+                        
+                        
+
                         {/* MAIN CONTENT */}
                         <div className="flex-1 min-w-0">
                             <AnimatePresence mode="wait" initial={false}>
@@ -539,7 +542,7 @@ const DepartmentPage: React.FC = () => {
                                             src={dept.image}
                                             alt={dept.fullName}
                                             className="w-full h-full object-cover"
-                                        />
+                                        loading="lazy" />
 
                                         {/* Cinematic Overlay */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />

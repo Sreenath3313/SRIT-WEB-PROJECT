@@ -67,7 +67,7 @@ const Research: React.FC = () => {
                             src={themes[0].image}
                             alt={themes[0].title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+                        loading="lazy" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10" />
 
                         {/* Index number */}
@@ -99,7 +99,7 @@ const Research: React.FC = () => {
                                     src={theme.image}
                                     alt={theme.title}
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                                loading="lazy" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
 
                                 {/* Index number */}

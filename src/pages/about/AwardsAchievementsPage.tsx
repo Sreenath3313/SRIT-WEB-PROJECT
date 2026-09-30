@@ -32,7 +32,7 @@ const AwardsAchievementsPage: React.FC = () => (
                         variants={scaleIn}
                         whileHover={{ y: -6, scale: 1.02 }}
                         transition={{ type: 'spring', stiffness: 300 }}
-                        className="relative bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden group hover:shadow-xl transition-shadow"
+                        className="relative bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden group hover:shadow-xl transition-shadow"
                     >
                         {/* Top gradient bar */}
                         <div className={`h-1.5 w-full bg-gradient-to-r ${award.color}`} />
@@ -47,7 +47,7 @@ const AwardsAchievementsPage: React.FC = () => (
                             <p className="text-neutral-500 text-sm leading-relaxed">{award.description}</p>
                         </div>
                         {/* Hover glow */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-0 group-hover:opacity-[0.03] transition-opacity rounded-2xl`} />
+                        <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-0 group-hover:opacity-[0.03] transition-opacity rounded-xl`} />
                     </motion.div>
                 ))}
             </motion.div>

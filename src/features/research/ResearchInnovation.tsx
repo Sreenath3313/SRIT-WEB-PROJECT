@@ -41,7 +41,7 @@ const ResearchInnovation: React.FC = () => {
                                     src={theme.image}
                                     alt={theme.title}
                                     className="w-full h-56 object-cover group-hover:scale-[1.04] transition-transform duration-700"
-                                />
+                                loading="lazy" />
                             </div>
                             <h3 className="font-serif text-xl font-semibold text-neutral-dark mb-3 group-hover:text-primary transition-colors duration-300">
                                 {theme.title}

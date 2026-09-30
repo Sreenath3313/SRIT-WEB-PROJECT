@@ -66,7 +66,7 @@ const SocialMediaFeeds: React.FC = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.7, delay: 0.2 }}
-                        className="bg-white rounded-2xl border border-neutral-200 shadow-sm flex flex-col w-full max-w-[420px] overflow-hidden h-[500px] md:h-[600px] relative"
+                        className="bg-white rounded-xl border border-neutral-200 shadow-sm flex flex-col w-full max-w-[420px] overflow-hidden h-[500px] md:h-[600px] relative"
                     >
                         <div className="absolute top-0 left-0 w-full h-full flex flex-col pt-4 overflow-hidden bg-neutral-50">
                             <div className="flex justify-center mb-2 shrink-0 z-10 w-full px-4">
@@ -86,7 +86,7 @@ const SocialMediaFeeds: React.FC = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.7, delay: 0.3 }}
-                        className="bg-white rounded-2xl border border-neutral-200 shadow-sm flex flex-col w-full max-w-[420px] overflow-hidden h-[500px] md:h-[600px] relative"
+                        className="bg-white rounded-xl border border-neutral-200 shadow-sm flex flex-col w-full max-w-[420px] overflow-hidden h-[500px] md:h-[600px] relative"
                     >
                         <div className="absolute top-0 left-0 w-full h-full flex flex-col pt-4 overflow-hidden bg-neutral-50">
                             <div className="flex justify-center mb-2 shrink-0 z-10 w-full px-4">
@@ -114,7 +114,7 @@ const SocialMediaFeeds: React.FC = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.7, delay: 0.4 }}
-                        className="bg-white rounded-2xl border border-neutral-200 shadow-sm flex flex-col w-full max-w-[420px] overflow-hidden h-[500px] md:h-[600px] relative"
+                        className="bg-white rounded-xl border border-neutral-200 shadow-sm flex flex-col w-full max-w-[420px] overflow-hidden h-[500px] md:h-[600px] relative"
                     >
                         <div className="absolute top-0 left-0 w-full h-full flex flex-col pt-4 overflow-hidden bg-neutral-50">
                             <div className="flex justify-center mb-2 shrink-0 z-10 w-full px-4">

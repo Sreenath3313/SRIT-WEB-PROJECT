@@ -8,17 +8,17 @@ interface FooterLink {
 
 const columns: Record<string, FooterLink[]> = {
     About: [
-        { label: 'Overview', href: 'https://www.srit.ac.in/overview/', external: true },
-        { label: 'Vision & Mission', href: 'https://www.srit.ac.in/vision-mission/', external: true },
-        { label: 'Chairperson', href: 'https://www.srit.ac.in/about-chairperson/', external: true },
-        { label: 'Principal', href: 'https://www.srit.ac.in/principal/', external: true },
+        { label: 'Overview', href: '/about/overview' },
+        { label: 'Vision & Mission', href: '/about/vision-mission' },
+        { label: 'Chairperson', href: '/about/chairperson' },
+        { label: 'Principal', href: '/about/principal' },
     ],
 
     Academics: [
-        { label: 'Courses Offered', href: 'https://www.srit.ac.in/courses-offered/', external: true },
-        { label: 'Fee Structure', href: 'https://www.srit.ac.in/fee-structure/', external: true },
-        { label: 'Scholarships', href: 'https://www.srit.ac.in/scholarships/', external: true },
-        { label: 'Library', href: 'https://www.srit.ac.in/library/', external: true },
+        { label: 'Courses Offered', href: '/admissions/courses-offered' },
+        { label: 'Fee Structure', href: '/admissions/fee-structure' },
+        { label: 'Scholarships', href: '/admissions/scholarships' },
+        { label: 'Library', href: '/campus-life/library' },
         { label: 'NDLI Club', href: '/ndli-club' },
         { label: 'Women Empowerment Cell', href: '/women-empowerment-cell' },
     ],
@@ -34,9 +34,9 @@ const columns: Record<string, FooterLink[]> = {
     ],
 
     Connect: [
-        { label: 'Admissions', href: 'https://www.srit.ac.in/admission-procedure/', external: true },
-        { label: 'Contact Us', href: 'https://www.srit.ac.in/contact-us/', external: true },
-        { label: 'Previous Ranks', href: 'https://www.srit.ac.in/previousranks/', external: true },
+        { label: 'Admissions', href: '/admissions/admission-procedure' },
+        { label: 'Contact Us', href: '/#contact' },
+        { label: 'Previous Ranks', href: '/admissions/eamcet-ranks' },
     ],
 };
 

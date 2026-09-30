@@ -13,7 +13,7 @@ const DepartmentOutcome: React.FC = () => {
                     Programme Outcomes (POs)
                 </h3>
                 <div
-                    className="rounded-2xl overflow-hidden shadow-sm"
+                    className="rounded-xl overflow-hidden shadow-sm"
                     style={{ background: '#fdf0e6', border: '1px solid rgba(255,120,50,0.18)' }}
                 >
                     {[
@@ -70,7 +70,7 @@ const DepartmentOutcome: React.FC = () => {
                     Programme Specific Outcomes (PSOs)
                 </h3>
                 <div
-                    className="rounded-2xl overflow-hidden shadow-sm"
+                    className="rounded-xl overflow-hidden shadow-sm"
                     style={{ background: '#fdf0e6', border: '1px solid rgba(255,120,50,0.18)' }}
                 >
                     {[

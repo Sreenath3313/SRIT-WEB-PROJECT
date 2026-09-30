@@ -62,7 +62,7 @@ const InstitutionalOverview: React.FC = () => {
                                 src="/culturalevent.jpg"
                                 alt="SRIT students on campus"
                                 className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-                            />
+                            loading="lazy" />
                         </div>
                         {/* Accent Block */}
                         <div className="absolute -bottom-6 -left-6 bg-primary-dark text-white p-8 rounded-sm hidden lg:block">
