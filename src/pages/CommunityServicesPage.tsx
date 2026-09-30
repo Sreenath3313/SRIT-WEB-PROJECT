@@ -946,11 +946,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <button
                                         type="button"
                                         onClick={() => setActiveMainTab('vision')}
-                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${
-                                            activeMainTab === 'vision'
-                                                ? 'bg-[#1e293b] text-white shadow-md'
-                                                : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
-                                        }`}
+                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'vision'
+                                            ? 'bg-[#1e293b] text-white shadow-md'
+                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            }`}
                                     >
                                         <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'vision' ? 'text-white' : 'text-[#f67437]'}`}>
                                             <Eye size={22} className="stroke-[2.5]" />
@@ -965,11 +964,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <button
                                         type="button"
                                         onClick={() => setActiveMainTab('mission')}
-                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${
-                                            activeMainTab === 'mission'
-                                                ? 'bg-[#1e293b] text-white shadow-md'
-                                                : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
-                                        }`}
+                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'mission'
+                                            ? 'bg-[#1e293b] text-white shadow-md'
+                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            }`}
                                     >
                                         <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'mission' ? 'text-white' : 'text-[#f67437]'}`}>
                                             <Target size={22} className="stroke-[2.5]" />
@@ -984,11 +982,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <button
                                         type="button"
                                         onClick={() => setActiveMainTab('objectives')}
-                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${
-                                            activeMainTab === 'objectives'
-                                                ? 'bg-[#1e293b] text-white shadow-md'
-                                                : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
-                                        }`}
+                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'objectives'
+                                            ? 'bg-[#1e293b] text-white shadow-md'
+                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            }`}
                                     >
                                         <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'objectives' ? 'text-white' : 'text-[#f67437]'}`}>
                                             <Flag size={22} className="stroke-[2.5]" />
@@ -1003,11 +1000,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <button
                                         type="button"
                                         onClick={() => setActiveMainTab('team')}
-                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${
-                                            activeMainTab === 'team'
-                                                ? 'bg-[#1e293b] text-white shadow-md'
-                                                : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
-                                        }`}
+                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'team'
+                                            ? 'bg-[#1e293b] text-white shadow-md'
+                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            }`}
                                     >
                                         <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'team' ? 'text-white' : 'text-[#f67437]'}`}>
                                             <Users size={22} className="stroke-[2.5]" />
@@ -1022,11 +1018,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <button
                                         type="button"
                                         onClick={() => setActiveMainTab('activities')}
-                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${
-                                            activeMainTab === 'activities'
-                                                ? 'bg-[#1e293b] text-white shadow-md'
-                                                : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
-                                        }`}
+                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'activities'
+                                            ? 'bg-[#1e293b] text-white shadow-md'
+                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            }`}
                                     >
                                         <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'activities' ? 'text-white' : 'text-[#f67437]'}`}>
                                             <Calendar size={22} className="stroke-[2.5]" />
@@ -1041,11 +1036,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <button
                                         type="button"
                                         onClick={() => setActiveMainTab('contact')}
-                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${
-                                            activeMainTab === 'contact'
-                                                ? 'bg-[#1e293b] text-white shadow-md'
-                                                : 'bg-[#1e293b] text-[#f67437] hover:text-white hover:bg-slate-900'
-                                        }`}
+                                        className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'contact'
+                                            ? 'bg-[#1e293b] text-white shadow-md'
+                                            : 'bg-[#1e293b] text-[#f67437] hover:text-white hover:bg-slate-900'
+                                            }`}
                                     >
                                         <div className="mb-1.5 transition-transform group-hover:scale-110 text-[#f67437]">
                                             <Phone size={22} className="stroke-[2.5]" />
@@ -1283,9 +1277,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         <img
                                             src="/ncc_logo.png"
                                             alt="National Cadet Corps (NCC)"
-                                            className="h-8 sm:h-9 w-auto max-w-[34px] sm:max-w-[38px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
+                                            className="h-20 sm:h-24 w-auto max-w-[90px] sm:max-w-[105px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
                                             onError={(e) => {
-                                                (e.target as HTMLImageElement).src = 'https://www.srit.ac.in/wp-content/uploads/2021/10/ncc-logo-768x725.png';
+                                                (e.target as HTMLImageElement).src =
+                                                    'https://www.srit.ac.in/wp-content/uploads/2021/10/ncc-logo-768x725.png';
                                             }}
                                         />
                                     </div>
@@ -1322,9 +1317,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <span>{item.label}</span>
                                                     <ChevronDown
                                                         size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${
-                                                            isOpen ? 'rotate-180' : ''
-                                                        }`}
+                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                            }`}
                                                     />
                                                 </button>
 
@@ -1343,7 +1337,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     </p>
                                                                 </div>
                                                                 <div className="p-3.5 rounded-xl bg-orange-50/70 border border-orange-200 text-[#ea580c] font-bold text-xs sm:text-sm flex items-center gap-2">
-                                                                    
+
                                                                     <span>Motto: Unity and Discipline (एकता और अनुशासन)</span>
                                                                 </div>
                                                                 <div className="pt-2">
@@ -1864,11 +1858,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                             key={dotIdx}
                                                             type="button"
                                                             onClick={() => setNccSliderIndex(dotIdx)}
-                                                            className={`h-2 rounded-full transition-all cursor-pointer ${
-                                                                nccSliderIndex === dotIdx
-                                                                    ? 'w-6 bg-[#FF5422]'
-                                                                    : 'w-2 bg-neutral-300 hover:bg-neutral-400'
-                                                            }`}
+                                                            className={`h-2 rounded-full transition-all cursor-pointer ${nccSliderIndex === dotIdx
+                                                                ? 'w-6 bg-[#FF5422]'
+                                                                : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                                                                }`}
                                                             aria-label={`Go to slide ${dotIdx + 1}`}
                                                         />
                                                     ))}
@@ -1906,7 +1899,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     src={selectedNccImage.url}
                                                     alt={selectedNccImage.title}
                                                     className="max-w-full max-h-[72vh] w-auto h-auto object-contain rounded-lg shadow-lg"
-                                                loading="lazy" />
+                                                    loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -1923,7 +1916,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         <img
                                             src="/nss_logo.jpg"
                                             alt="National Service Scheme (NSS)"
-                                            className="h-9 sm:h-10 w-auto max-w-[40px] sm:max-w-[46px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
+                                            className="h-20 sm:h-24 w-auto max-w-[90px] sm:max-w-[105px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).src = 'https://www.srit.ac.in/wp-content/uploads/2021/08/NSS-img-300x300.jpg';
                                             }}
@@ -1955,9 +1948,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <span>{item.label}</span>
                                                     <ChevronDown
                                                         size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${
-                                                            isOpen ? 'rotate-180' : ''
-                                                        }`}
+                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                            }`}
                                                     />
                                                 </button>
 
@@ -2285,11 +2277,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 key={dotIdx}
                                                                 type="button"
                                                                 onClick={() => setNssSliderIndex(dotIdx)}
-                                                                className={`h-2 rounded-full transition-all cursor-pointer ${
-                                                                    nssSliderIndex === dotIdx
-                                                                        ? 'w-6 bg-[#FF5422]'
-                                                                        : 'w-2 bg-neutral-300 hover:bg-neutral-400'
-                                                                }`}
+                                                                className={`h-2 rounded-full transition-all cursor-pointer ${nssSliderIndex === dotIdx
+                                                                    ? 'w-6 bg-[#FF5422]'
+                                                                    : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                                                                    }`}
                                                                 aria-label={`Go to slide ${dotIdx + 1}`}
                                                             />
                                                         ))}
@@ -2328,7 +2319,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     src={selectedNssImage.url}
                                                     alt={selectedNssImage.title}
                                                     className="max-w-full max-h-[72vh] w-auto h-auto object-contain rounded-lg shadow-lg"
-                                                loading="lazy" />
+                                                    loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -2345,7 +2336,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         <img
                                             src="/rotaract_logo.jpg"
                                             alt="Rotaract Club of SRIT"
-                                            className="h-9 sm:h-10 w-auto max-w-[42px] sm:max-w-[48px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
+                                            className="h-20 sm:h-24 w-auto max-w-[90px] sm:max-w-[105px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).src = 'https://www.srit.ac.in/wp-content/uploads/2023/02/rotaract-e1676441890818.jpg';
                                             }}
@@ -2375,9 +2366,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <span>{item.label}</span>
                                                     <ChevronDown
                                                         size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${
-                                                            isOpen ? 'rotate-180' : ''
-                                                        }`}
+                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                            }`}
                                                     />
                                                 </button>
 
@@ -2773,11 +2763,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 key={dotIdx}
                                                                 type="button"
                                                                 onClick={() => setRotaractSliderIndex(dotIdx)}
-                                                                className={`h-2 rounded-full transition-all cursor-pointer ${
-                                                                    rotaractSliderIndex === dotIdx
-                                                                        ? 'w-6 bg-[#FF5422]'
-                                                                        : 'w-2 bg-neutral-300 hover:bg-neutral-400'
-                                                                }`}
+                                                                className={`h-2 rounded-full transition-all cursor-pointer ${rotaractSliderIndex === dotIdx
+                                                                    ? 'w-6 bg-[#FF5422]'
+                                                                    : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                                                                    }`}
                                                                 aria-label={`Go to slide ${dotIdx + 1}`}
                                                             />
                                                         ))}
@@ -2816,7 +2805,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     src={selectedRotaractImage.url}
                                                     alt={selectedRotaractImage.title}
                                                     className="max-w-full max-h-[72vh] w-auto h-auto object-contain rounded-lg shadow-lg"
-                                                loading="lazy" />
+                                                    loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -2833,7 +2822,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         <img
                                             src="/ircs_logo.png"
                                             alt="Indian Red Cross Society"
-                                            className="h-10 sm:h-12 w-auto max-w-[60px] sm:max-w-[70px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
+                                            className="h-20 sm:h-24 w-auto max-w-[105px] sm:max-w-[120px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).src = 'https://www.srit.ac.in/wp-content/uploads/2021/08/IRCS-img-300x245.png';
                                             }}
@@ -2864,9 +2853,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <span>{item.label}</span>
                                                     <ChevronDown
                                                         size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${
-                                                            isOpen ? 'rotate-180' : ''
-                                                        }`}
+                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                            }`}
                                                     />
                                                 </button>
 
@@ -2988,9 +2976,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         ].map((principle, pIdx) => (
                                                                             <div
                                                                                 key={pIdx}
-                                                                                className={`p-4 rounded-xl border border-neutral-200/90 bg-neutral-50/50 hover:bg-orange-50/30 hover:border-orange-200 transition-all duration-200 flex flex-col justify-between ${
-                                                                                    pIdx === 6 ? 'md:col-span-2' : ''
-                                                                                }`}
+                                                                                className={`p-4 rounded-xl border border-neutral-200/90 bg-neutral-50/50 hover:bg-orange-50/30 hover:border-orange-200 transition-all duration-200 flex flex-col justify-between ${pIdx === 6 ? 'md:col-span-2' : ''
+                                                                                    }`}
                                                                             >
                                                                                 <div className="space-y-3">
                                                                                     <div className="flex items-center gap-3">
@@ -3254,11 +3241,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 key={dotIdx}
                                                                 type="button"
                                                                 onClick={() => setIrcsSliderIndex(dotIdx)}
-                                                                className={`h-2 rounded-full transition-all cursor-pointer ${
-                                                                    ircsSliderIndex === dotIdx
-                                                                        ? 'w-6 bg-[#FF5422]'
-                                                                        : 'w-2 bg-neutral-300 hover:bg-neutral-400'
-                                                                }`}
+                                                                className={`h-2 rounded-full transition-all cursor-pointer ${ircsSliderIndex === dotIdx
+                                                                    ? 'w-6 bg-[#FF5422]'
+                                                                    : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                                                                    }`}
                                                                 aria-label={`Go to slide ${dotIdx + 1}`}
                                                             />
                                                         ))}
@@ -3297,7 +3283,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     src={selectedIrcsImage.url}
                                                     alt={selectedIrcsImage.title}
                                                     className="max-w-full max-h-[72vh] w-auto h-auto object-contain rounded-lg shadow-lg"
-                                                loading="lazy" />
+                                                    loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -3314,7 +3300,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         <img
                                             src="/uba_logo.jpg"
                                             alt="Unnat Bharat Abhiyan"
-                                            className="h-10 sm:h-12 w-auto max-w-[80px] sm:max-w-[90px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
+                                            className="h-20 sm:h-24 w-auto max-w-[120px] sm:max-w-[140px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).src = 'https://www.srit.ac.in/wp-content/uploads/2021/08/unnat-bhrt-abhiyn.jpg';
                                             }}
@@ -3344,9 +3330,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <span>{item.label}</span>
                                                     <ChevronDown
                                                         size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${
-                                                            isOpen ? 'rotate-180' : ''
-                                                        }`}
+                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                            }`}
                                                     />
                                                 </button>
 
@@ -3732,11 +3717,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 key={dotIdx}
                                                                 type="button"
                                                                 onClick={() => setUbaSliderIndex(dotIdx)}
-                                                                className={`h-2 rounded-full transition-all cursor-pointer ${
-                                                                    ubaSliderIndex === dotIdx
-                                                                        ? 'w-6 bg-[#FF5422]'
-                                                                        : 'w-2 bg-neutral-300 hover:bg-neutral-400'
-                                                                }`}
+                                                                className={`h-2 rounded-full transition-all cursor-pointer ${ubaSliderIndex === dotIdx
+                                                                    ? 'w-6 bg-[#FF5422]'
+                                                                    : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                                                                    }`}
                                                                 aria-label={`Go to slide ${dotIdx + 1}`}
                                                             />
                                                         ))}
@@ -3775,7 +3759,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     src={selectedUbaImage.url}
                                                     alt={selectedUbaImage.title}
                                                     className="max-w-full max-h-[72vh] w-auto h-auto object-contain rounded-lg shadow-lg"
-                                                loading="lazy" />
+                                                    loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -3792,7 +3776,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         <img
                                             src="/ebsb_logo.png"
                                             alt="Ek Bharat Shreshtha Bharat - SRIT"
-                                            className="h-10 sm:h-12 w-auto max-w-[220px] sm:max-w-[280px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
+                                            className="h-20 sm:h-24 w-auto max-w-[300px] sm:max-w-[370px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).src = 'https://www.srit.ac.in/wp-content/uploads/2021/08/Ekbarath-SRIT.png';
                                             }}
@@ -3822,9 +3806,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <span>{item.label}</span>
                                                     <ChevronDown
                                                         size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${
-                                                            isOpen ? 'rotate-180' : ''
-                                                        }`}
+                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                            }`}
                                                     />
                                                 </button>
 
@@ -4178,7 +4161,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     src={selectedEbsbImage.url}
                                                     alt={selectedEbsbImage.title}
                                                     className="max-w-full max-h-[72vh] w-auto h-auto object-contain rounded-lg shadow-lg"
-                                                loading="lazy" />
+                                                    loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -4195,7 +4178,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         <img
                                             src="/viksit_bharat_2047.jpg"
                                             alt="Viksit Bharat @2047 - SRIT"
-                                            className="h-12 sm:h-14 w-auto max-w-[280px] sm:max-w-[340px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
+                                            className="h-20 sm:h-24 w-auto max-w-[360px] sm:max-w-[440px] object-contain drop-shadow-2xs transition-transform hover:scale-105"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).src = 'https://www.srit.ac.in/wp-content/uploads/2023/12/viksit-bharat-2047.jpg';
                                             }}
@@ -4226,9 +4209,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <span>{item.label}</span>
                                                     <ChevronDown
                                                         size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${
-                                                            isOpen ? 'rotate-180' : ''
-                                                        }`}
+                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                            }`}
                                                     />
                                                 </button>
 
@@ -4558,511 +4540,511 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     )}
                                 </div>
 
-                        {/* === Vision & Mission Two-Column Cards === */}
-                        <div className="grid sm:grid-cols-2 gap-4">
-                            {/* Vision Card */}
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 shadow-xs space-y-2.5">
-                                <div className="flex items-center gap-2 text-[#FF5422]">
-                                    <Eye size={18} />
-                                    <h3 className="font-serif text-base sm:text-lg font-black text-neutral-900">
-                                        Our Vision
-                                    </h3>
-                                </div>
-                                <div className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
-                                    {activeSection.vision}
-                                </div>
-                            </div>
-
-                            {/* Mission Card */}
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 shadow-xs space-y-2.5">
-                                <div className="flex items-center gap-2 text-[#FF5422]">
-                                    <Target size={18} />
-                                    <h3 className="font-serif text-base sm:text-lg font-black text-neutral-900">
-                                        Our Mission
-                                    </h3>
-                                </div>
-                                <div className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
-                                    {activeSection.mission}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* === Objectives / Goals / Cardinal Principles === */}
-                        {(activeSection.objectives || activeSection.goals || activeSection.principles) && (
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
-                                <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                    <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                        <Compass size={20} className="text-[#FF5422]" />
-                                        <span>
-                                            {activeSection.principles ? 'Fundamental Principles & Objectives' : activeSection.goals ? 'Strategic Goals & Objectives' : 'Core Objectives'}
-                                        </span>
-                                    </h2>
-                                </div>
-
-                                <div className="grid sm:grid-cols-2 gap-3">
-                                    {(activeSection.principles || activeSection.goals || activeSection.objectives || []).map((point, pIdx) => (
-                                        <div
-                                            key={pIdx}
-                                            className="flex items-start gap-3 p-3.5 rounded-lg border border-neutral-100 bg-neutral-50/70 hover:bg-orange-50/30 transition-colors"
-                                        >
-                                            <CheckCircle2 size={16} className="text-[#FF5422] shrink-0 mt-0.5" />
-                                            <span className="text-xs sm:text-[13.5px] text-neutral-800 leading-relaxed font-medium">
-                                                {point}
-                                            </span>
+                                {/* === Vision & Mission Two-Column Cards === */}
+                                <div className="grid sm:grid-cols-2 gap-4">
+                                    {/* Vision Card */}
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 shadow-xs space-y-2.5">
+                                        <div className="flex items-center gap-2 text-[#FF5422]">
+                                            <Eye size={18} />
+                                            <h3 className="font-serif text-base sm:text-lg font-black text-neutral-900">
+                                                Our Vision
+                                            </h3>
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* === Standard Operating Procedure (For Viksit Bharat / Specific Cells) === */}
-                        {activeSection.sopPoints && (
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
-                                <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                    <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                        <FileText size={20} className="text-[#FF5422]" />
-                                        <span>Standard Operating Procedure (SOP)</span>
-                                    </h2>
-                                </div>
-
-                                <div className="space-y-2.5">
-                                    {activeSection.sopPoints.map((step, sIdx) => (
-                                        <div
-                                            key={sIdx}
-                                            className="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 flex items-start gap-3"
-                                        >
-                                            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#FF5422] text-white text-xs font-black">
-                                                {sIdx + 1}
-                                            </span>
-                                            <p className="text-xs sm:text-sm text-neutral-800 leading-relaxed font-medium">
-                                                {step}
-                                            </p>
+                                        <div className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
+                                            {activeSection.vision}
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                                    </div>
 
-                        {/* === Registration Card (For Viksit Bharat / Portal Links) === */}
-                        {activeSection.registrationInfo && (
-                            <div className="rounded-xl border-2 border-orange-200 bg-white p-5 sm:p-7 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
-                                <div className="space-y-2">
-                                    <span className="text-[11px] font-bold text-[#FF5422] uppercase tracking-wider block">
-                                        Official Portal Registration
-                                    </span>
-                                    <h3 className="font-serif text-lg sm:text-xl font-black text-neutral-900">
-                                        {activeSection.registrationInfo.title}
-                                    </h3>
-                                    <p className="text-xs sm:text-sm text-neutral-600 w-full leading-relaxed">
-                                        {activeSection.registrationInfo.description}
-                                    </p>
+                                    {/* Mission Card */}
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 shadow-xs space-y-2.5">
+                                        <div className="flex items-center gap-2 text-[#FF5422]">
+                                            <Target size={18} />
+                                            <h3 className="font-serif text-base sm:text-lg font-black text-neutral-900">
+                                                Our Mission
+                                            </h3>
+                                        </div>
+                                        <div className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
+                                            {activeSection.mission}
+                                        </div>
+                                    </div>
                                 </div>
-                                <a
-                                    href={activeSection.registrationInfo.linkUrl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#FF5422] hover:bg-[#e04515] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/30 transition-all hover:scale-[1.02]"
-                                >
-                                    <span>{activeSection.registrationInfo.linkText}</span>
-                                    <ExternalLink size={15} />
-                                </a>
-                            </div>
-                        )}
 
-                        {/* === Advisory & Executive Committee Members (Exact Table from SRIT) === */}
-                        {(activeSection.advisoryCommittee || activeSection.executiveTeam) && (
-                            <div className="space-y-4">
-                                {activeSection.advisoryCommittee && (
-                                    <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full">
-                                        <div className="px-5 py-4 bg-black text-white flex items-center justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422]" />
-                                                <span className="font-serif font-black text-base sm:text-lg tracking-wide text-white">
-                                                    Advisory Committee & Institutional Leadership
+                                {/* === Objectives / Goals / Cardinal Principles === */}
+                                {(activeSection.objectives || activeSection.goals || activeSection.principles) && (
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
+                                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
+                                                <Compass size={20} className="text-[#FF5422]" />
+                                                <span>
+                                                    {activeSection.principles ? 'Fundamental Principles & Objectives' : activeSection.goals ? 'Strategic Goals & Objectives' : 'Core Objectives'}
                                                 </span>
-                                            </div>
-                                            <span className="text-[11px] font-bold text-orange-300 bg-[#FF5422]/20 px-2.5 py-0.5 rounded-full border border-[#FF5422]/40">
-                                                {activeSection.advisoryCommittee.length} Members
-                                            </span>
+                                            </h2>
                                         </div>
 
-                                        <div className="overflow-x-auto">
-                                            <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                                                <thead>
-                                                    <tr className="bg-orange-50/90 text-neutral-900 font-bold border-b border-orange-200">
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pl-5 sm:pl-6 w-16 text-center">
-                                                            S.No
-                                                        </th>
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
-                                                            Name & Affiliation
-                                                        </th>
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
-                                                            Designation
-                                                        </th>
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pr-5 sm:pr-6">
-                                                            Role in Cell
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody className="divide-y divide-orange-100 text-neutral-700">
-                                                    {activeSection.advisoryCommittee.map((m, mIdx) => (
-                                                        <tr key={mIdx} className="hover:bg-orange-50/40 transition-colors odd:bg-white even:bg-neutral-50/40">
-                                                            <td className="px-4 py-3.5 pl-5 sm:pl-6 text-center font-bold text-neutral-900 w-16">
-                                                                {m.sno}
-                                                            </td>
-                                                            <td className="px-4 py-3.5 font-bold text-neutral-900">
-                                                                <span className="text-[#FF5422]">{m.name}</span>
-                                                            </td>
-                                                            <td className="px-4 py-3.5 text-neutral-700 font-medium">
-                                                                {m.designation}
-                                                            </td>
-                                                            <td className="px-4 py-3.5 pr-5 sm:pr-6 font-semibold text-neutral-900">
-                                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-neutral-100 text-neutral-800 border border-neutral-200">
-                                                                    {m.role}
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    ))}
-                                                </tbody>
-                                            </table>
+                                        <div className="grid sm:grid-cols-2 gap-3">
+                                            {(activeSection.principles || activeSection.goals || activeSection.objectives || []).map((point, pIdx) => (
+                                                <div
+                                                    key={pIdx}
+                                                    className="flex items-start gap-3 p-3.5 rounded-lg border border-neutral-100 bg-neutral-50/70 hover:bg-orange-50/30 transition-colors"
+                                                >
+                                                    <CheckCircle2 size={16} className="text-[#FF5422] shrink-0 mt-0.5" />
+                                                    <span className="text-xs sm:text-[13.5px] text-neutral-800 leading-relaxed font-medium">
+                                                        {point}
+                                                    </span>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 )}
 
-                                {activeSection.executiveTeam && (
-                                    <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full">
-                                        <div className="px-5 py-4 bg-[#111827] text-white flex items-center justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422]" />
-                                                <span className="font-serif font-black text-base sm:text-lg tracking-wide text-white">
-                                                    Departmental Coordinators & Executive Team
-                                                </span>
-                                            </div>
-                                            <span className="text-[11px] font-bold text-orange-300 bg-[#FF5422]/20 px-2.5 py-0.5 rounded-full border border-[#FF5422]/40">
-                                                {activeSection.executiveTeam.length} Coordinators
-                                            </span>
+                                {/* === Standard Operating Procedure (For Viksit Bharat / Specific Cells) === */}
+                                {activeSection.sopPoints && (
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
+                                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
+                                                <FileText size={20} className="text-[#FF5422]" />
+                                                <span>Standard Operating Procedure (SOP)</span>
+                                            </h2>
                                         </div>
 
-                                        <div className="overflow-x-auto">
-                                            <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                                                <thead>
-                                                    <tr className="bg-orange-50/90 text-neutral-900 font-bold border-b border-orange-200">
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pl-5 sm:pl-6 w-16 text-center">
-                                                            S.No
-                                                        </th>
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
-                                                            Coordinator Name
-                                                        </th>
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
-                                                            Designation
-                                                        </th>
-                                                        <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pr-5 sm:pr-6">
-                                                            Department
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody className="divide-y divide-orange-100 text-neutral-700">
-                                                    {activeSection.executiveTeam.map((m, mIdx) => (
-                                                        <tr key={mIdx} className="hover:bg-orange-50/40 transition-colors odd:bg-white even:bg-neutral-50/40">
-                                                            <td className="px-4 py-3.5 pl-5 sm:pl-6 text-center font-bold text-neutral-900 w-16">
-                                                                {m.sno}
-                                                            </td>
-                                                            <td className="px-4 py-3.5 font-bold text-neutral-900">
-                                                                <span className="text-[#FF5422]">{m.name}</span>
-                                                            </td>
-                                                            <td className="px-4 py-3.5 text-neutral-700 font-medium">
-                                                                {m.designation}
-                                                            </td>
-                                                            <td className="px-4 py-3.5 pr-5 sm:pr-6 font-semibold text-neutral-900">
-                                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-50 text-[#FF5422] border border-orange-200">
-                                                                    {m.dept || m.role}
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    ))}
-                                                </tbody>
-                                            </table>
+                                        <div className="space-y-2.5">
+                                            {activeSection.sopPoints.map((step, sIdx) => (
+                                                <div
+                                                    key={sIdx}
+                                                    className="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 flex items-start gap-3"
+                                                >
+                                                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#FF5422] text-white text-xs font-black">
+                                                        {sIdx + 1}
+                                                    </span>
+                                                    <p className="text-xs sm:text-sm text-neutral-800 leading-relaxed font-medium">
+                                                        {step}
+                                                    </p>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 )}
-                            </div>
-                        )}
 
-                        {/* === Official Live Spreadsheets & Data Accordions (Matching SRIT Portal) === */}
-                        {activeSection.spreadsheets && activeSection.spreadsheets.length > 0 && (
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                    <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900">
-                                        Official Records & Live Spreadsheets
-                                    </h2>
-                                </div>
-
-                                {activeSection.spreadsheets.map((sheet, sIdx) => {
-                                    const isOpen = !!openSpreadsheets[sIdx];
-                                    return (
-                                        <div
-                                            key={sIdx}
-                                            className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full"
-                                        >
-                                            <button
-                                                onClick={() => toggleSpreadsheet(sIdx)}
-                                                className="w-full flex items-center justify-between px-5 py-4 bg-black hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <span className="text-[#FF5422] font-black text-xl leading-none">
-                                                        {isOpen ? '−' : '+'}
-                                                    </span>
-                                                    <span className="font-serif font-black text-base sm:text-lg tracking-wide text-[#FF5422]">
-                                                        {sheet.title}
-                                                    </span>
-                                                </div>
-                                                <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
-                                                    {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                                </div>
-                                            </button>
-
-                                            {isOpen && (
-                                                <div className="p-3 sm:p-5 bg-white space-y-3">
-                                                    {sheet.description && (
-                                                        <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-lg bg-orange-50/70 border border-orange-200/70 text-xs">
-                                                            <span className="text-neutral-700 font-medium">
-                                                                {sheet.description}
-                                                            </span>
-                                                            <a
-                                                                href={sheet.sheetUrl.replace('&amp;', '&')}
-                                                                target="_blank"
-                                                                rel="noreferrer"
-                                                                className="inline-flex items-center gap-1.5 font-bold text-white bg-[#FF5422] hover:bg-[#e04515] px-3 py-1 rounded-md transition-colors"
-                                                            >
-                                                                <span>Open Full Screen</span>
-                                                                <ExternalLink size={12} />
-                                                            </a>
-                                                        </div>
-                                                    )}
-
-                                                    <div className="w-full h-[540px] sm:h-[620px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">
-                                                        <iframe
-                                                            title={sheet.title}
-                                                            src={sheet.sheetUrl.replace('&amp;', '&')}
-                                                            className="w-full h-full border-0"
-                                                            loading="lazy"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        )}
-
-                        {/* === Activity Highlights (For UBA, EBSB, Social Responsibility) === */}
-                        {activeSection.activityList && activeSection.activityList.length > 0 && (
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
-                                <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                    <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                        <Calendar size={20} className="text-[#FF5422]" />
-                                        <span>Key Community & Field Activities</span>
-                                    </h2>
-                                </div>
-
-                                <div className="grid sm:grid-cols-2 gap-3.5">
-                                    {activeSection.activityList.map((act, aIdx) => (
-                                        <div
-                                            key={aIdx}
-                                            className="p-4 rounded-xl border border-neutral-100 bg-neutral-50/70 hover:bg-neutral-50 hover:border-[#FF5422]/30 transition-all duration-200 space-y-1.5"
-                                        >
-                                            <div className="flex items-center justify-between gap-2">
-                                                <h4 className="font-bold text-sm sm:text-[15px] text-neutral-900 flex items-center gap-2">
-                                                    <CheckCircle2 size={15} className="text-[#FF5422] shrink-0" />
-                                                    <span>{act.title}</span>
-                                                </h4>
-                                                {act.year && (
-                                                    <span className="text-[10px] font-bold text-[#FF5422] bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200 shrink-0">
-                                                        {act.year}
-                                                    </span>
-                                                )}
-                                            </div>
-                                            <p className="text-xs sm:text-[13px] text-neutral-600 leading-relaxed pl-6">
-                                                {act.desc}
+                                {/* === Registration Card (For Viksit Bharat / Portal Links) === */}
+                                {activeSection.registrationInfo && (
+                                    <div className="rounded-xl border-2 border-orange-200 bg-white p-5 sm:p-7 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+                                        <div className="space-y-2">
+                                            <span className="text-[11px] font-bold text-[#FF5422] uppercase tracking-wider block">
+                                                Official Portal Registration
+                                            </span>
+                                            <h3 className="font-serif text-lg sm:text-xl font-black text-neutral-900">
+                                                {activeSection.registrationInfo.title}
+                                            </h3>
+                                            <p className="text-xs sm:text-sm text-neutral-600 w-full leading-relaxed">
+                                                {activeSection.registrationInfo.description}
                                             </p>
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* === Career Opportunities & Defense Incentives (For NCC) === */}
-                        {activeSection.careerBenefits && (
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
-                                <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                    <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                        <Award size={20} className="text-[#FF5422]" />
-                                        <span>Career Incentives & Defense Opportunities</span>
-                                    </h2>
-                                </div>
-
-                                <div className="grid sm:grid-cols-2 gap-3">
-                                    {activeSection.careerBenefits.map((ben, bIdx) => (
-                                        <div
-                                            key={bIdx}
-                                            className="p-3.5 rounded-xl border border-orange-200/80 bg-orange-50/40 space-y-1"
-                                        >
-                                            <div className="font-bold text-xs sm:text-sm text-neutral-900 flex items-center gap-2">
-                                                <CheckCircle2 size={15} className="text-[#FF5422] shrink-0" />
-                                                <span>Incentive #{bIdx + 1}</span>
-                                            </div>
-                                            <p className="text-xs text-neutral-700 leading-relaxed pl-5">
-                                                {ben}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* === Visual Gallery === */}
-                        {activeSection.gallery && activeSection.gallery.length > 0 && (
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
-                                <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
-                                    <div className="flex items-center gap-2.5">
-                                        <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                        <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900">
-                                            Visual Gallery & Photographic Highlights
-                                        </h2>
-                                    </div>
-                                    <span className="text-xs font-bold text-[#FF5422] bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200">
-                                        {activeSection.gallery.length} Photographs
-                                    </span>
-                                </div>
-
-                                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                    {activeSection.gallery.map((img, gi) => (
-                                        <div
-                                            key={gi}
-                                            className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-neutral-100 shadow-xs hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300"
-                                        >
-                                            <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900">
-                                                <img
-                                                    src={img.url}
-                                                    alt={img.caption || activeSection.title}
-                                                    loading="lazy"
-                                                    decoding="async"
-                                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                    onError={(e) => {
-                                                        (e.target as HTMLImageElement).src = '/Campus.JPG';
-                                                    }}
-                                                />
-                                            </div>
-                                            {img.caption && (
-                                                <div className="p-3 bg-white text-[11px] font-semibold text-neutral-700 leading-snug border-t border-neutral-100">
-                                                    {img.caption}
-                                                </div>
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* === Official Downloads === */}
-                        {activeSection.downloads && activeSection.downloads.length > 0 && (
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
-                                <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                    <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                        <Download size={20} className="text-[#FF5422]" />
-                                        <span>Official Documents & Handbooks</span>
-                                    </h2>
-                                </div>
-
-                                <div className="grid sm:grid-cols-2 gap-3">
-                                    {activeSection.downloads.map((doc, dIdx) => (
                                         <a
-                                            key={dIdx}
-                                            href={doc.url}
+                                            href={activeSection.registrationInfo.linkUrl}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="flex items-center justify-between p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 hover:bg-orange-50/40 hover:border-orange-300 transition-colors"
+                                            className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#FF5422] hover:bg-[#e04515] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/30 transition-all hover:scale-[1.02]"
                                         >
-                                            <div className="flex items-center gap-3">
-                                                <FileText size={18} className="text-[#FF5422]" />
-                                                <span className="text-xs sm:text-sm font-bold text-neutral-900">{doc.title}</span>
-                                            </div>
-                                            <span className="text-[10px] font-bold text-neutral-600 bg-white border border-neutral-200 px-2 py-0.5 rounded">
-                                                {doc.type}
-                                            </span>
+                                            <span>{activeSection.registrationInfo.linkText}</span>
+                                            <ExternalLink size={15} />
                                         </a>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                                    </div>
+                                )}
 
-                        {/* === Contact Us Information Cards === */}
-                        {activeSection.contacts && activeSection.contacts.length > 0 && (
-                            <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
-                                <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                    <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                        <Phone size={20} className="text-[#FF5422]" />
-                                        <span>Contact & Coordination Cell</span>
-                                    </h2>
-                                </div>
+                                {/* === Advisory & Executive Committee Members (Exact Table from SRIT) === */}
+                                {(activeSection.advisoryCommittee || activeSection.executiveTeam) && (
+                                    <div className="space-y-4">
+                                        {activeSection.advisoryCommittee && (
+                                            <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full">
+                                                <div className="px-5 py-4 bg-black text-white flex items-center justify-between">
+                                                    <div className="flex items-center gap-3">
+                                                        <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422]" />
+                                                        <span className="font-serif font-black text-base sm:text-lg tracking-wide text-white">
+                                                            Advisory Committee & Institutional Leadership
+                                                        </span>
+                                                    </div>
+                                                    <span className="text-[11px] font-bold text-orange-300 bg-[#FF5422]/20 px-2.5 py-0.5 rounded-full border border-[#FF5422]/40">
+                                                        {activeSection.advisoryCommittee.length} Members
+                                                    </span>
+                                                </div>
 
-                                <div className="grid sm:grid-cols-2 gap-4">
-                                    {activeSection.contacts.map((c, ci) => (
-                                        <div
-                                            key={ci}
-                                            className="rounded-xl border border-neutral-200 bg-neutral-50 p-4 sm:p-5 space-y-2.5 hover:border-orange-300 transition-colors"
-                                        >
-                                            <div className="flex items-center justify-between">
-                                                <span className="text-[10px] font-bold text-[#FF5422] uppercase tracking-wider">
-                                                    {c.role}
-                                                </span>
-                                                <span className="text-[11px] font-semibold text-neutral-500">
-                                                    SRIT Ananthapuramu
-                                                </span>
+                                                <div className="overflow-x-auto">
+                                                    <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                                                        <thead>
+                                                            <tr className="bg-orange-50/90 text-neutral-900 font-bold border-b border-orange-200">
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pl-5 sm:pl-6 w-16 text-center">
+                                                                    S.No
+                                                                </th>
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
+                                                                    Name & Affiliation
+                                                                </th>
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
+                                                                    Designation
+                                                                </th>
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pr-5 sm:pr-6">
+                                                                    Role in Cell
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody className="divide-y divide-orange-100 text-neutral-700">
+                                                            {activeSection.advisoryCommittee.map((m, mIdx) => (
+                                                                <tr key={mIdx} className="hover:bg-orange-50/40 transition-colors odd:bg-white even:bg-neutral-50/40">
+                                                                    <td className="px-4 py-3.5 pl-5 sm:pl-6 text-center font-bold text-neutral-900 w-16">
+                                                                        {m.sno}
+                                                                    </td>
+                                                                    <td className="px-4 py-3.5 font-bold text-neutral-900">
+                                                                        <span className="text-[#FF5422]">{m.name}</span>
+                                                                    </td>
+                                                                    <td className="px-4 py-3.5 text-neutral-700 font-medium">
+                                                                        {m.designation}
+                                                                    </td>
+                                                                    <td className="px-4 py-3.5 pr-5 sm:pr-6 font-semibold text-neutral-900">
+                                                                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-neutral-100 text-neutral-800 border border-neutral-200">
+                                                                            {m.role}
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            ))}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
-                                            <h4 className="font-serif font-bold text-sm sm:text-base text-neutral-900">
-                                                {c.name}
-                                            </h4>
-                                            {c.dept && (
-                                                <p className="text-xs text-neutral-600 font-medium">
-                                                    {c.dept}
-                                                </p>
-                                            )}
+                                        )}
 
-                                            <div className="pt-2 border-t border-neutral-200/70 flex flex-wrap gap-2 text-xs">
-                                                {c.phone && (
-                                                    <a
-                                                        href={`tel:${c.phone}`}
-                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF5422] hover:text-white transition-colors font-medium shadow-2xs"
-                                                    >
-                                                        <Phone size={12} />
-                                                        <span>{c.phone}</span>
-                                                    </a>
-                                                )}
-                                                {c.email && (
-                                                    <a
-                                                        href={`mailto:${c.email}`}
-                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF5422] hover:text-white transition-colors font-medium shadow-2xs"
-                                                    >
-                                                        <Mail size={12} />
-                                                        <span>{c.email}</span>
-                                                    </a>
-                                                )}
+                                        {activeSection.executiveTeam && (
+                                            <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full">
+                                                <div className="px-5 py-4 bg-[#111827] text-white flex items-center justify-between">
+                                                    <div className="flex items-center gap-3">
+                                                        <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422]" />
+                                                        <span className="font-serif font-black text-base sm:text-lg tracking-wide text-white">
+                                                            Departmental Coordinators & Executive Team
+                                                        </span>
+                                                    </div>
+                                                    <span className="text-[11px] font-bold text-orange-300 bg-[#FF5422]/20 px-2.5 py-0.5 rounded-full border border-[#FF5422]/40">
+                                                        {activeSection.executiveTeam.length} Coordinators
+                                                    </span>
+                                                </div>
+
+                                                <div className="overflow-x-auto">
+                                                    <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                                                        <thead>
+                                                            <tr className="bg-orange-50/90 text-neutral-900 font-bold border-b border-orange-200">
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pl-5 sm:pl-6 w-16 text-center">
+                                                                    S.No
+                                                                </th>
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
+                                                                    Coordinator Name
+                                                                </th>
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950">
+                                                                    Designation
+                                                                </th>
+                                                                <th className="px-4 py-3 text-[11px] font-black uppercase tracking-wider text-orange-950 pr-5 sm:pr-6">
+                                                                    Department
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody className="divide-y divide-orange-100 text-neutral-700">
+                                                            {activeSection.executiveTeam.map((m, mIdx) => (
+                                                                <tr key={mIdx} className="hover:bg-orange-50/40 transition-colors odd:bg-white even:bg-neutral-50/40">
+                                                                    <td className="px-4 py-3.5 pl-5 sm:pl-6 text-center font-bold text-neutral-900 w-16">
+                                                                        {m.sno}
+                                                                    </td>
+                                                                    <td className="px-4 py-3.5 font-bold text-neutral-900">
+                                                                        <span className="text-[#FF5422]">{m.name}</span>
+                                                                    </td>
+                                                                    <td className="px-4 py-3.5 text-neutral-700 font-medium">
+                                                                        {m.designation}
+                                                                    </td>
+                                                                    <td className="px-4 py-3.5 pr-5 sm:pr-6 font-semibold text-neutral-900">
+                                                                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-50 text-[#FF5422] border border-orange-200">
+                                                                            {m.dept || m.role}
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            ))}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
+                                        )}
+                                    </div>
+                                )}
+
+                                {/* === Official Live Spreadsheets & Data Accordions (Matching SRIT Portal) === */}
+                                {activeSection.spreadsheets && activeSection.spreadsheets.length > 0 && (
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900">
+                                                Official Records & Live Spreadsheets
+                                            </h2>
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                        </>
+
+                                        {activeSection.spreadsheets.map((sheet, sIdx) => {
+                                            const isOpen = !!openSpreadsheets[sIdx];
+                                            return (
+                                                <div
+                                                    key={sIdx}
+                                                    className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full"
+                                                >
+                                                    <button
+                                                        onClick={() => toggleSpreadsheet(sIdx)}
+                                                        className="w-full flex items-center justify-between px-5 py-4 bg-black hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
+                                                    >
+                                                        <div className="flex items-center gap-3">
+                                                            <span className="text-[#FF5422] font-black text-xl leading-none">
+                                                                {isOpen ? '−' : '+'}
+                                                            </span>
+                                                            <span className="font-serif font-black text-base sm:text-lg tracking-wide text-[#FF5422]">
+                                                                {sheet.title}
+                                                            </span>
+                                                        </div>
+                                                        <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
+                                                            {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                                                        </div>
+                                                    </button>
+
+                                                    {isOpen && (
+                                                        <div className="p-3 sm:p-5 bg-white space-y-3">
+                                                            {sheet.description && (
+                                                                <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-lg bg-orange-50/70 border border-orange-200/70 text-xs">
+                                                                    <span className="text-neutral-700 font-medium">
+                                                                        {sheet.description}
+                                                                    </span>
+                                                                    <a
+                                                                        href={sheet.sheetUrl.replace('&amp;', '&')}
+                                                                        target="_blank"
+                                                                        rel="noreferrer"
+                                                                        className="inline-flex items-center gap-1.5 font-bold text-white bg-[#FF5422] hover:bg-[#e04515] px-3 py-1 rounded-md transition-colors"
+                                                                    >
+                                                                        <span>Open Full Screen</span>
+                                                                        <ExternalLink size={12} />
+                                                                    </a>
+                                                                </div>
+                                                            )}
+
+                                                            <div className="w-full h-[540px] sm:h-[620px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">
+                                                                <iframe
+                                                                    title={sheet.title}
+                                                                    src={sheet.sheetUrl.replace('&amp;', '&')}
+                                                                    className="w-full h-full border-0"
+                                                                    loading="lazy"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+
+                                {/* === Activity Highlights (For UBA, EBSB, Social Responsibility) === */}
+                                {activeSection.activityList && activeSection.activityList.length > 0 && (
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
+                                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
+                                                <Calendar size={20} className="text-[#FF5422]" />
+                                                <span>Key Community & Field Activities</span>
+                                            </h2>
+                                        </div>
+
+                                        <div className="grid sm:grid-cols-2 gap-3.5">
+                                            {activeSection.activityList.map((act, aIdx) => (
+                                                <div
+                                                    key={aIdx}
+                                                    className="p-4 rounded-xl border border-neutral-100 bg-neutral-50/70 hover:bg-neutral-50 hover:border-[#FF5422]/30 transition-all duration-200 space-y-1.5"
+                                                >
+                                                    <div className="flex items-center justify-between gap-2">
+                                                        <h4 className="font-bold text-sm sm:text-[15px] text-neutral-900 flex items-center gap-2">
+                                                            <CheckCircle2 size={15} className="text-[#FF5422] shrink-0" />
+                                                            <span>{act.title}</span>
+                                                        </h4>
+                                                        {act.year && (
+                                                            <span className="text-[10px] font-bold text-[#FF5422] bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200 shrink-0">
+                                                                {act.year}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                    <p className="text-xs sm:text-[13px] text-neutral-600 leading-relaxed pl-6">
+                                                        {act.desc}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* === Career Opportunities & Defense Incentives (For NCC) === */}
+                                {activeSection.careerBenefits && (
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
+                                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
+                                                <Award size={20} className="text-[#FF5422]" />
+                                                <span>Career Incentives & Defense Opportunities</span>
+                                            </h2>
+                                        </div>
+
+                                        <div className="grid sm:grid-cols-2 gap-3">
+                                            {activeSection.careerBenefits.map((ben, bIdx) => (
+                                                <div
+                                                    key={bIdx}
+                                                    className="p-3.5 rounded-xl border border-orange-200/80 bg-orange-50/40 space-y-1"
+                                                >
+                                                    <div className="font-bold text-xs sm:text-sm text-neutral-900 flex items-center gap-2">
+                                                        <CheckCircle2 size={15} className="text-[#FF5422] shrink-0" />
+                                                        <span>Incentive #{bIdx + 1}</span>
+                                                    </div>
+                                                    <p className="text-xs text-neutral-700 leading-relaxed pl-5">
+                                                        {ben}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* === Visual Gallery === */}
+                                {activeSection.gallery && activeSection.gallery.length > 0 && (
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
+                                        <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
+                                            <div className="flex items-center gap-2.5">
+                                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                                <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900">
+                                                    Visual Gallery & Photographic Highlights
+                                                </h2>
+                                            </div>
+                                            <span className="text-xs font-bold text-[#FF5422] bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200">
+                                                {activeSection.gallery.length} Photographs
+                                            </span>
+                                        </div>
+
+                                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                            {activeSection.gallery.map((img, gi) => (
+                                                <div
+                                                    key={gi}
+                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-neutral-100 shadow-xs hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300"
+                                                >
+                                                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900">
+                                                        <img
+                                                            src={img.url}
+                                                            alt={img.caption || activeSection.title}
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                                                            onError={(e) => {
+                                                                (e.target as HTMLImageElement).src = '/Campus.JPG';
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    {img.caption && (
+                                                        <div className="p-3 bg-white text-[11px] font-semibold text-neutral-700 leading-snug border-t border-neutral-100">
+                                                            {img.caption}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* === Official Downloads === */}
+                                {activeSection.downloads && activeSection.downloads.length > 0 && (
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
+                                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
+                                                <Download size={20} className="text-[#FF5422]" />
+                                                <span>Official Documents & Handbooks</span>
+                                            </h2>
+                                        </div>
+
+                                        <div className="grid sm:grid-cols-2 gap-3">
+                                            {activeSection.downloads.map((doc, dIdx) => (
+                                                <a
+                                                    key={dIdx}
+                                                    href={doc.url}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="flex items-center justify-between p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 hover:bg-orange-50/40 hover:border-orange-300 transition-colors"
+                                                >
+                                                    <div className="flex items-center gap-3">
+                                                        <FileText size={18} className="text-[#FF5422]" />
+                                                        <span className="text-xs sm:text-sm font-bold text-neutral-900">{doc.title}</span>
+                                                    </div>
+                                                    <span className="text-[10px] font-bold text-neutral-600 bg-white border border-neutral-200 px-2 py-0.5 rounded">
+                                                        {doc.type}
+                                                    </span>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* === Contact Us Information Cards === */}
+                                {activeSection.contacts && activeSection.contacts.length > 0 && (
+                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
+                                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
+                                                <Phone size={20} className="text-[#FF5422]" />
+                                                <span>Contact & Coordination Cell</span>
+                                            </h2>
+                                        </div>
+
+                                        <div className="grid sm:grid-cols-2 gap-4">
+                                            {activeSection.contacts.map((c, ci) => (
+                                                <div
+                                                    key={ci}
+                                                    className="rounded-xl border border-neutral-200 bg-neutral-50 p-4 sm:p-5 space-y-2.5 hover:border-orange-300 transition-colors"
+                                                >
+                                                    <div className="flex items-center justify-between">
+                                                        <span className="text-[10px] font-bold text-[#FF5422] uppercase tracking-wider">
+                                                            {c.role}
+                                                        </span>
+                                                        <span className="text-[11px] font-semibold text-neutral-500">
+                                                            SRIT Ananthapuramu
+                                                        </span>
+                                                    </div>
+                                                    <h4 className="font-serif font-bold text-sm sm:text-base text-neutral-900">
+                                                        {c.name}
+                                                    </h4>
+                                                    {c.dept && (
+                                                        <p className="text-xs text-neutral-600 font-medium">
+                                                            {c.dept}
+                                                        </p>
+                                                    )}
+
+                                                    <div className="pt-2 border-t border-neutral-200/70 flex flex-wrap gap-2 text-xs">
+                                                        {c.phone && (
+                                                            <a
+                                                                href={`tel:${c.phone}`}
+                                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF5422] hover:text-white transition-colors font-medium shadow-2xs"
+                                                            >
+                                                                <Phone size={12} />
+                                                                <span>{c.phone}</span>
+                                                            </a>
+                                                        )}
+                                                        {c.email && (
+                                                            <a
+                                                                href={`mailto:${c.email}`}
+                                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF5422] hover:text-white transition-colors font-medium shadow-2xs"
+                                                            >
+                                                                <Mail size={12} />
+                                                                <span>{c.email}</span>
+                                                            </a>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </>
                         )}
                     </div>
                 </div>

@@ -298,10 +298,10 @@ const Navbar: React.FC = () => {
                     <div className="hidden lg:flex relative items-center justify-center min-h-full gap-0.5 xl:gap-1 w-full max-w-[1500px] overflow-visible flex-wrap">
                         <Link
                             to="/"
-                            className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-[#FF5422] hover:text-white transition-all duration-200 mr-1 shrink-0 overflow-hidden border border-neutral-200 shadow-sm"
+                            className="h-10 md:h-12 flex items-center justify-center transition-opacity duration-200 hover:opacity-80 mr-2 shrink-0"
                             title="Home"
                         >
-                            <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" />
+                            <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="h-full w-auto object-contain" />
                         </Link>
                         
                         {navLinks.map((link) => (
@@ -317,10 +317,10 @@ const Navbar: React.FC = () => {
                     {/* MOBILE LOGO */}
                     <Link
                         to="/"
-                        className="lg:hidden w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-700 transition-all duration-200 shrink-0 overflow-hidden border border-neutral-200 shadow-sm mr-auto"
+                        className="lg:hidden h-10 flex items-center justify-center transition-opacity duration-200 shrink-0 mr-auto"
                         title="Home"
                     >
-                        <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" />
+                        <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="h-full w-auto object-contain" />
                     </Link>
 
                     {/* MOBILE MENU BUTTON */}
