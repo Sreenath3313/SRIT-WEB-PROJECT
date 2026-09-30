@@ -63,6 +63,10 @@ import ResearchConsultancyCellPage from './pages/committees/ResearchConsultancyC
 import InnovationsEntrepreneurshipDevelopmentCellPage from './pages/committees/InnovationsEntrepreneurshipDevelopmentCellPage';
 import IndustryInstituteInteractionCellPage from './pages/committees/IndustryInstituteInteractionCellPage';
 import InformationPage from './pages/InformationPage'
+import DegreeVerificationPage from './pages/DegreeVerificationPage';
+import PreviousRanksPage from './pages/PreviousRanksPage';
+import DownloadsPage from './pages/DownloadsPage';
+import ContactUsPage from './pages/ContactUsPage';
 
 // Campus Life Pages
 import { CampusOverviewPage } from './pages/campus-life/campus-life/CampusOverviewPage'
@@ -253,6 +257,11 @@ function App() {
           <Route path="/community-services/unnath-bharth-abhiyan" element={<CommunityServicesPage defaultPage="unnath-bharth-abhiyan" />} />
           <Route path="/community-services/ek-bharat-shreshtha-bharat" element={<CommunityServicesPage defaultPage="ek-bharat-shreshtha-bharat" />} />
           <Route path="/community-services/viksit-bharat-2047" element={<CommunityServicesPage defaultPage="viksit-bharat-2047" />} />
+
+          <Route path="/degree-verification" element={<DegreeVerificationPage />} />
+          <Route path="/previousranks" element={<PreviousRanksPage />} />
+          <Route path="/downloads" element={<DownloadsPage />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
 
           <Route path="/:category/:page" element={<InformationPage />} />
         </Routes>

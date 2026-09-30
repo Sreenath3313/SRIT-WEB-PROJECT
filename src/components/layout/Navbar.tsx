@@ -84,7 +84,7 @@ const NavItem = ({
                 {link.label}
 
                 {link.hasDropdown && (
-                    <ChevronDown className="w-3 h-3 text-primary shrink-0" />
+                    <ChevronDown className="w-2.5 h-2.5 text-primary shrink-0" />
                 )}
 
                 <span
@@ -188,97 +188,104 @@ const Navbar: React.FC = () => {
 
             {/* TOP UTILITY BAR */}
             <div className="w-full bg-[#FF5422] text-white py-1.5 min-h-[28px] flex items-center justify-center relative z-50">
-                <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1600px] px-2 gap-1.5 lg:gap-4 h-full flex-wrap">
+                <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1600px] px-4 gap-2 h-full flex-wrap">
 
-                    <div className="flex items-center justify-center gap-2 xl:gap-3 flex-wrap h-full py-1">
-
+                    {/* LEFT SIDE: Phone & Email */}
+                    <div className="flex items-center justify-center gap-2 xl:gap-3 h-full">
                         <a
                             href="tel:+919515611111"
-                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
                         >
-                            <Phone className="w-3 h-3" />
-                            +91 951 561 1111
+                            <Phone className="w-2.5 h-2.5" />
+                            +91-951 561 1111
                         </a>
 
                         <span className="w-px h-3 bg-white/35" />
 
                         <a
                             href="mailto:hr@srit.ac.in"
-                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
                         >
-                            <Mail className="w-3 h-3" />
+                            <Mail className="w-2.5 h-2.5" />
                             hr@srit.ac.in
-                        </a>
-
-                        <span className="hidden md:block w-px h-3 bg-white/35" />
-
-                        <a
-                            href="#"
-                            className="hidden md:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
-                        >
-                            <UserCheck className="w-3 h-3" />
-                            Faculty Login
-                        </a>
-
-                        <span className="hidden md:block w-px h-3 bg-white/35" />
-
-                        <a
-                            href="#"
-                            className="hidden md:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
-                        >
-                            <User className="w-3 h-3" />
-                            Student Login
-                        </a>
-
-                        <span className="hidden md:block w-px h-3 bg-white/35" />
-
-                        <a
-                            href="#"
-                            className="hidden md:flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
-                        >
-                            <GraduationCap className="w-3 h-3" />
-                            Degree Verification
                         </a>
                     </div>
                     
-                    <div className="hidden md:flex items-center justify-center gap-2 xl:gap-3 flex-wrap h-full py-1">
+                    {/* RIGHT SIDE: All Links */}
+                    <div className="hidden md:flex items-center justify-center gap-2 xl:gap-3 flex-wrap h-full">
                         <a
-                            href="#"
-                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                            href="https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
                         >
-                            <Users className="w-3 h-3" />
+                            <UserCheck className="w-2.5 h-2.5" />
+                            Faculty Login
+                        </a>
+
+                        <span className="w-px h-3 bg-white/35" />
+
+                        <a
+                            href="https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
+                        >
+                            <User className="w-2.5 h-2.5" />
+                            Student Login
+                        </a>
+
+                        <span className="w-px h-3 bg-white/35" />
+
+                        <Link
+                            to="/degree-verification"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
+                        >
+                            <GraduationCap className="w-2.5 h-2.5" />
+                            Degree Verification
+                        </Link>
+
+                        <span className="w-px h-3 bg-white/35" />
+
+                        <a
+                            href="https://alumni.srit.ac.in/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
+                        >
+                            <Users className="w-2.5 h-2.5" />
                             Alumni
                         </a>
 
                         <span className="w-px h-3 bg-white/35" />
 
-                        <a
-                            href="#"
-                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                        <Link
+                            to="/previousranks"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
                         >
-                            <Users className="w-3 h-3" />
+                            <Users className="w-2.5 h-2.5" />
                             EAPCET/ECET Ranks
-                        </a>
+                        </Link>
 
                         <span className="w-px h-3 bg-white/35" />
 
-                        <a
-                            href="#"
-                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                        <Link
+                            to="/downloads"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
                         >
-                            <Download className="w-3 h-3" />
+                            <Download className="w-2.5 h-2.5" />
                             Downloads
-                        </a>
+                        </Link>
 
                         <span className="w-px h-3 bg-white/35" />
 
-                        <a
-                            href="/#contact"
-                            className="flex items-center gap-1 text-[10px] md:text-[11px] font-semibold whitespace-nowrap hover:text-white/80 transition-colors"
+                        <Link
+                            to="/contact-us"
+                            className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
                         >
-                            <Contact className="w-3 h-3" />
+                            <Contact className="w-2.5 h-2.5" />
                             Contact Us
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -507,18 +514,18 @@ const Navbar: React.FC = () => {
                             
                             {/* Mobile Quick Links from Utility Bar */}
                             <div className="mt-4 pt-4 border-t border-neutral-200 flex flex-col gap-3 md:hidden">
-                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                <a href="https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
                                     <UserCheck className="w-4 h-4 text-primary" />
                                     Faculty Login
                                 </a>
-                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                <a href="https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
                                     <User className="w-4 h-4 text-primary" />
                                     Student Login
                                 </a>
-                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
+                                <Link to="/degree-verification" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
                                     <GraduationCap className="w-4 h-4 text-primary" />
                                     Degree Verification
-                                </a>
+                                </Link>
                                 <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
                                     <Download className="w-4 h-4 text-primary" />
                                     Downloads
