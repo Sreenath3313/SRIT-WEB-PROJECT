@@ -121,7 +121,7 @@ export const InternetPage: React.FC = () => {
                                         <div className="lg:col-span-5 self-stretch flex flex-col justify-center min-h-[260px]">
                                             <div className="rounded-xl overflow-hidden border-2 border-orange-200/90 shadow-md bg-gradient-to-br from-white via-orange-50/40 to-orange-100/30 group relative flex-1 w-full min-h-[260px] flex items-center justify-center p-2">
                                                 <img
-                                                    src="/digital_library.jpg"
+                                                    src="https://www.srit.ac.in/wp-content/uploads/2021/05/internet-img.jpg"
                                                     alt="SRIT Internet & Campus Network Infrastructure"
                                                     className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 ease-out"
                                                     onError={(e) => {
@@ -313,9 +313,9 @@ export const InternetPage: React.FC = () => {
                                     {isInternetViewAll ? (
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                             {[
-                                                { url: '/digital_library.jpg', caption: 'Digital Library 12-System E-Learning & Internet Terminal Hub' },
-                                                { url: '/ComputerLab.webp', caption: 'High-Speed Internet Connected Computer Laboratory' },
-                                                { url: '/Campus.JPG', caption: 'Campus-Wide High-Speed Wi-Fi Zone' },
+                                                { url: '/cse_lab.png', caption: 'High-Speed Internet Connected CSE Laboratory' },
+                                                { url: '/ComputerLab.webp', caption: 'Campus Central Computer Centre' },
+                                                { url: '/csm_lab.png', caption: 'Dedicated Student Browsing & Learning Hub' },
                                             ].map((img, idx) => (
                                                 <div
                                                     key={idx}
@@ -340,9 +340,9 @@ export const InternetPage: React.FC = () => {
                                         <div className="relative px-2 py-1">
                                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                                 {[
-                                                    { url: '/digital_library.jpg', caption: 'Digital Library 12-System E-Learning & Internet Terminal Hub' },
-                                                    { url: '/ComputerLab.webp', caption: 'High-Speed Internet Connected Computer Laboratory' },
-                                                    { url: '/Campus.JPG', caption: 'Campus-Wide High-Speed Wi-Fi Zone' },
+                                                    { url: '/cse_lab.png', caption: 'High-Speed Internet Connected CSE Laboratory' },
+                                                    { url: '/ComputerLab.webp', caption: 'Campus Central Computer Centre' },
+                                                    { url: '/csm_lab.png', caption: 'Dedicated Student Browsing & Learning Hub' },
                                                 ].map((img, idx) => (
                                                     <div
                                                         key={idx}
