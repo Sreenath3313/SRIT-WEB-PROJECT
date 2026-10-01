@@ -271,7 +271,7 @@ const LeadershipVision: React.FC = () => {
                                         w-full
                                         h-full
                                         object-cover
-                                        object-center
+                                        object-top
                                     "
                                 loading="lazy" />
                             </div>
