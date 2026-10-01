@@ -482,11 +482,11 @@ export const HostelsPage: React.FC = () => {
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                             {[
                                                 { url: '/Hostel.jpg', caption: 'SRIT On-Campus Student Hostels' },
+                                                { url: '/hostel_room.jpg', caption: 'Comfortable Student Accommodations' },
+                                                { url: '/hostel_mess.jpg', caption: 'Spacious & Hygienic Dining Mess' },
+                                                { url: '/hostel_study.jpg', caption: 'Common Study & Recreation Hall' },
                                                 { url: '/CollegeMain.jpg', caption: 'Hostel Resident Campus Courtyard' },
-                                                { url: '/Campus.JPG', caption: 'Lush Green Residential Surroundings' },
                                                 { url: '/BasketBall.JPG', caption: 'Evening Sports & Recreation Ground' },
-                                                { url: '/College 2.JPG', caption: 'Campus Path to Hostel Blocks' },
-                                                { url: '/College 3.JPG', caption: 'Peaceful Academic & Living Environment' },
                                             ].map((img, gi) => (
                                                 <div
                                                     key={gi}
@@ -520,22 +520,22 @@ export const HostelsPage: React.FC = () => {
                                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                                 {[
                                                     { url: '/Hostel.jpg', caption: 'SRIT On-Campus Student Hostels' },
+                                                    { url: '/hostel_room.jpg', caption: 'Comfortable Student Accommodations' },
+                                                    { url: '/hostel_mess.jpg', caption: 'Spacious & Hygienic Dining Mess' },
+                                                    { url: '/hostel_study.jpg', caption: 'Common Study & Recreation Hall' },
                                                     { url: '/CollegeMain.jpg', caption: 'Hostel Resident Campus Courtyard' },
-                                                    { url: '/Campus.JPG', caption: 'Lush Green Residential Surroundings' },
                                                     { url: '/BasketBall.JPG', caption: 'Evening Sports & Recreation Ground' },
-                                                    { url: '/College 2.JPG', caption: 'Campus Path to Hostel Blocks' },
-                                                    { url: '/College 3.JPG', caption: 'Peaceful Academic & Living Environment' },
                                                 ]
                                                     .slice(hostelGalleryIndex, hostelGalleryIndex + 3)
                                                     .concat(
                                                         hostelGalleryIndex + 3 > 6
                                                             ? [
                                                                   { url: '/Hostel.jpg', caption: 'SRIT On-Campus Student Hostels' },
+                                                                  { url: '/hostel_room.jpg', caption: 'Comfortable Student Accommodations' },
+                                                                  { url: '/hostel_mess.jpg', caption: 'Spacious & Hygienic Dining Mess' },
+                                                                  { url: '/hostel_study.jpg', caption: 'Common Study & Recreation Hall' },
                                                                   { url: '/CollegeMain.jpg', caption: 'Hostel Resident Campus Courtyard' },
-                                                                  { url: '/Campus.JPG', caption: 'Lush Green Residential Surroundings' },
                                                                   { url: '/BasketBall.JPG', caption: 'Evening Sports & Recreation Ground' },
-                                                                  { url: '/College 2.JPG', caption: 'Campus Path to Hostel Blocks' },
-                                                                  { url: '/College 3.JPG', caption: 'Peaceful Academic & Living Environment' },
                                                               ].slice(0, (hostelGalleryIndex + 3) % 6)
                                                             : []
                                                     )

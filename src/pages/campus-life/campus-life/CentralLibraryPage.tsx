@@ -297,12 +297,9 @@ export const CentralLibraryPage: React.FC = () => {
                 {isLibraryViewAll ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {[
-                            { url: '/digital_library.jpg', caption: 'Air-Conditioned Digital Library Lab' },
                             { url: '/library.webp', caption: 'Central Reading & Reference Section' },
-                            { url: '/library_reading_hall.jpg', caption: 'Periodicals Research Hall' },
                             { url: '/Library 1.JPG', caption: 'Study Cubicles & Stack Area' },
-                            { url: '/srit_library_main_banner.jpg', caption: 'Central Circulation & OPAC Search Desk' },
-                            { url: '/srit_library_reference.jpg', caption: 'Engineering Reference Repository' },
+                            { url: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1588&auto=format&fit=crop', caption: 'Periodicals & Research Hub' },
                         ].map((img, gi) => (
                             <div
                                 key={gi}
@@ -335,24 +332,18 @@ export const CentralLibraryPage: React.FC = () => {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {[
-                                { url: '/digital_library.jpg', caption: 'Air-Conditioned Digital Library Lab' },
                                 { url: '/library.webp', caption: 'Central Reading & Reference Section' },
-                                { url: '/library_reading_hall.jpg', caption: 'Periodicals Research Hall' },
                                 { url: '/Library 1.JPG', caption: 'Study Cubicles & Stack Area' },
-                                { url: '/srit_library_main_banner.jpg', caption: 'Central Circulation & OPAC Search Desk' },
-                                { url: '/srit_library_reference.jpg', caption: 'Engineering Reference Repository' },
+                                { url: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1588&auto=format&fit=crop', caption: 'Periodicals & Research Hub' },
                             ]
                                 .slice(libraryGalleryIndex, libraryGalleryIndex + 3)
                                 .concat(
-                                    libraryGalleryIndex + 3 > 6
+                                    libraryGalleryIndex + 3 > 3
                                         ? [
-                                              { url: '/digital_library.jpg', caption: 'Air-Conditioned Digital Library Lab' },
                                               { url: '/library.webp', caption: 'Central Reading & Reference Section' },
-                                              { url: '/library_reading_hall.jpg', caption: 'Periodicals Research Hall' },
                                               { url: '/Library 1.JPG', caption: 'Study Cubicles & Stack Area' },
-                                              { url: '/srit_library_main_banner.jpg', caption: 'Central Circulation & OPAC Search Desk' },
-                                              { url: '/srit_library_reference.jpg', caption: 'Engineering Reference Repository' },
-                                          ].slice(0, (libraryGalleryIndex + 3) % 6)
+                                              { url: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1588&auto=format&fit=crop', caption: 'Periodicals & Research Hub' },
+                                          ].slice(0, (libraryGalleryIndex + 3) % 3)
                                         : []
                                 )
                                 .map((img, gi) => (

@@ -95,15 +95,6 @@ export const SustainableCampusPage: React.FC = () => {
                                             </p>
 
                                             <div className="pt-2 flex flex-wrap items-center gap-3">
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setIsSolarEnergyOpen(!isSolarEnergyOpen)}
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#FF5422] to-[#FF7A45] hover:from-[#e04515] hover:to-[#FF5422] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-102 active:scale-98 transition-all duration-200 cursor-pointer"
-                                                >
-                                                    <span>{isSolarEnergyOpen ? 'Hide Solar Sheets' : 'Explore Solar Energy Spreadsheets'}</span>
-                                                    <ChevronRight size={16} />
-                                                </button>
-
                                                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
                                                     <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
                                                         100+ kWp Solar Power
@@ -121,7 +112,7 @@ export const SustainableCampusPage: React.FC = () => {
                                         <div className="lg:col-span-5 self-stretch flex flex-col min-h-[280px]">
                                             <div className="rounded-xl overflow-hidden border-2 border-orange-200/90 shadow-md bg-orange-50/20 group relative flex-1 w-full min-h-[280px]">
                                                 <img
-                                                    src="/sustainable_hero.jpg"
+                                                    src="/College.JPG"
                                                     alt="Eco-Friendly, Landscaped Green Campus & Solar Infrastructure at SRIT"
                                                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                                                     onError={(e) => {
@@ -258,7 +249,7 @@ export const SustainableCampusPage: React.FC = () => {
                                                     {isSolarEnergyOpen ? '−' : '+'}
                                                 </span>
                                                 <span className="font-serif font-bold text-base sm:text-lg tracking-wide text-white">
-                                                    Solar Energy Data (Official Generation Sheet)
+                                                    Solar Energy Data
                                                 </span>
                                             </div>
                                             <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
@@ -340,19 +331,18 @@ export const SustainableCampusPage: React.FC = () => {
                                             onClick={() => setIsSustainableViewAll(!isSustainableViewAll)}
                                             className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF5422] bg-orange-50 border border-orange-200 hover:bg-[#FF5422] hover:text-white transition-all cursor-pointer"
                                         >
-                                            {isSustainableViewAll ? 'Show Carousel' : 'View All 6 Photos'}
+                                            {isSustainableViewAll ? 'Show Carousel' : 'View All 5 Photos'}
                                         </button>
                                     </div>
 
                                     {isSustainableViewAll ? (
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                             {[
-                                                { url: '/solar/solar_main_block.jpg', caption: 'SRIT Main Block Terrace Rooftop Solar Installation (50.40 kWp)' },
-                                                { url: '/solar/solar_hostel_block.jpg', caption: 'SRIT Boys Hostel Terrace Solar Installation (50.24 kWp)' },
-                                                { url: '/solar/solar_energy_production_chart.png', caption: 'Monthly Production Graph (2025)' },
-                                                { url: '/solar/solar_yearly_production.png', caption: 'Daily Production Graph (July 2025)' },
-                                                { url: '/solar/solar_canopy.jpg', caption: 'Rooftop Solar Photovoltaic Grid & Clean Energy Infrastructure' },
-                                                { url: '/solar/sustainable_landscape.jpg', caption: 'Eco-Friendly Landscaped Botanical Grounds & Rainwater Catchment' },
+                                                { url: '/College 2.JPG', caption: 'Sustainable Campus Grounds' },
+                                                { url: '/solar/image2.jpg', caption: 'Solar Infrastructure View' },
+                                                { url: '/solar/image3.png', caption: 'Campus Solar Energy System' },
+                                                { url: '/solar/image4.jpg', caption: 'Rooftop Solar Array' },
+                                                { url: '/Campus.JPG', caption: 'Lush Green Environment' },
                                             ].map((img, idx) => (
                                                 <div
                                                     key={idx}
@@ -377,7 +367,7 @@ export const SustainableCampusPage: React.FC = () => {
                                         <div className="relative px-2 py-1">
                                             <button
                                                 type="button"
-                                                onClick={() => setSustainableGalleryIndex((prev) => (prev <= 0 ? 3 : prev - 1))}
+                                                onClick={() => setSustainableGalleryIndex((prev) => (prev <= 0 ? 2 : prev - 1))}
                                                 className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Previous image"
                                             >
@@ -386,12 +376,11 @@ export const SustainableCampusPage: React.FC = () => {
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                                 {[
-                                                    { url: '/solar/solar_main_block.jpg', caption: 'SRIT Main Block Terrace Rooftop Solar Installation (50.40 kWp)' },
-                                                    { url: '/solar/solar_hostel_block.jpg', caption: 'SRIT Boys Hostel Terrace Solar Installation (50.24 kWp)' },
-                                                    { url: '/solar/solar_energy_production_chart.png', caption: 'Monthly Production Graph (2025)' },
-                                                    { url: '/solar/solar_yearly_production.png', caption: 'Daily Production Graph (July 2025)' },
-                                                    { url: '/solar/solar_canopy.jpg', caption: 'Rooftop Solar Photovoltaic Grid & Clean Energy Infrastructure' },
-                                                    { url: '/solar/sustainable_landscape.jpg', caption: 'Eco-Friendly Landscaped Botanical Grounds & Rainwater Catchment' },
+                                                    { url: '/College 2.JPG', caption: 'Sustainable Campus Grounds' },
+                                                    { url: '/solar/image2.jpg', caption: 'Solar Infrastructure View' },
+                                                    { url: '/solar/image3.png', caption: 'Campus Solar Energy System' },
+                                                    { url: '/solar/image4.jpg', caption: 'Rooftop Solar Array' },
+                                                    { url: '/Campus.JPG', caption: 'Lush Green Environment' },
                                                 ]
                                                     .slice(sustainableGalleryIndex, sustainableGalleryIndex + 3)
                                                     .map((img, idx) => (
@@ -417,7 +406,7 @@ export const SustainableCampusPage: React.FC = () => {
 
                                             <button
                                                 type="button"
-                                                onClick={() => setSustainableGalleryIndex((prev) => (prev >= 3 ? 0 : prev + 1))}
+                                                onClick={() => setSustainableGalleryIndex((prev) => (prev >= 2 ? 0 : prev + 1))}
                                                 className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Next image"
                                             >

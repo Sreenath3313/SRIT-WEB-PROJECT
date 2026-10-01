@@ -95,14 +95,6 @@ export const LaboratoriesPage: React.FC = () => {
                                             </p>
 
                                             <div className="pt-2 flex flex-wrap items-center gap-3">
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setIsLabsTableOpen(!isLabsTableOpen)}
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#FF5422] to-[#FF7A45] hover:from-[#e04515] hover:to-[#FF5422] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-102 active:scale-98 transition-all duration-200 cursor-pointer"
-                                                >
-                                                    <span>{isLabsTableOpen ? 'Hide Lab Specs Table' : 'Explore Lab Specifications & Configurations'}</span>
-                                                    <ChevronRight size={16} />
-                                                </button>
 
                                                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
                                                     <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
@@ -201,60 +193,7 @@ export const LaboratoriesPage: React.FC = () => {
                                 </div>
 
                                 {/* === 4. COMPUTING LABS BREAKDOWN TABLE (Collapsible) === */}
-                                {isLabsTableOpen && (
-                                    <div className="rounded-xl border-2 border-orange-200/90 bg-white overflow-hidden shadow-sm">
-                                        <div className="bg-gradient-to-r from-[#111827] via-[#1c1412] to-[#2b1610] px-5 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-3 text-white border-b-2 border-[#FF5422]">
-                                            <div className="flex items-center gap-2.5">
-                                                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422] shadow-[0_0_8px_#FF5422]" />
-                                                <h3 className="font-serif text-base sm:text-lg font-bold text-white tracking-tight">
-                                                    CSE Department Laboratories &amp; Computing Specifications (labs-1)
-                                                </h3>
-                                            </div>
-                                            <span className="text-xs font-bold text-orange-300 bg-[#FF5422]/20 px-3 py-1 rounded-full border border-[#FF5422]/40">
-                                                8 Specialized Labs
-                                            </span>
-                                        </div>
-
-                                        <div className="overflow-x-auto">
-                                            <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                                                <thead>
-                                                    <tr className="bg-neutral-100 text-neutral-900 border-b border-neutral-200">
-                                                        <th className="px-4 py-3.5 font-bold">Laboratory Name</th>
-                                                        <th className="px-4 py-3.5 font-bold">Hardware Configuration</th>
-                                                        <th className="px-4 py-3.5 font-bold">Installed Software &amp; Frameworks</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody className="divide-y divide-orange-100/80 text-neutral-700">
-                                                    {[
-                                                        ['1. C & Data Structures Lab', 'HP Core 2 DUO Processor, 2 GB RAM, 160 GB HDD, 15.6" Monitor', 'GCC, Dev C/C++, Open Office, Ubuntu'],
-                                                        ['2. B-Block Computer Lab-1', 'HP-3090 Pro / Dual Core 3.0, 6 GB RAM, 320 GB HDD, 18.5" LCD Monitor', 'Oracle 11g Express, JDK, GCC, DIA Tool, Dev C++, Xrunner, WAMP, Tomcat, WEKA, Wireshark, OpenSSL, GNU PGP, NMAP, Ethereal, J2ME, Android ADT, R, MongoDB, PIG, HIVE Hadoop, TestLink, Selenium, Ubuntu'],
-                                                        ['3. B-Block Computer Lab-2', 'HP-3090 Pro / Dual Core 3.0, 6 GB RAM, 320 GB HDD, 18.5" LCD Monitor', 'JDK, GCC, DIA Tool, Dev C/C++, Xrunner, WAMP, Tomcat Server, WEKA Tool, Wireshark, Open SSL, GNU PGP, NMAP, Ethereal, J2ME Wireless Toolkit, Android ADT Bundle, Ubuntu'],
-                                                        ['4. B-Block Computer Lab-3', 'HP-3090 Pro / Dual Core 3.0, 6 GB RAM, 320 GB HDD, 18.5" LCD Monitor', 'JDK, GCC, DIA Tool, Dev C/C++, Xrunner, WAMP, Tomcat Server, WEKA Tool, Wireshark, Open SSL, GNU PGP, NMAP, Ethereal, J2ME Toolkit, Android ADT Bundle, Ubuntu'],
-                                                        ['5. Research Lab', 'Lenovo – Dual Core, 4 GB RAM, 320 GB HDD, 18.5" Monitor', 'Python, JDK, Ubuntu, NS3, Android Studio, R Programming, GNU Octave'],
-                                                        ['6. Project Lab', 'Lenovo – Dual Core, 4 GB RAM, 320 GB HDD, 18.5" Monitor', 'Python, JDK, Ubuntu, NS3, Android Studio, R Programming, GNU Octave'],
-                                                        ['7. APSSDC CM’s Skill Excellence Center', 'Acer TMP 249-G2-M Laptops, Intel Core i5, 16 GB RAM, 500 GB HDD, 14" Display', 'Android Studio, Java/Kotlin SDK, Cloud Toolchains'],
-                                                        ['8. Machine Learning Lab', 'Acer TMP 249-G2-M Laptops, Intel Core i5, 16 GB RAM, 500 GB HDD, 14" Display', 'TensorFlow, Keras, Octave, Scikit-learn'],
-                                                    ].map((row, ri) => (
-                                                        <tr key={ri} className="hover:bg-orange-50/50 transition-colors odd:bg-white even:bg-orange-50/20">
-                                                            <td className="px-4 py-3.5 font-bold text-neutral-900">
-                                                                <div className="flex items-center gap-2">
-                                                                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF5422]" />
-                                                                    <span>{row[0]}</span>
-                                                                </div>
-                                                            </td>
-                                                            <td className="px-4 py-3.5 text-xs text-neutral-800 font-medium">
-                                                                {row[1]}
-                                                            </td>
-                                                            <td className="px-4 py-3.5 text-xs text-neutral-600">
-                                                                {row[2]}
-                                                            </td>
-                                                        </tr>
-                                                    ))}
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                )}
+                                {/* Table moved to CSE Section */}
 
                                 {/* === 5. OFFICIAL DEPARTMENT ACCORDIONS (CIVIL & CSE) === */}
                                 <div className="space-y-4">
@@ -308,10 +247,42 @@ export const LaboratoriesPage: React.FC = () => {
                                         </button>
 
                                         {isCseLabsOpen && (
-                                            <div className="p-4 sm:p-6 bg-white space-y-3">
-                                                <p className="text-xs text-neutral-600">
-                                                    Complete breakdown of 8 high-performance computing labs, RAM configurations, system specs, and software environments is available in the specifications table above.
-                                                </p>
+                                            <div className="bg-white border border-neutral-300 shadow-sm mt-4">
+                                                <div className="overflow-x-auto">
+                                                    <table className="w-full text-left text-sm border-collapse">
+                                                        <thead>
+                                                            <tr className="bg-[#f3f3f3] text-neutral-800">
+                                                                <th className="px-3 py-2 border border-neutral-300 font-semibold whitespace-nowrap">Laboratory Name</th>
+                                                                <th className="px-3 py-2 border border-neutral-300 font-semibold">Hardware Configuration</th>
+                                                                <th className="px-3 py-2 border border-neutral-300 font-semibold">Installed Software &amp; Frameworks</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody className="bg-white text-neutral-800">
+                                                            {[
+                                                                ['1. C & Data Structures Lab', 'HP Core 2 DUO Processor, 2 GB RAM, 160 GB HDD, 15.6" Monitor', 'GCC, Dev C/C++, Open Office, Ubuntu'],
+                                                                ['2. B-Block Computer Lab-1', 'HP-3090 Pro / Dual Core 3.0, 6 GB RAM, 320 GB HDD, 18.5" LCD Monitor', 'Oracle 11g Express, JDK, GCC, DIA Tool, Dev C++, Xrunner, WAMP, Tomcat, WEKA, Wireshark, OpenSSL, GNU PGP, NMAP, Ethereal, J2ME, Android ADT, R, MongoDB, PIG, HIVE Hadoop, TestLink, Selenium, Ubuntu'],
+                                                                ['3. B-Block Computer Lab-2', 'HP-3090 Pro / Dual Core 3.0, 6 GB RAM, 320 GB HDD, 18.5" LCD Monitor', 'JDK, GCC, DIA Tool, Dev C/C++, Xrunner, WAMP, Tomcat Server, WEKA Tool, Wireshark, Open SSL, GNU PGP, NMAP, Ethereal, J2ME Wireless Toolkit, Android ADT Bundle, Ubuntu'],
+                                                                ['4. B-Block Computer Lab-3', 'HP-3090 Pro / Dual Core 3.0, 6 GB RAM, 320 GB HDD, 18.5" LCD Monitor', 'JDK, GCC, DIA Tool, Dev C/C++, Xrunner, WAMP, Tomcat Server, WEKA Tool, Wireshark, Open SSL, GNU PGP, NMAP, Ethereal, J2ME Toolkit, Android ADT Bundle, Ubuntu'],
+                                                                ['5. Research Lab', 'Lenovo – Dual Core, 4 GB RAM, 320 GB HDD, 18.5" Monitor', 'Python, JDK, Ubuntu, NS3, Android Studio, R Programming, GNU Octave'],
+                                                                ['6. Project Lab', 'Lenovo – Dual Core, 4 GB RAM, 320 GB HDD, 18.5" Monitor', 'Python, JDK, Ubuntu, NS3, Android Studio, R Programming, GNU Octave'],
+                                                                ['7. APSSDC CM’s Skill Excellence Center', 'Acer TMP 249-G2-M Laptops, Intel Core i5, 16 GB RAM, 500 GB HDD, 14" Display', 'Android Studio, Java/Kotlin SDK, Cloud Toolchains'],
+                                                                ['8. Machine Learning Lab', 'Acer TMP 249-G2-M Laptops, Intel Core i5, 16 GB RAM, 500 GB HDD, 14" Display', 'TensorFlow, Keras, Octave, Scikit-learn'],
+                                                            ].map((row, ri) => (
+                                                                <tr key={ri}>
+                                                                    <td className="px-3 py-2 border border-neutral-300 whitespace-nowrap">
+                                                                        {row[0]}
+                                                                    </td>
+                                                                    <td className="px-3 py-2 border border-neutral-300">
+                                                                        {row[1]}
+                                                                    </td>
+                                                                    <td className="px-3 py-2 border border-neutral-300">
+                                                                        {row[2]}
+                                                                    </td>
+                                                                </tr>
+                                                            ))}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         )}
                                     </div>

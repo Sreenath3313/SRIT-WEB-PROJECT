@@ -128,6 +128,37 @@ export const AbhigyaanPage: React.FC = () => {
                                         )}
                                     </div>
 
+                                    {/* --- 2. Student Category Information (Google Slides Embed) --- */}
+                                    <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-sm w-full">
+                                        <button
+                                            onClick={() => setIsStudentSlidesOpen(!isStudentSlidesOpen)}
+                                            className="w-full flex items-center justify-between px-5 py-4 bg-black hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-[#FF5422] font-bold text-xl leading-none">
+                                                    {isStudentSlidesOpen ? '−' : '+'}
+                                                </span>
+                                                <span className="font-serif font-bold text-base sm:text-lg tracking-wide text-[#FF5422]">
+                                                    Student Category Information
+                                                </span>
+                                            </div>
+                                            <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
+                                                {isStudentSlidesOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                                            </div>
+                                        </button>
+
+                                        {isStudentSlidesOpen && (
+                                            <div className="p-4 sm:p-6 bg-white space-y-4">
+                                                <div className="w-full h-[600px] md:h-[700px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">
+                                                    <IframeWithLoader
+                                                        title="Student Category Information Presentation"
+                                                        src="https://docs.google.com/presentation/d/e/2PACX-1vQXAhJqXv555FeslvOfQSuY7aFd334Ia0Vxrgt1gyOTxsUv1Tz7rwDmI7UJdfU5Tg/embed?start=true&loop=false&delayms=10000"
+                                                        className="w-full h-full border-0"
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
 
                                     {/* --- 3. Faculty Reward Categories --- */}
                                     <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-sm w-full">
@@ -185,6 +216,37 @@ export const AbhigyaanPage: React.FC = () => {
                                         )}
                                     </div>
 
+                                    {/* --- 4. Faculty Category Information (Google Slides Embed) --- */}
+                                    <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-sm w-full">
+                                        <button
+                                            onClick={() => setIsFacultySlidesOpen(!isFacultySlidesOpen)}
+                                            className="w-full flex items-center justify-between px-5 py-4 bg-black hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-[#FF5422] font-bold text-xl leading-none">
+                                                    {isFacultySlidesOpen ? '−' : '+'}
+                                                </span>
+                                                <span className="font-serif font-bold text-base sm:text-lg tracking-wide text-[#FF5422]">
+                                                    Faculty Category Information
+                                                </span>
+                                            </div>
+                                            <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
+                                                {isFacultySlidesOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                                            </div>
+                                        </button>
+
+                                        {isFacultySlidesOpen && (
+                                            <div className="p-4 sm:p-6 bg-white space-y-4">
+                                                <div className="w-full h-[600px] md:h-[700px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">
+                                                    <IframeWithLoader
+                                                        title="Faculty Category Information Presentation"
+                                                        src="https://docs.google.com/presentation/d/e/2PACX-1vQUnd3NNM5QVbj6WdofGiolhsuoMrbiW4l4GQ3oN_u4NsGik994WF9vpFU47wPuHg/embed?start=true&loop=false&delayms=10000"
+                                                        className="w-full h-full border-0"
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
 
                                     {/* --- 5. Year Wise Report (Google Spreadsheet Embed) --- */}
                                     <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-sm w-full">
@@ -207,25 +269,7 @@ export const AbhigyaanPage: React.FC = () => {
 
                                         {isAchieversReportsOpen && (
                                             <div className="p-4 sm:p-6 bg-white space-y-4">
-                                                <div className="rounded-lg bg-orange-50/80 border border-orange-200/80 p-3.5 flex flex-wrap items-center justify-between gap-3">
-                                                    <div>
-                                                        <h4 className="font-serif font-bold text-sm sm:text-base text-neutral-900">
-                                                            Achievers Day – Year Wise Activity Reports
-                                                        </h4>
-                                                        <p className="text-xs text-neutral-600 mt-0.5">
-                                                            Official consolidated reports and archives of student and faculty achievers.
-                                                        </p>
-                                                    </div>
-                                                    <a
-                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS1ucNyZAGkK7xRenY4hX-idp3r-soV79INzPtu26JWrIpoN-wBHgIPrWndilthHA/pubhtml"
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg bg-[#FF5422] text-white hover:bg-[#e04515] transition-colors shadow-sm"
-                                                    >
-                                                        <span>Open in Google Sheets</span>
-                                                        <ChevronRight size={14} />
-                                                    </a>
-                                                </div>
+
 
                                                 <div className="w-full h-[800px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">
                                                     <IframeWithLoader
