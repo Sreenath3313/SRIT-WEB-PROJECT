@@ -62,26 +62,7 @@ export const PrabhavaPage: React.FC = () => {
                                     {/* Inside Accordion: Full-Width Embedded Excel / Google Spreadsheet */}
                                     {isPrabhavaReportsOpen && (
                                         <div className="p-4 sm:p-6 bg-white w-full space-y-4">
-                                            {/* Top Banner */}
-                                            <div className="rounded-lg bg-orange-50/80 border border-orange-200/80 p-3.5 flex flex-wrap items-center justify-between gap-3">
-                                                <div>
-                                                    <h4 className="font-serif font-bold text-sm sm:text-base text-neutral-900">
-                                                        Prabhava (Freshers Day) – Activity Reports
-                                                    </h4>
-                                                    <p className="text-xs text-neutral-600 mt-0.5">
-                                                        Official annual freshers day archives and comprehensive event reports.
-                                                    </p>
-                                                </div>
-                                                <a
-                                                    href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSE33k0xRqXtvcdZErGoYQUN1taILxPEYXKVXvQEoUDUS08UaytBYucijczFkYYjKCTixtgnRtkzGdg/pubhtml"
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg bg-[#FF5422] text-white hover:bg-[#e04515] transition-colors shadow-sm"
-                                                >
-                                                    <span>Open in Google Sheets</span>
-                                                    <ChevronRight size={14} />
-                                                </a>
-                                            </div>
+
 
                                             {/* Live Google Sheets Embed */}
                                             <div className="w-full h-[800px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">

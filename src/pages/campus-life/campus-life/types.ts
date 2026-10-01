@@ -194,15 +194,13 @@ export const campusLifeSections: SubSection[] = [
         icon: Award,
         path: '/campus-life/aarambh',
         overview: [
-            'AARAMBH is the formal inaugural induction program welcoming newly admitted engineering students and their families to the vibrant SRIT family.',
-            'Features inspirational addresses by management, industry leaders, academic mentors, and peer orientation to set students on the path of lifelong success.',
+            'Orientation Day is an important event that is designed to help new students get acquainted with the campus, the academic programs, and the various resources available to them during their time here.',
+            'The Orientation Day is typically held a few days before the start of the academic term. During this event, new students will have the opportunity to meet the professors and other staff members, who will be providing essential information and guidance about your academic program. They will also be introduced to the campus facilities, such as the library, the computer labs, and the student support systems.',
+            'The Orientation Day is not just about academics, though. Students will also learn about the various clubs and organizations on campus, which offer opportunities to get involved in extracurricular activities and meet new people who share their interests. Representatives from the College will be present to answer your questions and provide information about their activities.',
+            'Overall, the Orientation Day is a great way to get started on the right foot at the college. It is an opportunity to meet new people, learn about the resources available, and get excited about the academic program and the college community.',
+            'It is a tradition at SRIT to conduct Aarambh (Orientation Day) every year for the new joinees to the College and create awareness for both Students and Parents on Engineering education and how SRIT creates ease learning environment by catering the needs for the Students to become a complete Graduate with human and ethical values.',
         ],
-        keyStats: [
-            { value: '1,000+', label: 'New Entrants', desc: 'Inducted every academic year' },
-            { value: '100%', label: 'Mentorship', desc: 'Faculty mentor assigned to every student' },
-            { value: '15+', label: 'Interactive Sessions', desc: 'Spanning ethics, engineering, and clubs' },
-            { value: 'Day 1', label: 'Tech Immersion', desc: 'Lab visits & innovation center tours' },
-        ],
+
     },
     {
         id: 'symphony',
@@ -228,15 +226,11 @@ export const campusLifeSections: SubSection[] = [
         icon: GraduationCap,
         path: '/campus-life/udbhavaan',
         overview: [
-            'UDBHAVAAN marks the ceremonial graduation convocation honoring outgoing engineering graduates as they receive their provisional certificates and embark on illustrious career journeys.',
-            'Dignitaries, distinguished alumni, and proud parents gather to celebrate years of dedication, research, and technical accomplishment.',
+            'Graduation Day is one of the most significant and exciting events in a student’s academic journey. It is a day that marks the culmination of years of hard work, dedication, and perseverance. At SRIT, we take pride in celebrating the achievements of our students on this day and acknowledging their contributions to the academic community which is named as Udbhavaan.',
+            'At SRIT, we believe that Graduation Day is not just an end to the academic journey, but also the beginning of a new chapter in the graduates’ lives. We strive to prepare our students for success in their chosen fields, and we are proud to see them go on to achieve great things.',
+            'We congratulate our graduating class and wish them all the best for their future endeavors. We also extend our heartfelt thanks to the faculty members, staff, and the entire college community for their dedication and commitment to our students’ success.',
         ],
-        keyStats: [
-            { value: '800+', label: 'Graduates Annually', desc: 'Conferred with engineering degrees' },
-            { value: '90%+', label: 'Placement Record', desc: 'Graduating with top corporate offers' },
-            { value: 'Gold Medals', label: 'Academic Honors', desc: 'Conferred upon branch toppers' },
-            { value: 'Global Alumni', label: 'Network', desc: 'Connecting SRIT alumni worldwide' },
-        ],
+
     },
     {
         id: 'abhigyaan',
@@ -245,14 +239,11 @@ export const campusLifeSections: SubSection[] = [
         icon: Award,
         path: '/campus-life/abhigyaan',
         overview: [
-            'ABHIGYAAN is the prestigious annual award ceremony honoring university rank holders, hackathon winners, sports champions, patent holders, and exceptional student leaders.',
+            'ABHIGYAAN (Achievers Day) is celebrated to honour and acknowledge students\' exemplary performance and significant contributions in various fields during the academic year 2023-24. Students who bring laurels to the college are honoured and rewarded. Faculty performance in various areas is also identified and appreciated.',
+            'Students and faculty who participated, competed, and won prizes in State, National, and International Level competitions are appreciated during this special event.',
+            'A committee headed by the principal has been appointed to finalize the list of achievers for the academic year 2023-24.'
         ],
-        keyStats: [
-            { value: '250+', label: 'Awards Conferred', desc: 'Across academics, sports, and research' },
-            { value: '₹10L+', label: 'Merit Scholarships', desc: 'Awarded to top ranking scholars' },
-            { value: '50+', label: 'Hackathon Wins', desc: 'At state, national, and global stages' },
-            { value: '100%', label: 'Recognition', desc: 'For dedicated community & club leaders' },
-        ],
+
     },
     {
         id: 'mathematics-day',
@@ -278,14 +269,8 @@ export const campusLifeSections: SubSection[] = [
         icon: HeartHandshake,
         path: '/campus-life/prabhava',
         overview: [
-            'Prabhava is the spirited Freshers Day event organized by senior students to welcome their junior peers with warmth, camaraderie, talent shows, and joyful interactive games.',
-            'Fosters strong friendships, breaks ice across diverse student backgrounds, and sparks lifelong bonds in the SRIT campus community.',
+            'Prabhava, our annual Freshers Day celebration, is a vibrant event that marks the commencement of a new academic year with a warm welcome from Seniors to Freshers. It’s a day filled with excitement, laughter, and the spirit of togetherness as we warmly welcome our newest members to the college family.'
         ],
-        keyStats: [
-            { value: '1,000+', label: 'Attendees', desc: 'Freshers and seniors uniting together' },
-            { value: 'Mr & Ms Fresher', label: 'Pageant', desc: 'Celebrating poise, intellect, and talent' },
-            { value: 'Non-stop', label: 'Entertainment', desc: 'Dance, music, skits, and fun games' },
-            { value: '100%', label: 'Ragging-Free', desc: 'Safe, warm, and inclusive environment' },
-        ],
+
     },
 ];

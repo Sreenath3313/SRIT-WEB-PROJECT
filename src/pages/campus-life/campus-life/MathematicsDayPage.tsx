@@ -62,12 +62,9 @@ export const MathematicsDayPage: React.FC = () => {
                                         <div className="lg:col-span-4 self-stretch flex flex-col justify-center">
                                             <div className="rounded-xl overflow-hidden border-2 border-orange-200/90 shadow-md bg-orange-50/20 group relative w-full aspect-[3/4] flex items-center justify-center p-2">
                                                 <img
-                                                    src="/ramanujan_photo.jpg"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Srinivasa_Ramanujan_-_OPC_-_1.jpg/220px-Srinivasa_Ramanujan_-_OPC_-_1.jpg"
                                                     alt="Srinivasa Ramanujan"
                                                     className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                    onError={(e) => {
-                                                        (e.target as HTMLImageElement).src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Srinivasa_Ramanujan_-_OPC_-_1.jpg/220px-Srinivasa_Ramanujan_-_OPC_-_1.jpg';
-                                                    }}
                                                 />
                                             </div>
                                         </div>

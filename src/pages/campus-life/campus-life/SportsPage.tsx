@@ -8,7 +8,7 @@ import IframeWithLoader from '../../../components/common/IframeWithLoader';
 
 export const SportsPage: React.FC = () => {
     const [isSportsVisionOpen, setIsSportsVisionOpen] = useState(false);
-    const [isSportsCommitteeOpen, setIsSportsCommitteeOpen] = useState(false);
+
     const [isSportsTeamSheetOpen, setIsSportsTeamSheetOpen] = useState(false);
     const [isSportsAchievementsOpen, setIsSportsAchievementsOpen] = useState(false);
     const [isSportsContactOpen, setIsSportsContactOpen] = useState(false);
@@ -79,34 +79,19 @@ export const SportsPage: React.FC = () => {
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm relative overflow-hidden">
                                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                                         <div className="lg:col-span-7 space-y-3.5">
-                                            <div className="flex items-center gap-2.5 pb-1">
+                                            <div className="flex items-center gap-2.5 pb-2">
                                                 <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                                <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                    About <span className="text-[#FF5422]">Sports Arena &amp; Physical Education</span>
+                                                <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight leading-tight">
+                                                    Every champion was once a contender that <span className="text-[#FF5422]">refused to give up.</span>
                                                 </h2>
                                             </div>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                Sport is an integral part of the curriculum at <strong className="text-[#FF5422] font-bold">Srinivasa Ramanujan Institute of Technology</strong>, fostering a balanced environment of academic excellence, cultural vibrancy, and athletic spirit.
-                                            </p>
-
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                Comprehensive indoor and outdoor sports facilities span the expansive <strong className="text-[#FF5422] font-bold">25+ acre campus</strong>. Led by Physical Directors <span className="text-[#FF5422] font-semibold">Mr. R. Amaresh and Mr. B. Raja Reddy</span>, the Games &amp; Sports Cell prepares student-athletes for inter-collegiate and <span className="text-[#FF5422] font-bold">JNTUA inter-university tournaments</span>.
-                                            </p>
-
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                Engaging in regular athletic competitions builds leadership, endurance, and teamwork. Outstanding student achievers are honored with prestigious <span className="text-[#FF5422] font-semibold">medals, championship trophies, merit certificates, and cash incentives</span>.
+                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify pt-1">
+                                                Sport is an integral part of the curriculum. Various sports facility is provided to the students within the campus. The college is committed to create a balanced atmosphere of academic, cultural and sports activities for the overall personality development of its students. Various sports competitions such as inter departmental, Inter collegiate, Inter University, etc help in developing team spirit in students. Sports and games help the students to improve their interpersonal relationship am in healthy manner. Talented students are honored with medals, trophies and certificates.
                                             </p>
 
                                             <div className="pt-2 flex flex-wrap items-center gap-3">
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setIsSportsCommitteeOpen(!isSportsCommitteeOpen)}
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#FF5422] to-[#FF7A45] hover:from-[#e04515] hover:to-[#FF5422] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-102 active:scale-98 transition-all duration-200 cursor-pointer"
-                                                >
-                                                    <span>{isSportsCommitteeOpen ? 'Hide Committee Sheet' : 'Explore Sports Committee & Records'}</span>
-                                                    <ChevronRight size={16} />
-                                                </button>
+
 
                                                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
                                                     <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
@@ -125,8 +110,8 @@ export const SportsPage: React.FC = () => {
                                         <div className="lg:col-span-5 self-stretch flex flex-col min-h-[280px]">
                                             <div className="rounded-xl overflow-hidden border-2 border-orange-200/90 shadow-md bg-orange-50/20 group relative flex-1 w-full min-h-[280px]">
                                                 <img
-                                                    src="/sports_official_banner.jpg"
-                                                    alt="SRIT Sports, Athletic Meets & Championship Grounds"
+                                                    src="https://www.srit.ac.in/wp-content/uploads/2021/05/Sports-img.jpg"
+                                                    alt="SRIT Sports"
                                                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                                                     onError={(e) => {
                                                         (e.target as HTMLImageElement).src = '/BasketBall.webp';

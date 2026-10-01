@@ -6,7 +6,6 @@ import CampusLifeLayout from './CampusLifeLayout';
 import { campusLifeSections } from './types';
 
 export const InternetPage: React.FC = () => {
-    const [isInternetTableOpen, setIsInternetTableOpen] = useState(false);
     const [isInternetViewAll, setIsInternetViewAll] = useState(false);
 
     const activeSection = campusLifeSections.find((s) => s.id === 'internet') || campusLifeSections[0];
@@ -95,15 +94,6 @@ export const InternetPage: React.FC = () => {
 
                                             {/* Feature Badges & Action Button */}
                                             <div className="pt-2 flex flex-wrap items-center gap-3">
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setIsInternetTableOpen(!isInternetTableOpen)}
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#FF5422] to-[#FF7A45] hover:from-[#e04515] hover:to-[#FF5422] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-102 active:scale-98 transition-all duration-200 cursor-pointer"
-                                                >
-                                                    <span>{isInternetTableOpen ? 'Hide Connectivity Table' : 'Explore Connectivity Specifications'}</span>
-                                                    <ChevronRight size={16} />
-                                                </button>
-
                                                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
                                                     <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
                                                         80 Mbps Leased Line
