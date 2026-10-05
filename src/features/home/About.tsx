@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import OptimizedImage from '../../components/common/OptimizedImage';
 
 const About: React.FC = () => {
@@ -43,22 +44,13 @@ const About: React.FC = () => {
                         </div>
 
                         <div className="mt-6 lg:mt-8 flex items-center gap-4 lg:gap-6">
-                            <a
-                                href="#departments"
+                            <Link
+                                to="/about/overview"
                                 className="inline-flex items-center gap-2 text-primary text-sm font-semibold group"
                             >
-                                <span>Explore Departments</span>
+                                <span>Read More</span>
                                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                            </a>
-                            <span className="w-px h-4 bg-neutral-300" />
-                            <a
-                                href="https://www.srit.ac.in/overview/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-neutral-500 text-sm font-medium hover:text-primary transition-colors duration-300"
-                            >
-                                Read More
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
 

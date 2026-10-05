@@ -58,16 +58,35 @@ const LeadershipVision: React.FC = () => {
                             ease: [0.22, 1, 0.36, 1],
                         }}
                     >
-                        <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
+
+                        {/* =================================================
+                            MAIN HEADING
+                        ================================================= */}
+
+                        <span
+                            className="text-primary font-black tracking-[0.08em] uppercase block"
+                            style={{
+                                fontSize: 'clamp(1.75rem, 3vw, 3rem)',
+                                lineHeight: '1',
+                                marginBottom: '10px',
+                            }}
+                        >
                             Visionary Leadership
                         </span>
 
-                        <h2 className="font-serif text-5xl md:text-6xl font-bold text-neutral-900 tracking-tight">
+                        <h2
+                            className="font-serif font-bold text-neutral-900 tracking-tight"
+                            style={{
+                                fontSize: 'clamp(1rem, 1.5vw, 1.5rem)',
+                                lineHeight: '1.1',
+                            }}
+                        >
                             Guiding{' '}
                             <span className="text-primary">
                                 The Future
                             </span>
                         </h2>
+
                     </motion.div>
 
                 </div>
@@ -148,7 +167,8 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-center
                                     "
-                                loading="lazy" />
+                                    loading="lazy"
+                                />
                             </div>
 
 
@@ -175,14 +195,14 @@ const LeadershipVision: React.FC = () => {
 
                             <p
                                 className="
-        text-primary
-        text-[13px]
-        sm:text-[14px]
-        font-semibold
-        tracking-wide
-        leading-[1.15]
-        text-center
-    "
+                                    text-primary
+                                    text-[13px]
+                                    sm:text-[14px]
+                                    font-semibold
+                                    tracking-wide
+                                    leading-[1.15]
+                                    text-center
+                                "
                             >
                                 <span className="block">Founder</span>
                                 <span className="block">&amp;</span>
@@ -273,7 +293,8 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-top
                                     "
-                                loading="lazy" />
+                                    loading="lazy"
+                                />
                             </div>
 
 
@@ -396,7 +417,8 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-center
                                     "
-                                loading="lazy" />
+                                    loading="lazy"
+                                />
                             </div>
 
 
@@ -519,7 +541,8 @@ const LeadershipVision: React.FC = () => {
                                         object-cover
                                         object-center
                                     "
-                                loading="lazy" />
+                                    loading="lazy"
+                                />
                             </div>
 
 
