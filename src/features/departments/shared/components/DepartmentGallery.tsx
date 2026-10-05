@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { DepartmentData } from '../../data/departments';
+import type { DepartmentData } from '../../index';
 
 interface DepartmentGalleryProps {
     dept: DepartmentData;
@@ -14,82 +14,15 @@ interface GalleryImage {
 
 /* ── Gallery data per department ───────────────────────── */
 
-const galleryData: Record<string, GalleryImage[]> = {
-    cse: [
-        { src: '/culturalevent.jpg', caption: 'Annual Hackathon 2025', category: 'Events' },
-        { src: '/labs.jpg', caption: 'Coding Lab Session', category: 'Labs' },
-        { src: '/sportfacilites.jpg', caption: 'Team Project Discussion', category: 'Students' },
-        { src: '/sports.jpg', caption: 'Workshop on Cloud Computing', category: 'Events' },
-        { src: '/srit.jpg', caption: 'Coding Club Meet', category: 'Clubs' },
-        { src: '/srit1.jpg', caption: 'Student Seminar Presentation', category: 'Students' },
-        { src: '/Campus.JPG', caption: 'Tech Fest Opening Ceremony', category: 'Events' },
-        { src: '/College 1.jpg', caption: 'Placement Training Session', category: 'Students' },
-        { src: '/College 2.JPG', caption: 'AI & ML Workshop', category: 'Events' },
-        { src: '/College 3.JPG', caption: 'Computer Lab Infrastructure', category: 'Labs' },
-        { src: '/College.JPG', caption: 'Innovation Club Brainstorm', category: 'Clubs' },
-        { src: '/ComputerLab.JPG', caption: 'Annual Day Celebration', category: 'Events' },
-    ],
-    csm: [
-        { src: '/Library 1.JPG', caption: 'AI Research Lab', category: 'Labs' },
-        { src: '/Library.JPG', caption: 'Robotics Club Demo', category: 'Clubs' },
-        { src: '/BasketBall.JPG', caption: 'ML Project Showcase', category: 'Students' },
-        { src: '/Transport.jpg', caption: 'Deep Learning Workshop', category: 'Events' },
-        { src: '/culturalevent.jpg', caption: 'Neural Networks Seminar', category: 'Events' },
-        { src: '/labs.jpg', caption: 'AI Club Meeting', category: 'Clubs' },
-        { src: '/sportfacilites.jpg', caption: 'Hackathon Participants', category: 'Students' },
-        { src: '/sports.jpg', caption: 'Tech Symposium', category: 'Events' },
-    ],
-    ece: [
-        { src: '/srit.jpg', caption: 'Circuit Design Lab', category: 'Labs' },
-        { src: '/srit1.jpg', caption: 'Electronics Workshop', category: 'Events' },
-        { src: '/Campus.JPG', caption: 'VLSI Design Session', category: 'Labs' },
-        { src: '/College 1.jpg', caption: 'ECE Student Group', category: 'Students' },
-        { src: '/College 2.JPG', caption: 'IoT Project Expo', category: 'Events' },
-        { src: '/College 3.JPG', caption: 'Embedded Systems Club', category: 'Clubs' },
-        { src: '/College.JPG', caption: 'Signal Processing Seminar', category: 'Events' },
-        { src: '/ComputerLab.JPG', caption: 'Industry Visit', category: 'Students' },
-    ],
-    eee: [
-        { src: '/Library 1.JPG', caption: 'Power Systems Lab', category: 'Labs' },
-        { src: '/Library.JPG', caption: 'Renewable Energy Workshop', category: 'Events' },
-        { src: '/BasketBall.JPG', caption: 'EEE Students Team', category: 'Students' },
-        { src: '/Transport.jpg', caption: 'Electrical Machines Demo', category: 'Events' },
-        { src: '/culturalevent.jpg', caption: 'Energy Club Meet', category: 'Clubs' },
-        { src: '/labs.jpg', caption: 'Annual Tech Fest', category: 'Events' },
-    ],
-    mec: [
-        { src: '/sportfacilites.jpg', caption: 'Workshop Practical Session', category: 'Labs' },
-        { src: '/sports.jpg', caption: 'CAD/CAM Lab', category: 'Labs' },
-        { src: '/srit.jpg', caption: 'Design Competition', category: 'Events' },
-        { src: '/srit1.jpg', caption: 'Mechanical Students', category: 'Students' },
-        { src: '/Campus.JPG', caption: 'SAE Club Activities', category: 'Clubs' },
-        { src: '/College 1.jpg', caption: 'Industrial Visit', category: 'Events' },
-    ],
-    cad: [
-        { src: '/College 2.JPG', caption: 'Data Analytics Lab', category: 'Labs' },
-        { src: '/College 3.JPG', caption: 'Data Science Workshop', category: 'Events' },
-        { src: '/College.JPG', caption: 'AI&DS Student Team', category: 'Students' },
-        { src: '/ComputerLab.JPG', caption: 'Kaggle Club Meetup', category: 'Clubs' },
-        { src: '/Library 1.JPG', caption: 'Data Hackathon', category: 'Events' },
-        { src: '/Library.JPG', caption: 'Guest Lecture on Big Data', category: 'Students' },
-    ],
-    civil: [
-        { src: '/BasketBall.JPG', caption: 'Construction Site Visit', category: 'Events' },
-        { src: '/Transport.jpg', caption: 'Surveying Practical', category: 'Labs' },
-        { src: '/culturalevent.jpg', caption: 'Civil Engineering Students', category: 'Students' },
-        { src: '/labs.jpg', caption: 'Bridge Model Competition', category: 'Events' },
-        { src: '/sportfacilites.jpg', caption: 'ASCE Student Chapter', category: 'Clubs' },
-        { src: '/sports.jpg', caption: 'Geo-Technical Seminar', category: 'Events' },
-    ],
-};
 
+/* Data moved to department data files */
 const categories = ['All', 'Events', 'Students', 'Clubs', 'Labs'];
 
 const DepartmentGallery: React.FC<DepartmentGalleryProps> = ({ dept }) => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
-    const images = galleryData[dept.slug] || galleryData['cse'];
+    const images = dept.gallery || [];
     const filtered = activeCategory === 'All'
         ? images
         : images.filter((img) => img.category === activeCategory);

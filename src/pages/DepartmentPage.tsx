@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { getDepartmentBySlug, type DepartmentData } from '../data/departments';
+import { getDepartmentBySlug, type DepartmentData } from '../features/departments/index';
 import DepartmentNavbar from '../components/layout/DepartmentNavbar';
 import Footer from '../components/layout/Footer';
-import DepartmentAbout from '../features/departments/DepartmentAbout';
-import DepartmentFaculty from '../features/departments/DepartmentFaculty';
-import DepartmentStudents from '../features/departments/DepartmentStudents';
-import DepartmentGallery from '../features/departments/DepartmentGallery';
-import DepartmentCourseStructure from '../features/departments/DepartmentCourseStructure';
-import DepartmentProjects from '../features/departments/DepartmentProjects';
-import DepartmentOverview from '../features/departments/DepartmentOverview';
-import DepartmentOutcome from '../features/departments/DepartmentOutcome';
-import DepartmentEContent from '../features/departments/DepartmentEContent';
-import DepartmentStudentChapters from '../features/departments/DepartmentStudentChapters';
+import DepartmentAbout from '../features/departments/shared/components/DepartmentAbout';
+import DepartmentFaculty from '../features/departments/shared/components/DepartmentFaculty';
+import DepartmentStudents from '../features/departments/shared/components/DepartmentStudents';
+import DepartmentGallery from '../features/departments/shared/components/DepartmentGallery';
+import DepartmentCourseStructure from '../features/departments/shared/components/DepartmentCourseStructure';
+import DepartmentProjects from '../features/departments/shared/components/DepartmentProjects';
+import DepartmentOverview from '../features/departments/shared/components/DepartmentOverview';
+import DepartmentOutcome from '../features/departments/shared/components/DepartmentOutcome';
+import DepartmentEContent from '../features/departments/shared/components/DepartmentEContent';
+import DepartmentStudentChapters from '../features/departments/shared/components/DepartmentStudentChapters';
 import DepartmentAccordion from '../components/common/DepartmentAccordion';
 import {
     Info,
@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 const getSidebarItems = (dept: DepartmentData) => {
-    if (dept.slug === 'cse') {
+    if (dept.layout === 'sidebar') {
         return [
             {
                 key: 'about',
@@ -221,110 +221,40 @@ const DepartmentPage: React.FC = () => {
      * Render the selected department section.
      */
     const renderContent = () => {
+        const AboutComp = dept.components?.About || DepartmentAbout;
+        const OverviewComp = dept.components?.Overview || DepartmentOverview;
+        const FacultyComp = dept.components?.Faculty || DepartmentFaculty;
+        const CourseComp = dept.components?.CourseStructure || DepartmentCourseStructure;
+        const OutcomeComp = dept.components?.Outcome || DepartmentOutcome;
+        const EContentComp = dept.components?.EContent || DepartmentEContent;
+        const ChaptersComp = dept.components?.StudentChapters || DepartmentStudentChapters;
+        const ProgramComp = dept.components?.Projects || DepartmentProjects;
+        const StudentsComp = dept.components?.Students || DepartmentStudents;
+        const GalleryComp = dept.components?.Gallery || DepartmentGallery;
+
         switch (activeTab) {
-
             case 'about':
-                return (
-                    <DepartmentAbout
-                        dept={dept}
-                    />
-                );
-
+                return <AboutComp dept={dept} />;
             case 'overview':
-                return (
-                    <DepartmentOverview
-                        dept={dept}
-                    />
-                );
-
+                return <OverviewComp dept={dept} />;
             case 'faculty':
-                return (
-                    <DepartmentFaculty
-                        dept={dept}
-                    />
-                );
-
+                return <FacultyComp dept={dept} />;
             case 'course':
-                return (
-                    <DepartmentCourseStructure
-                        dept={dept}
-                    />
-                );
-
+                return <CourseComp dept={dept} />;
             case 'outcome':
-                if (dept.slug === 'cse') {
-                    return (
-                        <DepartmentAccordion
-                            title="OUTCOME BASED EDUCATION"
-                            items={[
-                                { title: 'Program Educational Objectives (PEOs)' },
-                                { title: 'Program Outcomes (POs) & Program Specific Outcome (PSOs)' },
-                                { title: 'Outcome Based Education Manual' },
-                                { title: 'Attainment of Course Outcomes' },
-                                { title: 'PO and PSO Attainment' },
-                            ]}
-                        />
-                    );
-                }
-                return (
-                    <DepartmentOutcome />
-                );
-
+                return <OutcomeComp dept={dept} />;
             case 'e-content':
-                return (
-                    <DepartmentEContent
-                        dept={dept}
-                    />
-                );
-
+                return <EContentComp dept={dept} />;
             case 'chapters':
-                return (
-                    <DepartmentStudentChapters
-                        dept={dept}
-                    />
-                );
-
+                return <ChaptersComp dept={dept} />;
             case 'program':
-                return (
-                    <DepartmentProjects
-                        dept={dept}
-                    />
-                );
-
+                return <ProgramComp dept={dept} />;
             case 'students':
-                if (dept.slug === 'cse') {
-                    return (
-                        <DepartmentAccordion
-                            title="STUDENTS"
-                            items={[
-                                { title: 'Student Academic Activities' },
-                                { title: 'Cocurricular and Extra Curricular Activities' },
-                                { title: 'Students Internship' },
-                                { title: 'Students Projects' },
-                                { title: 'Placements' },
-                                { title: 'Roll of Honors' },
-                                { title: 'Logic of the Day' },
-                            ]}
-                        />
-                    );
-                }
-                return (
-                    <DepartmentStudents />
-                );
-
+                return <StudentsComp dept={dept} />;
             case 'gallery':
-                return (
-                    <DepartmentGallery
-                        dept={dept}
-                    />
-                );
-
+                return <GalleryComp dept={dept} />;
             default:
-                return (
-                    <DepartmentAbout
-                        dept={dept}
-                    />
-                );
+                return <AboutComp dept={dept} />;
         }
     };
 
@@ -356,8 +286,8 @@ const DepartmentPage: React.FC = () => {
 
             <main className="w-full min-h-screen">
 
-                {dept.slug === 'cse' ? (
-                    /* ── CSE: Sidebar + Content layout ── */
+                {dept.layout === 'sidebar' ? (
+                    /* ── Sidebar + Content layout ── */
                     <div className="flex min-h-[calc(100vh-62px)] bg-neutral-50/30">
 
                         {/* LEFT SIDEBAR — CSE Reference Match */}
@@ -382,7 +312,7 @@ const DepartmentPage: React.FC = () => {
                                     <GraduationCap size={20} strokeWidth={2} color="#fff" />
                                 </div>
                                 <div>
-                                    <p className="text-white font-bold text-[15px] leading-tight tracking-wide">CSE</p>
+                                    <p className="text-white font-bold text-[15px] leading-tight tracking-wide">{dept.code}</p>
                                     <p className="text-[13px] leading-tight mt-[2px]" style={{ color: 'rgba(255,255,255,0.45)' }}>Department</p>
                                 </div>
                             </div>
@@ -532,7 +462,7 @@ const DepartmentPage: React.FC = () => {
                                 ABOUT PAGE HERO
                             ================================================= */}
 
-                            {activeTab === 'about' && dept.slug !== 'cse' && (
+                            {activeTab === 'about' && dept.layout !== 'sidebar' && (
                                 <section className="relative overflow-hidden min-h-[300px] lg:min-h-[400px] flex items-end">
 
                                     {/* Background Image */}

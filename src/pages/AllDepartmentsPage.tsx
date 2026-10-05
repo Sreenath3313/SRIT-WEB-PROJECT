@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
-import Departments from '../features/departments/Departments';
+import Departments from '../features/departments/shared/components/Departments';
 import Footer from '../components/layout/Footer';
 
 const AllDepartmentsPage: React.FC = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GraduationCap, Calendar, Users, ArrowRight } from 'lucide-react';
-import type { FacultyMember } from '../../data/departments';
+import type { FacultyMember } from '../../index';
 
 interface FacultyProfilesProps {
     faculty: FacultyMember[];

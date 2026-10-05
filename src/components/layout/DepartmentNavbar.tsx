@@ -9,6 +9,7 @@ interface Department {
     code: string;
     name: string;
     fullName?: string;
+    layout?: 'sidebar' | 'full-width';
 }
 
 interface DepartmentNavItem {
@@ -45,8 +46,8 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 DEPARTMENT HEADER
             ===================================================== */}
 
-            {dept.slug === 'cse' ? (
-                /* ── CSE: Custom Header matching reference image ── */
+            {dept.layout === 'sidebar' ? (
+                /* ── Sidebar Layout: Custom Header ── */
                 <div className="bg-white text-neutral-900 relative overflow-hidden border-b border-neutral-100">
 
                     {/* Left geometric accents */}
@@ -249,7 +250,7 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 DEPARTMENT NAVIGATION
             ===================================================== */}
 
-            <div className={`bg-white border-b border-[#FF5422]/20 shadow-sm relative z-20 ${dept.slug === 'cse' ? 'lg:hidden' : ''}`}>
+            <div className={`bg-white border-b border-[#FF5422]/20 shadow-sm relative z-20 ${dept.layout === 'sidebar' ? 'lg:hidden' : ''}`}>
 
                 <div className="max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-10">
 

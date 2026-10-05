@@ -1,5 +1,5 @@
 import React from 'react';
-import type { DepartmentData } from '../../data/departments';
+import type { DepartmentData } from '../../index';
 
 interface DepartmentProjectsProps {
     dept: DepartmentData;

@@ -1,6 +1,6 @@
 import React from 'react';
-import type { DepartmentData } from '../../data/departments';
-import DepartmentAccordion from '../../components/common/DepartmentAccordion';
+import type { DepartmentData } from '../../index';
+import DepartmentAccordion from '../../../../components/common/DepartmentAccordion';
 
 interface DepartmentStudentChaptersProps {
     dept: DepartmentData;

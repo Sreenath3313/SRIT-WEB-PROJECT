@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import type { DepartmentData } from '../../data/departments';
+import type { DepartmentData } from '../../index';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import SpreadsheetTable from '../../components/common/SpreadsheetTable';
-import ContentRenderer from '../../components/common/ContentRenderer';
+import SpreadsheetTable from '../../../../components/common/SpreadsheetTable';
+import ContentRenderer from '../../../../components/common/ContentRenderer';
 
 interface DepartmentOverviewProps {
     dept: DepartmentData;

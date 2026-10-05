@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { departments } from '../../data/departments';
+import { departments } from '../../index';
 
 const deptImages: Record<string, string> = {
     CSE: '/CSEDept.jpg',
