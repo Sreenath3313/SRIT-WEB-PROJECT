@@ -462,7 +462,7 @@ const DepartmentPage: React.FC = () => {
                                 ABOUT PAGE HERO
                             ================================================= */}
 
-                            {activeTab === 'about' && dept.layout !== 'sidebar' && (
+                            {activeTab === 'about' && (
                                 <section className="relative overflow-hidden min-h-[300px] lg:min-h-[400px] flex items-end">
 
                                     {/* Background Image */}
