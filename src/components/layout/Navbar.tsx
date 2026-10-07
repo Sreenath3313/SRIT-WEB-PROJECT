@@ -187,11 +187,11 @@ const Navbar: React.FC = () => {
         <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col bg-white shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
 
             {/* TOP UTILITY BAR */}
-            <div className="w-full bg-[#FF5422] text-white py-1.5 min-h-[28px] flex items-center justify-center relative z-50">
-                <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1600px] px-4 gap-2 h-full flex-wrap">
+            <div className="w-full bg-[#FF5422] text-white py-1.5 min-h-[28px] flex items-center relative z-50">
+                <div className="flex flex-wrap items-center justify-center md:justify-between w-full max-w-[1600px] px-2 md:px-4 gap-y-1.5 gap-x-2 md:gap-2 h-full mx-auto">
 
                     {/* LEFT SIDE: Phone & Email */}
-                    <div className="flex items-center justify-center gap-2 xl:gap-3 h-full">
+                    <div className="flex flex-wrap items-center justify-center gap-2 xl:gap-3 w-full md:w-auto h-full">
                         <a
                             href="tel:+919515611111"
                             className="flex items-center gap-1 text-[9px] md:text-[10px] font-medium whitespace-nowrap hover:text-white/80 transition-colors"
@@ -212,7 +212,7 @@ const Navbar: React.FC = () => {
                     </div>
                     
                     {/* RIGHT SIDE: All Links */}
-                    <div className="hidden md:flex items-center justify-center gap-2 xl:gap-3 flex-wrap h-full">
+                    <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1.5 xl:gap-3 w-full md:w-auto h-full py-0.5">
                         <a
                             href="https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f"
                             target="_blank"
@@ -512,30 +512,7 @@ const Navbar: React.FC = () => {
                                 </div>
                             ))}
                             
-                            {/* Mobile Quick Links from Utility Bar */}
-                            <div className="mt-4 pt-4 border-t border-neutral-200 flex flex-col gap-3 md:hidden">
-                                <a href="https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
-                                    <UserCheck className="w-4 h-4 text-primary" />
-                                    Faculty Login
-                                </a>
-                                <a href="https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
-                                    <User className="w-4 h-4 text-primary" />
-                                    Student Login
-                                </a>
-                                <Link to="/degree-verification" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
-                                    <GraduationCap className="w-4 h-4 text-primary" />
-                                    Degree Verification
-                                </Link>
-                                <a href="#" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
-                                    <Download className="w-4 h-4 text-primary" />
-                                    Downloads
-                                </a>
-                                <a href="/#contact" className="flex items-center gap-3 px-2 py-1 text-[14px] font-bold text-slate-700 hover:text-primary transition-colors">
-                                    <Contact className="w-4 h-4 text-primary" />
-                                    Contact Us
-                                </a>
-                            </div>
-
+                            {/* Removed redundant quick links */}
                         </div>
                     </motion.div>
                     </>

@@ -185,130 +185,88 @@ const DepartmentCourseStructure: React.FC<
                                             </div>
                                         )}
 
-                                        {/* Data Table */}
-                                        <div className="px-4 lg:px-6 pb-5 overflow-x-auto custom-scrollbar">
-                                            <table className="w-full text-left border-collapse min-w-[400px] sm:min-w-full">
-                                                <thead>
-                                                    <tr>
-                                                        <th
-                                                            className="px-4 py-3.5 text-[15px] font-bold uppercase tracking-wider"
-                                                            style={{
-                                                                background:
-                                                                    '#F85E00',
-                                                                color: 'white',
-                                                                borderRight:
-                                                                    '1px solid rgba(255,255,255,0.15)',
-                                                            }}
-                                                        >
-                                                            Description
-                                                        </th>
-
-                                                        <th
-                                                            className="px-4 py-3.5 text-[15px] font-bold uppercase tracking-wider text-center"
-                                                            style={{
-                                                                background:
-                                                                    '#F85E00',
-                                                                color: 'white',
-                                                                width: '200px',
-                                                            }}
-                                                        >
-                                                            View/Download
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    {section.documents.map(
-                                                        (
-                                                            doc,
-                                                            di
-                                                        ) => (
+                                        {section.documents && section.documents.length > 0 && (
+                                            <div className="px-4 lg:px-6 pb-5 overflow-x-auto custom-scrollbar">
+                                                <table className="w-full text-left border-collapse min-w-[400px] sm:min-w-full">
+                                                    <thead>
+                                                        <tr>
+                                                            <th
+                                                                className="px-4 py-3.5 text-[15px] font-bold uppercase tracking-wider"
+                                                                style={{
+                                                                    background: '#F85E00',
+                                                                    color: 'white',
+                                                                    borderRight: '1px solid rgba(255,255,255,0.15)',
+                                                                }}
+                                                            >
+                                                                Description
+                                                            </th>
+                                                            <th
+                                                                className="px-4 py-3.5 text-[15px] font-bold uppercase tracking-wider text-center"
+                                                                style={{
+                                                                    background: '#F85E00',
+                                                                    color: 'white',
+                                                                    width: '200px',
+                                                                }}
+                                                            >
+                                                                View/Download
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {section.documents.map((doc, di) => (
                                                             <tr
-                                                                key={
-                                                                    di
-                                                                }
+                                                                key={di}
                                                                 className="transition-colors duration-200"
                                                                 style={{
-                                                                    borderBottom:
-                                                                        '1px solid rgba(248, 94, 0, 0.06)',
-                                                                    background:
-                                                                        di %
-                                                                            2 ===
-                                                                            0
-                                                                            ? 'rgba(255, 250, 243, 0.5)'
-                                                                            : 'white',
+                                                                    borderBottom: '1px solid rgba(248, 94, 0, 0.06)',
+                                                                    background: di % 2 === 0 ? 'rgba(255, 250, 243, 0.5)' : 'white',
                                                                 }}
-                                                                onMouseEnter={(
-                                                                    e
-                                                                ) => {
-                                                                    e.currentTarget.style.background =
-                                                                        'rgba(255, 210, 157, 0.15)';
+                                                                onMouseEnter={(e) => {
+                                                                    e.currentTarget.style.background = 'rgba(255, 210, 157, 0.15)';
                                                                 }}
-                                                                onMouseLeave={(
-                                                                    e
-                                                                ) => {
-                                                                    e.currentTarget.style.background =
-                                                                        di %
-                                                                            2 ===
-                                                                            0
-                                                                            ? 'rgba(255, 250, 243, 0.5)'
-                                                                            : 'white';
+                                                                onMouseLeave={(e) => {
+                                                                    e.currentTarget.style.background = di % 2 === 0 ? 'rgba(255, 250, 243, 0.5)' : 'white';
                                                                 }}
                                                             >
                                                                 <td className="px-4 py-3.5 text-[16px] text-neutral-700">
-                                                                    {
-                                                                        doc.description
-                                                                    }
+                                                                    {doc.description}
                                                                 </td>
-
                                                                 <td className="px-4 py-3.5 text-center">
                                                                     <a
-                                                                        href={
-                                                                            doc.link
-                                                                        }
+                                                                        href={doc.link}
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
                                                                         className="inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors duration-200"
-                                                                        style={{
-                                                                            color: '#FF5422',
+                                                                        style={{ color: '#FF5422' }}
+                                                                        onMouseEnter={(e) => {
+                                                                            e.currentTarget.style.color = '#FFB563';
                                                                         }}
-                                                                        onMouseEnter={(
-                                                                            e
-                                                                        ) => {
-                                                                            e.currentTarget.style.color =
-                                                                                '#FFB563';
-                                                                        }}
-                                                                        onMouseLeave={(
-                                                                            e
-                                                                        ) => {
-                                                                            e.currentTarget.style.color =
-                                                                                '#F85E00';
+                                                                        onMouseLeave={(e) => {
+                                                                            e.currentTarget.style.color = '#F85E00';
                                                                         }}
                                                                     >
-                                                                        <svg
-                                                                            width="14"
-                                                                            height="14"
-                                                                            viewBox="0 0 14 14"
-                                                                            fill="none"
-                                                                        >
-                                                                            <path
-                                                                                d="M7 1.75V9.625M7 9.625L4.375 7M7 9.625L9.625 7M2.625 11.375H11.375"
-                                                                                stroke="currentColor"
-                                                                                strokeWidth="1.5"
-                                                                                strokeLinecap="round"
-                                                                                strokeLinejoin="round"
-                                                                            />
+                                                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                                            <path d="M7 1.75V9.625M7 9.625L4.375 7M7 9.625L9.625 7M2.625 11.375H11.375" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                                                         </svg>
-
                                                                         View/Download
                                                                     </a>
                                                                 </td>
                                                             </tr>
-                                                        )
-                                                    )}
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                                        ))}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        )}
+
+                                        {section.iframeSrc && (
+                                            <div className="w-full">
+                                                <iframe src={section.iframeSrc} className="w-full h-[600px] border-none" />
+                                            </div>
+                                        )}
+
+                                        {section.content && (
+                                            <div className="w-full" dangerouslySetInnerHTML={{ __html: section.content }} />
+                                        )}
                                     </motion.div>
                                 )}
                             </AnimatePresence>

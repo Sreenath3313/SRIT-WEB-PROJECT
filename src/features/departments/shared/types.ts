@@ -9,7 +9,9 @@ export interface CourseSection {
     key: string;
     title: string;
     subtitle?: string;
-    documents: CourseDocument[];
+    documents?: CourseDocument[];
+    iframeSrc?: string;
+    content?: string;
 }
 
 export interface GalleryImage {
@@ -67,10 +69,24 @@ export interface DepartmentData {
     hodMessage: HodMessage;
     faculty: FacultyMember[];
     courses?: CourseSection[];
+    facultyAccordions?: Array<{
+        title: string;
+        content: string;
+    }>;
     gallery?: GalleryImage[];
     studentChapters?: { title: string, content?: any }[];
+    students?: Array<{
+        title: string;
+        content: string;
+    }>;
     eContent?: { title: string, content?: any }[];
     facultyGroups?: { title: string, content?: any }[];
+    studentGroups?: { title: string, content?: any }[];
+    outcomeGroups?: { title: string, content?: any }[];
+    outcome?: Array<{
+        title: string;
+        content: string;
+    }>;
     overview?: Array<{
         title: string;
         content: string;
@@ -78,6 +94,10 @@ export interface DepartmentData {
         sheetUrls?: Record<string, string>;
         editUrls?: Record<string, string>;
         availableYears?: string[];
+    }>;
+    courseStructureItems?: Array<{
+        title: string;
+        content: string;
     }>;
     layout?: 'sidebar' | 'full-width';
     components?: {

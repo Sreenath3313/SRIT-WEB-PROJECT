@@ -29,6 +29,8 @@ html {
   font-size: 85%; /* Scaled down for 90% zoom effect */
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  /* Prevent layout shifts during scroll */
+  overflow-x: hidden;
 }
 
 /* Fluid responsive typography scaling */
@@ -56,6 +58,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
+  /* Buttery smooth momentum scrolling on iOS / macOS trackpads */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent pull-to-refresh jank and over-bounce */
+  overscroll-behavior-y: none;
 }
 
 h1,
@@ -80,11 +86,24 @@ h6 {
   -webkit-transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  will-change: transform, opacity;
+  will-change: transform;
 }
 
 .content-contained {
-  contain: layout paint style;
+  contain: layout style;
+}
+
+/* ─── Smooth Scroll Layer ────────────────────────────── */
+/* Applied to any overflow container that should scroll smoothly */
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+/* Framer-motion page wrappers */
+.page-layer {
+  position: relative;
 }
 
 /* ─── Typography Tokens ──────────────────────────────── */
@@ -166,6 +185,16 @@ h6 {
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -246,10 +275,12 @@ h6 {
 
 .animate-marquee {
   animation: marquee 10s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee-reverse {
   animation: marquee-reverse 10s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee:hover,

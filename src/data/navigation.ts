@@ -45,7 +45,7 @@ export const navLinks: NavLink[] = [
             { label: 'Electrical & Electronics (EEE)', href: '/department/eee' },
             { label: 'Mechanical Engineering (MEC)', href: '/department/mec' },
             { label: 'Civil Engineering (CIVIL)', href: '/department/civil' },
-            { label: 'H&S', href: '/academics/h-and-s' }
+            { label: 'H&S', href: '/department/has' }
         ]
     },
     { 

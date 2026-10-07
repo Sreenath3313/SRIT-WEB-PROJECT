@@ -1,0 +1,303 @@
+[
+    {
+        "name": "Dr. J. Gurusiddappa",
+        "designation": "Associate Professor & Head",
+        "qualification": "M.Sc., Ph.D",
+        "joiningDate": "12-06-2019",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. P. Vinatha",
+        "designation": "Associate Professor",
+        "qualification": "M.A., Ph.D",
+        "joiningDate": "13-06-2012",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. K. Uma Maheswari",
+        "designation": "Associate Professor",
+        "qualification": "M.Sc., Ph.D",
+        "joiningDate": "31-07-2018",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. U. Mahesh Kumar",
+        "designation": "Associate Professor",
+        "qualification": "M.Sc., Ph.D",
+        "joiningDate": "18-06-2018",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. R. Vijayalakshmi",
+        "designation": "Associate Professor",
+        "qualification": "M.Sc., Ph.D",
+        "joiningDate": "15-04-2021",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. J S Sukanya",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc., Ph.D",
+        "joiningDate": "01-11-2021",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. D. Anil Kumar",
+        "designation": "Assistant Professor",
+        "qualification": "M.A., Ph.D",
+        "joiningDate": "11-08-2008",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. G. Raghaveni",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "12-12-2014",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. M. Pullareddy",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.(Ph.D)",
+        "joiningDate": "01-06-2015",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. D. Narasimha Chakri",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "20-06-2016",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. G. Adinarayana",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "01-07-2016",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. V. Gopal",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.(Ph.D)",
+        "joiningDate": "01-07-2016",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. C. Lakshmi Narayana",
+        "designation": "Assistant Professor",
+        "qualification": "M.A., Ph.D",
+        "joiningDate": "19-06-2017",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. K. Bharathi",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.(Ph.D)",
+        "joiningDate": "22-06-2017",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. K Peddulaiah",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "06-05-2022",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. Y Venkata Siva Krishna",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "13-05-2022",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. A. Swetha",
+        "designation": "Assistant Professor",
+        "qualification": "MBA",
+        "joiningDate": "01-11-2012",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr.P.Raghavendra Sharma",
+        "designation": "Assistant Professor",
+        "qualification": "M.A.(Ph.D)",
+        "joiningDate": "20-08-2014",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. S. Lakshmi",
+        "designation": "Associate Professor",
+        "qualification": "M.A., Ph.D.",
+        "joiningDate": "14-07-2017",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. C. Y. Balu",
+        "designation": "Assistant Professor",
+        "qualification": "MBA",
+        "joiningDate": "01-05-2014",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. K. Satish kumar",
+        "designation": "Assistant Professor",
+        "qualification": "MBA",
+        "joiningDate": "18-01-2021",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. P Kavin Kumar",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc., M.Phil",
+        "joiningDate": "15-07-2022",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. Y. Jyothi",
+        "designation": "Assistant Professor",
+        "qualification": "M.L.I.Sc.",
+        "joiningDate": "12-04-2022",
+        "association": "Regular"
+    },
+    {
+        "name": "Ms. Nalini Kumari",
+        "designation": "Assistant Professor",
+        "qualification": "M.A.",
+        "joiningDate": "01-06-2022",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. D.V. Hari Kishore",
+        "designation": "Assistant Professor",
+        "qualification": "MBA",
+        "joiningDate": "04-02-2021",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. Y. Thomas Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "MBA",
+        "joiningDate": "04-01-2008",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. S. Shaheena Banu",
+        "designation": "Assistant Professor",
+        "qualification": "M.A.",
+        "joiningDate": "01-07-2022",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr.E Supriya",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc,. Ph.D",
+        "joiningDate": "17-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Mr. M.Prabhakar",
+        "designation": "Assistant Professor",
+        "qualification": "M.A.",
+        "joiningDate": "25-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs.B Bhagya Sree",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "10-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. G Anusha",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "10-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs.M Krishnaveni",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "17-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. Y Madhusudhana Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc., Ph.D.",
+        "joiningDate": "12-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. M Mustak Ahamad",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc,. Ph.D",
+        "joiningDate": "12-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. S Ayesha Khanam",
+        "designation": "Assistant Professor",
+        "qualification": "M.A",
+        "joiningDate": "10-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. P Aparna",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "10-07-2024",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. B. Hima Bindu",
+        "designation": "Assistant Professor",
+        "qualification": "M.A.",
+        "joiningDate": "02-06-2025",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. C. Lakshmi Pathi",
+        "designation": "Associate Professor",
+        "qualification": "M.Sc. Ph.D.",
+        "joiningDate": "16-06-2025",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. Shabana Azmeen",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc.",
+        "joiningDate": "16-06-2025",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs.Shaik Fathima Naseers",
+        "designation": "Assistant Professor",
+        "qualification": "MBA",
+        "joiningDate": "16-06-2025",
+        "association": "Regular"
+    },
+    {
+        "name": "Dr. D. Madhusudhana Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "M.Sc., B.Ed., M.Phil.,Ph.D",
+        "joiningDate": "18-06-2025",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. B. Chandra Kala",
+        "designation": "Assistant Professor",
+        "qualification": "M.L.I.Sc.",
+        "joiningDate": "01-07-2025",
+        "association": "Regular"
+    },
+    {
+        "name": "Mrs. M. Suajatha",
+        "designation": "Assistant Professor",
+        "qualification": "MBA",
+        "joiningDate": "11-07-2025",
+        "association": "Regular"
+    }
+]

@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 const getSidebarItems = (dept: DepartmentData) => {
-    if (dept.layout === 'sidebar') {
+    if (dept.slug === 'ece' || dept.slug === 'eee' || dept.slug === 'has') {
         return [
             {
                 key: 'about',
@@ -72,6 +72,56 @@ const getSidebarItems = (dept: DepartmentData) => {
                 icon: <Network className="w-[18px] h-[18px]" strokeWidth={2.2} />
             }
         ];
+    }
+
+    if (dept.layout === 'sidebar') {
+        const items = [
+            {
+                key: 'about',
+                label: 'About Us',
+                icon: <Info className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            },
+            {
+                key: 'overview',
+                label: 'Program Overview',
+                icon: <FileText className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            },
+            {
+                key: 'course',
+                label: 'Course Structure',
+                icon: <BookOpen className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            },
+            {
+                key: 'outcome',
+                label: 'Outcome Based Education',
+                icon: <Target className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            },
+            {
+                key: 'e-content',
+                label: 'E-Content',
+                icon: <Monitor className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            },
+            {
+                key: 'faculty',
+                label: 'Faculty',
+                icon: <GraduationCap className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            },
+            {
+                key: 'students',
+                label: 'Students',
+                icon: <Users className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            }
+        ];
+
+        if (dept.slug !== 'cad') {
+            items.push({
+                key: 'chapters',
+                label: 'Students Chapters',
+                icon: <Network className="w-[18px] h-[18px]" strokeWidth={2.2} />
+            });
+        }
+
+        return items;
     }
 
     const items = [
@@ -286,7 +336,7 @@ const DepartmentPage: React.FC = () => {
 
             <main className="w-full min-h-screen">
 
-                {dept.layout === 'sidebar' ? (
+                {(dept.layout === 'sidebar' || dept.slug === 'eee' || dept.slug === 'has') ? (
                     /* ── Sidebar + Content layout ── */
                     <div className="flex min-h-[calc(100vh-62px)] bg-neutral-50/30">
 
@@ -318,7 +368,7 @@ const DepartmentPage: React.FC = () => {
                             </div>
 
                             {/* ── NAVIGATION ── */}
-                            <nav className="flex-1 overflow-y-auto py-3 flex flex-col gap-[2px] scrollbar-hide px-3">
+                            <nav className="flex-1 overflow-y-auto py-3 flex flex-col gap-[2px] scrollbar-hide smooth-scroll px-3">
                                 {currentSidebarItems.map((item, index) => {
                                     const active = activeTab === item.key || (item.key === 'about' && activeTab === '');
                                     return (
@@ -411,10 +461,11 @@ const DepartmentPage: React.FC = () => {
                             <AnimatePresence mode="wait" initial={false}>
                                 <motion.div
                                     key={activeTab}
-                                    initial={{ opacity: 0, y: 12, filter: 'blur(4px)' }}
-                                    animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                                    exit={{ opacity: 0, y: -8, filter: 'blur(3px)' }}
-                                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                                    className="page-layer"
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -6 }}
+                                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                                 >
                                     <div className="px-6 sm:px-8 lg:px-12 py-8 sm:py-10 max-w-[1240px] mx-auto">
                                         {renderContent()}
@@ -433,27 +484,25 @@ const DepartmentPage: React.FC = () => {
 
                         <motion.div
                             key={activeTab}
+                            className="page-layer"
 
                             initial={{
                                 opacity: 0,
-                                y: 14,
-                                filter: 'blur(6px)',
+                                y: 12,
                             }}
 
                             animate={{
                                 opacity: 1,
                                 y: 0,
-                                filter: 'blur(0px)',
                             }}
 
                             exit={{
                                 opacity: 0,
-                                y: -10,
-                                filter: 'blur(4px)',
+                                y: -8,
                             }}
 
                             transition={{
-                                duration: 0.45,
+                                duration: 0.32,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
                         >

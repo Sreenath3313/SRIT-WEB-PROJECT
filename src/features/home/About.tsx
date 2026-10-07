@@ -62,11 +62,11 @@ const About: React.FC = () => {
                         className="lg:col-span-6 relative mt-10 lg:mt-0 content-contained"
                     >
                         {/* Gradient Fade Overlays */}
-                        <div className="absolute top-0 left-0 w-full h-10 lg:h-12 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none" />
-                        <div className="absolute bottom-0 left-0 w-full h-10 lg:h-12 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
+                        <div className="absolute top-0 bottom-0 left-0 w-8 lg:w-full lg:h-12 bg-gradient-to-r lg:bg-gradient-to-b from-white to-transparent z-20 pointer-events-none" />
+                        <div className="absolute top-0 bottom-0 right-0 w-8 lg:w-full lg:h-12 bg-gradient-to-l lg:bg-gradient-to-t from-white to-transparent z-20 pointer-events-none lg:bottom-0 lg:top-auto lg:left-0 lg:right-auto" />
 
                         {/* Scrolling Container */}
-                        <div className="flex flex-row lg:flex-col gap-3 lg:gap-6 h-auto lg:h-[600px] xl:h-[650px] overflow-x-auto lg:overflow-y-auto px-3 py-3 lg:py-6 custom-scrollbar w-full">
+                        <div className="flex flex-row lg:flex-col gap-4 lg:gap-6 h-auto lg:h-[600px] xl:h-[650px] overflow-x-auto lg:overflow-y-auto px-4 py-4 lg:py-6 custom-scrollbar w-full snap-x snap-mandatory lg:snap-y pb-6">
                             {[
                                 { src: '/cert-iic.jpg', alt: 'IIC Certificate' },
                                 { src: '/cert-salesforce.jpg', alt: 'Salesforce Award' },
@@ -75,11 +75,11 @@ const About: React.FC = () => {
                             ].map((img, index) => (
                                 <motion.div
                                     key={index}
-                                    className="relative overflow-hidden rounded-xl shadow-xl border border-neutral-100 bg-white group flex-shrink-0 cursor-pointer w-[260px] sm:w-[300px] md:w-[340px] lg:w-full h-[180px] sm:h-[240px] md:h-[300px] lg:h-full"
+                                    className="relative overflow-hidden rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-neutral-100 bg-white group flex-shrink-0 cursor-pointer w-[280px] sm:w-[320px] md:w-[340px] lg:w-full h-[200px] sm:h-[240px] md:h-[300px] lg:h-[300px] snap-center"
                                     whileHover={{
-                                        scale: 1.05,
+                                        scale: 1.02,
                                         zIndex: 50,
-                                        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                                        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
                                         transition: { duration: 0.3 }
                                     }}
                                 >

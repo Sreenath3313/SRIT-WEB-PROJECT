@@ -23,11 +23,18 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
         }
         
         const styleMatch = match[0].match(/style="([^"]+)"/);
+        const attrHeightMatch = match[0].match(/height="([^"]+)"/);
         let customStyle: React.CSSProperties = { width: '100%', minHeight: '500px' };
         
         if (styleMatch) {
             const heightMatch = styleMatch[1].match(/height:\s*([^;]+)/);
             if (heightMatch) customStyle.height = heightMatch[1].trim();
+        }
+        
+        if (!customStyle.height && attrHeightMatch) {
+            // if height attribute is something like "900", add "px", if it's "100%" keep it
+            const val = attrHeightMatch[1].trim();
+            customStyle.height = /^\d+$/.test(val) ? `${val}px` : val;
         }
 
         parts.push(

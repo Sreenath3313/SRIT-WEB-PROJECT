@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowLeft, ChevronRight, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import CollegeBuildingOutline from "./CollegeBuildingOutline";
 
 interface Department {
@@ -31,6 +31,8 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
     activeTab,
     onTabChange,
 }) => {
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
     const isActive = (key: string) => {
         if (key === "about") {
             return activeTab === "about" || activeTab === "";
@@ -46,7 +48,7 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 DEPARTMENT HEADER
             ===================================================== */}
 
-            {dept.layout === 'sidebar' ? (
+            {(dept.layout === 'sidebar' || dept.slug === 'eee' || dept.slug === 'has') ? (
                 /* ── Sidebar Layout: Custom Header ── */
                 <div className="bg-white text-neutral-900 relative overflow-hidden border-b border-neutral-100">
 
@@ -137,10 +139,10 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                 {/* TITLE & SUBTITLE */}
                                 <div className="min-w-0">
                                     <h1 className="text-[13px] sm:text-[15px] lg:text-[16px] font-bold leading-tight truncate text-neutral-900 tracking-tight">
-                                        CSE – Computer Science & Engineering
+                                        {dept.code} – {dept.name}
                                     </h1>
                                     <p className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium text-neutral-500 leading-tight mt-0.5 truncate max-w-[400px] sm:max-w-[600px]">
-                                        Department of Computer Science & Engineering
+                                        {dept.fullName || `Department of ${dept.name}`}
                                     </p>
                                 </div>
                             </motion.div>
@@ -250,22 +252,66 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 DEPARTMENT NAVIGATION
             ===================================================== */}
 
-            <div className={`bg-white border-b border-[#FF5422]/20 shadow-sm relative z-20 ${dept.layout === 'sidebar' ? 'lg:hidden' : ''}`}>
+            <div className={`bg-white border-b border-[#FF5422]/20 shadow-sm relative z-20 ${(dept.layout === 'sidebar' || dept.slug === 'eee' || dept.slug === 'has') ? 'lg:hidden' : ''}`}>
 
                 <div className="max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-10">
 
+                    {/* MOBILE DROPDOWN TABS */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="w-full h-[54px] flex items-center justify-between px-2 text-[#FF5422] font-semibold"
+                        >
+                            <div className="flex items-center gap-2">
+                                <span className="bg-[#FF5422]/10 p-1.5 rounded-full">{items.find(i => isActive(i.key))?.icon}</span>
+                                <span>{items.find(i => isActive(i.key))?.label}</span>
+                            </div>
+                            <ChevronDown className={`w-5 h-5 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        
+                        <AnimatePresence>
+                            {isMenuOpen && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: 'auto', opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="overflow-hidden bg-white absolute left-0 right-0 top-[54px] shadow-lg border-b border-neutral-100 z-50"
+                                >
+                                    <div className="flex flex-col pb-2 max-h-[60vh] overflow-y-auto">
+                                        {items.map((item) => {
+                                            const active = isActive(item.key);
+                                            return (
+                                                <button
+                                                    key={item.key}
+                                                    onClick={() => {
+                                                        onTabChange(item.key);
+                                                        setIsMenuOpen(false);
+                                                    }}
+                                                    className={`flex items-center gap-3 px-5 py-3.5 border-t border-neutral-50 transition-colors ${active ? 'bg-[#FF5422]/5 text-[#FF5422]' : 'text-neutral-600 hover:bg-neutral-50'}`}
+                                                >
+                                                    <span className={`${active ? 'text-[#FF5422]' : 'text-neutral-400'}`}>{item.icon}</span>
+                                                    <span className="font-medium text-[14px]">{item.label}</span>
+                                                </button>
+                                            )
+                                        })}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+
+                    {/* DESKTOP TABS */}
                     <nav
                         className="
-                            flex
+                            hidden md:flex
                             items-center
                             justify-start
-                            lg:justify-center
                             gap-1
                             sm:gap-2
-                            lg:gap-6
+                            lg:gap-3
+                            xl:gap-4
                             min-h-[54px] sm:min-h-[60px]
-                            overflow-x-auto
-                            scrollbar-hide
+                            px-2 sm:px-0
                         "
                     >
 
@@ -277,123 +323,42 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                     key={item.key}
                                     type="button"
                                     onClick={() => onTabChange(item.key)}
-                                    initial={{
-                                        opacity: 0,
-                                        y: 8,
-                                    }}
-                                    animate={{
-                                        opacity: 1,
-                                        y: 0,
-                                    }}
-                                    transition={{
-                                        delay: 0.3 + index * 0.055,
-                                        duration: 0.4,
-                                        ease: [0.22, 1, 0.36, 1],
-                                    }}
-                                    whileHover={{
-                                        y: -1,
-                                    }}
-                                    whileTap={{
-                                        scale: 0.97,
-                                    }}
+                                    initial={{ opacity: 0, y: 8 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.3 + index * 0.055, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                                    whileHover={{ y: -1 }}
+                                    whileTap={{ scale: 0.97 }}
                                     className={`
-                                        relative
-                                        h-[54px] sm:h-[60px]
-                                        px-2 sm:px-3
-                                        flex
-                                        items-center
-                                        justify-center
-                                        gap-1.5 sm:gap-2
-                                        whitespace-nowrap
-                                        shrink-0
-                                        text-[12px] sm:text-[13px]
-                                        font-medium
-                                        transition-colors
-                                        duration-200
-                                        group
-                                        ${active
-                                            ? "text-[#FF5422]"
-                                            : "text-neutral-600 hover:text-[#FF5422]"
-                                        }
+                                        relative h-[54px] sm:h-[60px] px-2 sm:px-3
+                                        flex items-center justify-center gap-1.5 sm:gap-2
+                                        whitespace-nowrap shrink-0 text-[12px] sm:text-[13px] font-medium
+                                        transition-colors duration-200 group
+                                        ${active ? "text-[#FF5422]" : "text-neutral-600 hover:text-[#FF5422]"}
                                     `}
                                 >
-
-                                    {/* ICON */}
-
                                     <motion.span
-                                        animate={{
-                                            y: active ? -0.5 : 0,
-                                        }}
-                                        transition={{
-                                            duration: 0.2,
-                                        }}
+                                        animate={{ y: active ? -0.5 : 0 }}
+                                        transition={{ duration: 0.2 }}
                                         className={`
-                                            flex
-                                            items-center
-                                            justify-center
-                                            w-7 h-7 sm:w-8 sm:h-8
-                                            rounded-full
-                                            shrink-0
-                                            transition-colors
-                                            duration-200
-                                            ${active
-                                                ? "bg-[#FF5422]/10 text-[#FF5422]"
-                                                : "bg-transparent text-neutral-400 group-hover:text-[#FF5422]"
-                                            }
+                                            flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8
+                                            rounded-full shrink-0 transition-colors duration-200
+                                            ${active ? "bg-[#FF5422]/10 text-[#FF5422]" : "bg-transparent text-neutral-400 group-hover:text-[#FF5422]"}
                                         `}
                                     >
                                         {item.icon}
                                     </motion.span>
-
-
-                                    {/* LABEL */}
-
-                                    <span>
-                                        {item.label}
-                                    </span>
-
-
-                                    {/* ACTIVE INDICATOR */}
-
+                                    <span>{item.label}</span>
                                     <motion.span
-                                        className="
-                                            absolute
-                                            bottom-0
-                                            left-0
-                                            h-[3px]
-                                            rounded-t-full
-                                            bg-[#FF5422]
-                                        "
+                                        className="absolute bottom-0 left-0 h-[3px] rounded-t-full bg-[#FF5422]"
                                         initial={false}
-                                        animate={{
-                                            width: active ? "100%" : "0%",
-                                            opacity: active ? 1 : 0,
-                                            left: active ? "0%" : "50%",
-                                            x: active ? "0%" : "-50%",
-                                        }}
-                                        transition={{
-                                            duration: 0.28,
-                                            ease: [0.22, 1, 0.36, 1],
-                                        }}
+                                        animate={{ width: active ? "100%" : "0%", opacity: active ? 1 : 0, left: active ? "0%" : "50%", x: active ? "0%" : "-50%" }}
+                                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                                     />
-
                                 </motion.button>
                             );
                         })}
-
                     </nav>
                 </div>
-            </div>
-
-
-            {/* MOBILE SCROLL INDICATOR */}
-            <div className={`pointer-events-none absolute right-0 bottom-0 h-[54px] sm:h-[60px] w-8 sm:w-10 bg-gradient-to-l from-white to-transparent flex items-center justify-end pr-2 z-30 ${dept.slug === 'cse' ? 'lg:hidden' : 'lg:hidden'}`}>
-
-                <ChevronRight
-                    size={14}
-                    className="text-neutral-300"
-                />
-
             </div>
 
         </header>

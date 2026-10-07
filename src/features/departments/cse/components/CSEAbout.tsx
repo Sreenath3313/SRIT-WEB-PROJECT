@@ -38,23 +38,6 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                                 <p key={idx}>{para}</p>
                             ))}
                         </div>
-                        <div className="pt-2">
-                            <a
-                                href=""
-                                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-[13px] font-bold transition-all duration-200 hover:opacity-90 bg-[#FF5422] text-white shadow-sm hover:shadow"
-                            >
-                                Know More
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path
-                                        d="M3 8H13M13 8L9 4M13 8L9 12"
-                                        stroke="white"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

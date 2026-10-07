@@ -6,6 +6,7 @@ import { eeeDepartment } from './eee/data/department';
 import { mecDepartment } from './mec/data/department';
 import { cadDepartment } from './cad/index';
 import { civilDepartment } from './civil/data/department';
+import { hasDepartment } from './has/index';
 
 export const departments: DepartmentData[] = [
     cseDepartment,
@@ -14,7 +15,8 @@ export const departments: DepartmentData[] = [
     eeeDepartment,
     mecDepartment,
     cadDepartment,
-    civilDepartment
+    civilDepartment,
+    hasDepartment
 ];
 
 export const getDepartmentBySlug = (slug: string): DepartmentData | undefined => {

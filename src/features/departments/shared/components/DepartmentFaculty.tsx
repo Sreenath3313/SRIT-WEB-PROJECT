@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import type { DepartmentData } from '../../index';
 import DepartmentAccordion from '../../../../components/common/DepartmentAccordion';
 import FacultyProfiles from './FacultyProfiles';
+import ContentRenderer from '../../../../components/common/ContentRenderer';
 
 interface DepartmentFacultyProps {
     dept: DepartmentData;
@@ -157,6 +158,18 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                     View Full Directory
                 </a>
             </div>
+
+            {dept.facultyAccordions && dept.facultyAccordions.length > 0 && (
+                <div className="mt-16">
+                    <DepartmentAccordion 
+                        title="FACULTY" 
+                        items={dept.facultyAccordions.map(acc => ({
+                            title: acc.title,
+                            content: <ContentRenderer content={acc.content} />
+                        }))} 
+                    />
+                </div>
+            )}
         </div>
     );
 };

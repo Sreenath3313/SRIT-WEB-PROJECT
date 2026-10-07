@@ -1,15 +1,17 @@
 import { cadDepartment as cadData } from './data/department';
 import type { DepartmentData } from '../shared/types';
-import CSEAbout from '../cse/components/CSEAbout';
+import CADAbout from './components/CADAbout';
+import CADCourseStructure from './components/CADCourseStructure';
 import CSEOutcome from '../cse/components/CSEOutcome';
-import CSEStudents from '../cse/components/CSEStudents';
+import CADStudents from './components/CADStudents';
 
 export const cadDepartment: DepartmentData = {
     ...cadData,
     layout: 'sidebar',
     components: {
-        About: CSEAbout,
+        About: CADAbout,
+        CourseStructure: CADCourseStructure,
         Outcome: CSEOutcome,
-        Students: CSEStudents,
+        Students: CADStudents,
     }
 };

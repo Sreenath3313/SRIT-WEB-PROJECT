@@ -1,12 +1,21 @@
 import React from 'react';
 import type { DepartmentData } from '../../index';
 import DepartmentAccordion from '../../../../components/common/DepartmentAccordion';
+import ContentRenderer from '../../../../components/common/ContentRenderer';
 
 interface DepartmentEContentProps {
     dept: DepartmentData;
 }
 
 const DepartmentEContent: React.FC<DepartmentEContentProps> = ({ dept }) => {
+    if (dept.eContent && dept.eContent.length > 0) {
+        const items = dept.eContent.map(item => ({
+            title: item.title,
+            content: <ContentRenderer content={item.content} />
+        }));
+        return <DepartmentAccordion title="E-CONTENT" items={items} />;
+    }
+
     if (dept.slug === 'cse') {
         const items = [
             { title: 'CSE- 2025-29 Batch' },

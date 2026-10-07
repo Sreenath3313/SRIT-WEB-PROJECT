@@ -13,7 +13,7 @@ const readable = (value = '') => value
 
 const categoryLabels: Record<string, string> = {
   'campus-life': 'Campus Life', 'student-chapters': 'Student Chapters',
-  'community-services': 'Community Services', 'h-and-s': 'Humanities & Sciences',
+  'community-services': 'Community Services',
 }
 
 const highlights: Record<string, string[]> = {
