@@ -22,6 +22,7 @@ const avatarPlaceholder = (name: string) => {
 
 const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
     if (dept.slug === 'csm') {
+        const csmAccordions = (dept.facultyGroups || []).filter(acc => acc.title.toLowerCase() !== 'faculty profiles');
         const items = [
             {
                 title: 'Faculty Profiles',
@@ -34,10 +35,10 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                     />
                 ),
             },
-            { title: 'Publications' },
-            { title: 'Patents' },
-            { title: 'Book and Book Chapters' },
-            { title: 'Faculty Certifications/NPTEL' },
+            ...csmAccordions.map(acc => ({
+                title: acc.title,
+                content: <ContentRenderer content={acc.content} />
+            }))
         ];
         return <DepartmentAccordion title="FACULTY" items={items} defaultOpenIndex={0} />;
     }

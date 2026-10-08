@@ -1,13 +1,13 @@
-import React from 'react';
+﻿import React from 'react';
 import type { DepartmentData } from '../../shared/types';
 import DepartmentAccordion from '../../../../components/common/DepartmentAccordion';
 import ContentRenderer from '../../../../components/common/ContentRenderer';
 
-interface MECOutcomeProps {
+interface CivilOutcomeProps {
     dept: DepartmentData;
 }
 
-const MECOutcome: React.FC<MECOutcomeProps> = ({ dept }) => {
+const CivilOutcome: React.FC<CivilOutcomeProps> = ({ dept }) => {
     const items = (dept.outcomeGroups ?? []).map(item => ({
         title: item.title,
         content: <ContentRenderer content={item.content} />,
@@ -22,4 +22,4 @@ const MECOutcome: React.FC<MECOutcomeProps> = ({ dept }) => {
     );
 };
 
-export default MECOutcome;
+export default CivilOutcome;

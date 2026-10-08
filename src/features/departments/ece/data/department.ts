@@ -445,7 +445,7 @@ export const eceDepartment: DepartmentData = {
     "studentChapters": [
         {
             "title": "IETE",
-            "content": "<div class=\"p-4 space-y-4\"><p class=\"text-neutral-700 leading-relaxed\">The Institution of Electronics and Telecommunication Engineers (IETE) is a premier professional society devoted to the advancement of Science and Technology in Electronics, Telecommunications &amp; IT. It organizes workshops, technical symposiums, coding competitions, and guest lectures to prepare students for core industry and higher studies.</p><p><a href=\"/student-chapters/iete\" class=\"inline-flex items-center text-[#FF5422] font-semibold hover:underline\">View Detailed IETE Student Chapter Page &rarr;</a></p></div>"
+            "content": ""
         }
     ],
     components: {

@@ -1,6 +1,7 @@
 import { gallery } from './gallery';
 
 import type { DepartmentData } from '../../shared/types';
+import CSMOutcome from '../components/CSMOutcome';
 
 export const csmDepartment: DepartmentData = {
     "slug": "csm",
@@ -329,4 +330,7 @@ export const csmDepartment: DepartmentData = {
         { title: "Internet Society", content: "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRMLFcg740wOWyChSxyIZ-rAqh3tecDjwDrJAPemLx8bW1O7NjsA5DbOCYggUdLhg/pubhtml?widget=true&chrome=false&headers=false\" width=\"100%\" height=\"600\" style=\"border: none; width: 100%; height: 600px; zoom: 1.25; overflow: hidden;\"></iframe>" }
     ],
     gallery,
+    components: {
+        Outcome: CSMOutcome,
+    },
 };

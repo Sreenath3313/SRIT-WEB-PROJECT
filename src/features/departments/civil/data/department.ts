@@ -1,4 +1,5 @@
 import type { DepartmentData } from '../../shared/types';
+import CivilOutcome from '../components/CivilOutcome';
 
 export const civilDepartment: DepartmentData = {
     "slug": "civil",
@@ -338,10 +339,13 @@ export const civilDepartment: DepartmentData = {
                     "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vQuaPXgz8K8h2-1rJDeT8YwTSBAzu3qqCroDpDDItB8Xb8pVg3JtiZ59eGFawiSzA/pubhtml?widget=true&#038;headers=false\" width=\"100%\" height=\"600\" style=\"border: none; width: 100%; height: 600px; zoom: 1.25; overflow: hidden;\"></iframe>"
             }
     ],
-    "studentChapters": [
+    studentChapters: [
             {
                     "title": "ICI",
-                    "content": ""
+                    "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRbhSTPdBGChkPT_jYOrWiBIXTzat4HnZhrhenIGvm2ECQcmxF1nWhDMKxwr05snA/pubhtml?widget=true&headers=false\" width=\"100%\" height=\"600\" style=\"border: none; width: 100%; height: 600px; zoom: 1.25; overflow: hidden;\"></iframe>"
             }
-    ]
+    ],
+    components: {
+        Outcome: CivilOutcome,
+    },
 };
