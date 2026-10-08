@@ -46,8 +46,8 @@ const Hero: React.FC = () => {
     return (
         <section className="flex flex-col lg:grid relative min-h-[100svh] w-full bg-neutral-dark overflow-hidden">
             
-            {/* Background Image Carousel: 45vh on mobile, Full Bleed on desktop */}
-            <div className="relative w-full h-[45vh] min-h-[350px] shrink-0 lg:aspect-auto lg:h-auto lg:col-start-1 lg:row-start-1 lg:w-full lg:h-full z-0 overflow-hidden">
+            {/* Background Image Carousel: Taller height on mobile to prevent aggressive cropping, Full Bleed on desktop */}
+            <div className="relative w-full h-[55vh] min-h-[450px] shrink-0 lg:aspect-auto lg:h-auto lg:col-start-1 lg:row-start-1 lg:w-full lg:h-full z-0 overflow-hidden">
                 <AnimatePresence>
                     <motion.div
                         key={currentIndex}
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                             alt={HERO_IMAGES[currentIndex].alt}
                             eager={currentIndex === 0}
                             sizes="100vw"
-                            className="absolute inset-0 w-full h-full object-cover object-center"
+                            className="absolute inset-0 w-full h-full object-cover object-top lg:object-center"
                         />
                     </motion.div>
                 </AnimatePresence>
