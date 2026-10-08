@@ -85,17 +85,24 @@ const Hero: React.FC = () => {
                     animate="show"
                     className="flex flex-col max-w-xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
                 >
-                    {/* Location Badge */}
-                    <motion.div variants={itemVariants} className="flex items-center gap-4 mb-6 lg:mb-10 mt-12 lg:mt-0">
-                        
-                        <span className="text-white font-bold tracking-[0.25em] uppercase text-xs drop-shadow-sm">
+                    {/* Location Badge & Logo */}
+                    <motion.div variants={itemVariants} className="flex items-center gap-4 mb-6 lg:mb-8 mt-28 lg:mt-32">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white p-1.5 rounded-xl shadow-[0_4px_16px_rgba(0,0,0,0.4)] shrink-0 flex items-center justify-center border border-white/10">
+                            <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain" />
+                        </div>
+                        <div className="h-6 w-[2px] bg-white/30 rounded-full hidden sm:block"></div>
+                        <span className="text-white font-bold tracking-[0.25em] uppercase text-xs sm:text-sm drop-shadow-md">
                             Anantapur, AP
                         </span>
                     </motion.div>
 
                     {/* Main Title */}
-                    <motion.h1 variants={itemVariants} className="font-serif text-4xl sm:text-5xl md:text-6xl xl:text-[72px] font-black text-white leading-[1.05] tracking-tight mb-4 lg:mb-8 drop-shadow-md">
-                        Srinivasa Ramanujan Institute of Technology
+                    <motion.h1 variants={itemVariants} className="font-serif text-4xl sm:text-5xl md:text-6xl xl:text-[72px] font-black leading-[1.15] tracking-tight mb-6 lg:mb-8 drop-shadow-lg">
+                        <span className="inline-block bg-primary text-white px-4 py-1 sm:px-6 sm:py-2 rounded-xl sm:rounded-2xl shadow-[0_8px_30px_rgba(255,84,34,0.4)] mb-2 sm:mb-4 border border-white/20">
+                            Srinivasa Ramanujan
+                        </span>
+                        <br />
+                        <span className="text-white drop-shadow-md">Institute of Technology</span>
                     </motion.h1>
 
                     {/* Subtitle */}
