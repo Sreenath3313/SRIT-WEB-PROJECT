@@ -77,7 +77,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                     </div>
 
                     <div className="text-neutral-600 text-base lg:text-lg leading-[1.85] space-y-5 mt-8 text-justify">
-                        {dept.description.map((para, idx) => (
+                        {dept.description.slice(1).map((para, idx) => (
                             <p key={idx}>{para}</p>
                         ))}
                     </div>
