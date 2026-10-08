@@ -38,7 +38,6 @@ export const eceDepartment: DepartmentData = {
         "students": "600+",
         "placement": "92%"
     },
-    "layout": "sidebar",
     "intake": 120,
     "accreditation": "NBA Accredited",
     "eligibility": "10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.",

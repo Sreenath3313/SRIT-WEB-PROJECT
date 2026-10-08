@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 const getSidebarItems = (dept: DepartmentData) => {
-    if (dept.slug === 'ece' || dept.slug === 'eee' || dept.slug === 'has') {
+    if (dept.slug === 'eee' || dept.slug === 'has') {
         return [
             {
                 key: 'about',
