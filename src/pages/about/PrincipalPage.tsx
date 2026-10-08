@@ -19,7 +19,7 @@ const PrincipalPage: React.FC = () => {
                     <div className="relative">
                         <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
                         <img
-                            src="https://www.srit.ac.in/wp-content/uploads/2021/07/princi-img.png"
+                            src="/principal.jpg"
                             alt="Dr. G. Balakrishna"
                             className="relative w-full rounded-xl shadow-xl border-2 border-white object-cover"
                         loading="lazy" />

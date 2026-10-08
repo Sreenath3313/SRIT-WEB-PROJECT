@@ -66,7 +66,7 @@ const About: React.FC = () => {
                         <div className="absolute top-0 bottom-0 right-0 w-8 lg:w-full lg:h-12 bg-gradient-to-l lg:bg-gradient-to-t from-white to-transparent z-20 pointer-events-none lg:bottom-0 lg:top-auto lg:left-0 lg:right-auto" />
 
                         {/* Scrolling Container */}
-                        <div className="flex flex-row lg:flex-col gap-4 lg:gap-6 h-auto lg:h-[600px] xl:h-[650px] overflow-x-auto lg:overflow-y-auto px-4 py-4 lg:py-6 custom-scrollbar w-full snap-x snap-mandatory lg:snap-y pb-6">
+                        <div className="flex flex-row lg:flex-col gap-4 lg:gap-6 h-[220px] sm:h-[260px] md:h-[320px] lg:h-[600px] xl:h-[650px] overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto px-4 py-2 lg:py-6 custom-scrollbar w-full snap-x snap-mandatory lg:snap-y pb-4">
                             {[
                                 { src: '/cert-iic.jpg', alt: 'IIC Certificate' },
                                 { src: '/cert-salesforce.jpg', alt: 'Salesforce Award' },

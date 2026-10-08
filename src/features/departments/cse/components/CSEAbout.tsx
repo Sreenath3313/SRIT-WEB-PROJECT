@@ -94,8 +94,10 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                             className="w-28 h-28 lg:w-40 lg:h-40 rounded-full object-cover shrink-0 shadow-lg"
                         loading="lazy" />
                     ) : (
-                        <div className="w-28 h-28 lg:w-40 lg:h-40 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 shadow-inner">
-                            <span className="text-5xl text-neutral-300 font-serif">{dept.hodMessage.name.charAt(0)}</span>
+                        <div className="w-28 h-28 lg:w-40 lg:h-40 rounded-full bg-neutral-50 flex flex-col items-center justify-center shrink-0 shadow-inner border border-neutral-200 text-center px-4 overflow-hidden">
+                            <span className="text-[10px] lg:text-[11px] font-bold text-neutral-400 uppercase tracking-wider leading-tight mb-1">{dept.code}</span>
+                            <span className="text-[9px] lg:text-[10px] font-medium text-neutral-500 uppercase tracking-wide leading-tight mb-2">Head of Dept</span>
+                            <span className="text-[9px] lg:text-[10px] font-semibold text-neutral-400 italic">Photo<br/>Unavailable</span>
                         </div>
                     )}
                     <div className="flex-1 text-left pt-2">

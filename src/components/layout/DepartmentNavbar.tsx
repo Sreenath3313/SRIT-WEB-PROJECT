@@ -128,9 +128,9 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                 <Link
                                     to="/"
                                     title="Home"
-                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md relative z-20 overflow-hidden"
+                                    className="h-8 sm:h-9 flex items-center justify-center transition-opacity duration-200 hover:opacity-80 shrink-0 relative z-20"
                                 >
-                                    <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" loading="lazy" />
+                                    <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="h-full w-auto object-contain bg-white rounded-sm" loading="lazy" />
                                 </Link>
 
                                 {/* DIVIDER */}
@@ -188,9 +188,9 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                 <Link
                                     to="/"
                                     title="Home"
-                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md relative z-20 overflow-hidden"
+                                    className="h-8 sm:h-9 flex items-center justify-center transition-opacity duration-200 hover:opacity-80 shrink-0 relative z-20"
                                 >
-                                    <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="w-full h-full object-contain bg-white" loading="lazy" />
+                                    <img src="/SRIT_LOGO.jpg" alt="SRIT Logo" className="h-full w-auto object-contain bg-white rounded-sm px-1" loading="lazy" />
                                 </Link>
 
                                 {/* DIVIDER */}

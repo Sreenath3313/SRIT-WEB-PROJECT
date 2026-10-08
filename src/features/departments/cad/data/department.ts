@@ -20,7 +20,7 @@ export const cadDepartment: DepartmentData = {
         "Preparation for data science and ML engineering careers",
         "Big data tools: Hadoop, Spark, Kafka, Tableau"
     ],
-    "image": "/Transport.jpg",
+    "image": "/departments/dept about us coverpages/csd.jpg",
     "researchAreas": [
         "Big Data Analytics",
         "Predictive Modeling",
@@ -56,7 +56,7 @@ export const cadDepartment: DepartmentData = {
         "name": "Dr. C. Sasaikala",
         "designation": "Head of the Department, CAD",
         "message": "The AI & Data Science department is focused on building a new generation of data professionals who can drive innovation through intelligent data analysis. With industry-aligned curriculum, cloud computing labs, and real-world project exposure, we ensure our graduates are equipped with the skills demanded by top employers in AI and data analytics.",
-        "image": "/culturalevent.jpg"
+        "image": ""
     },
     "faculty": [
         {

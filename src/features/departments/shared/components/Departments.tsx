@@ -45,7 +45,7 @@ const Departments: React.FC = () => {
                         >
                             <Link
                                 to={`/department/${dept.slug}`}
-                                className="group block bg-white h-full rounded-xl shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-500 border border-neutral-100 relative"
+                                className="group block bg-white h-full rounded-xl shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] overflow-hidden transition-shadow duration-500 border border-neutral-100 relative"
                             >
                                 {/* Bottom Hover Accent Line */}
                                 <div className="absolute bottom-0 left-0 w-full h-[3px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20" />

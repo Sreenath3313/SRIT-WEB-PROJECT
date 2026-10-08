@@ -58,14 +58,16 @@ export const cseDepartment: DepartmentData = {
             "designation": "Associate Professor & Head",
             "specialization": "Computer Science & Engineering",
             "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/view/pvprakash/home"
+            "profileUrl": "https://sites.google.com/view/pvprakash/home",
+            "image": "/cse_hod.jpg"
         },
         {
             "name": "Dr. M. Ranjit Reddy",
             "designation": "Professor",
             "specialization": "Computer Science & Engineering",
             "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/view/ranjit"
+            "profileUrl": "https://sites.google.com/view/ranjit",
+            "image": "/ranjit.jpg"
         },
         {
             "name": "Dr. T. Venkata Naga Jayudu",

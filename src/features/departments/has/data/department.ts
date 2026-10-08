@@ -22,7 +22,7 @@ export const hasDepartment: DepartmentData = {
         "Regular workshops and seminars on communication and soft skills",
         "Strong foundation for core engineering courses"
     ],
-    "image": "/images/campus/library-1.jpg", 
+    "image": "/departments/dept about us coverpages/h&s.jpg", 
     "researchAreas": [
         "Applied Mathematics",
         "Materials Science",
@@ -58,7 +58,7 @@ export const hasDepartment: DepartmentData = {
         "name": "Dr. J. Gurusiddappa",
         "designation": "HOD, Humanities & Sciences",
         "message": "Welcome to the Department of Humanities & Sciences. Our goal is to provide a strong foundation for our engineering students. We focus on developing not just technical skills, but also communication, analytical, and interpersonal skills.",
-        "image": "/images/faculty/default.jpg"
+        "image": ""
     },
     "faculty": [
             {

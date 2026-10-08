@@ -25,7 +25,7 @@ export const eceDepartment: DepartmentData = {
         "Active technical competitions and research participation",
         "Top recruiters: Qualcomm, Texas Instruments, BEL, ECIL, Infosys, Wipro"
     ],
-    "image": "/College 3.JPG",
+    "image": "/departments/dept about us coverpages/ece.jpg",
     "researchAreas": [
         "VLSI Design",
         "Signal Processing",
@@ -38,6 +38,7 @@ export const eceDepartment: DepartmentData = {
         "students": "600+",
         "placement": "92%"
     },
+    "layout": "sidebar",
     "intake": 120,
     "accreditation": "NBA Accredited",
     "eligibility": "10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.",
@@ -61,7 +62,7 @@ export const eceDepartment: DepartmentData = {
         "name": "Dr. M.L.RAVI CHANDRA",
         "designation": "Head of the Department, ECE",
         "message": "The ECE department is dedicated to providing an enriching learning experience that combines theoretical knowledge with practical skills in electronics and communication engineering. We continuously update our curriculum to match the rapid advancements in the field, ensuring our graduates are industry-ready and capable of contributing to cutting-edge technologies in VLSI, IoT, and wireless communications.",
-        "image": "/College.JPG"
+        "image": ""
     },
     "faculty": [
         {

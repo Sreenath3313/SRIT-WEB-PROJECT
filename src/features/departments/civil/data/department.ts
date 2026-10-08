@@ -16,7 +16,7 @@ export const civilDepartment: DepartmentData = {
         "Practical exposure through site visits, labs (6 labs), and CAD software",
         "Career opportunities in construction, urban planning, and government agencies"
     ],
-    "image": "/labs.jpg",
+    "image": "/departments/dept about us coverpages/civil.jpg",
     "researchAreas": [
         "Structural Engineering",
         "Geotechnical Engineering",
@@ -49,12 +49,20 @@ export const civilDepartment: DepartmentData = {
     ],
     "goals": "Civil Engineering graduates will become successful professionals in Government agencies/companies or entrepreneurs, responsible Civil Engineers with good leadership qualities, and engage in lifelong learning with good computational skills and multi-disciplinary approach.",
     "hodMessage": {
-        "name": "Dr. R. Suresh Kumar",
-        "designation": "Head of the Department, Civil",
+        "name": "Dr. U. Raghu Babu",
+        "designation": "Professor & Head",
         "message": "The Civil Engineering department is dedicated to developing infrastructure professionals who can contribute to the nation's growth through sustainable construction practices. Our curriculum covers the entire spectrum of civil engineering disciplines, from surveying and structural design to environmental and transportation engineering. We prepare students to meet the challenges of modern infrastructure development with technical excellence and ethical responsibility.",
-        "image": "/sportfacilites.jpg"
+        "image": ""
     },
                 "faculty": [
+        {
+            "name": "Dr. U. Raghu Babu",
+            "designation": "Professor & Head",
+            "qualification": "M. Tech. Ph. D.",
+            "joiningDate": "21-01-2021",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/view/raghubabuuppara/home"
+        },
         {
             "name": "Dr. T. Chinna Venkata Reddy",
             "designation": "Professor",
@@ -62,14 +70,6 @@ export const civilDepartment: DepartmentData = {
             "joiningDate": "08-08-2022",
             "association": "Regular",
             "profileUrl": "https://sites.google.com/srit.ac.in/drtcvenkatareddy/home"
-        },
-        {
-            "name": "Dr. U. Raghu Babu",
-            "designation": "Professor",
-            "qualification": "M. Tech. Ph. D.",
-            "joiningDate": "21-01-2021",
-            "association": "Regular",
-            "profileUrl": "https://sites.google.com/view/raghubabuuppara/home"
         },
         {
             "name": "Dr. S. Hariprasad Reddy",

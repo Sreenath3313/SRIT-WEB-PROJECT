@@ -216,7 +216,11 @@ const sections: SectionData[] = [
 
 /* ── Component ─────────────────────────────────────────── */
 
-const DepartmentStudents: React.FC = () => {
+import DepartmentAccordion from '../../../../components/common/DepartmentAccordion';
+import ContentRenderer from '../../../../components/common/ContentRenderer';
+import type { DepartmentData } from '../../index';
+
+const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
     const [openSection, setOpenSection] = useState<string | null>('academic');
     const [activeYears, setActiveYears] = useState<Record<string, string>>(
         Object.fromEntries(sections.map((s) => [s.key, '2025-26']))
@@ -233,6 +237,14 @@ const DepartmentStudents: React.FC = () => {
     const setYearForSection = (sectionKey: string, year: string) => {
         setActiveYears((prev) => ({ ...prev, [sectionKey]: year }));
     };
+
+    if (dept && dept.studentGroups && dept.studentGroups.length > 0) {
+        const items = dept.studentGroups.map(group => ({
+            title: group.title,
+            content: <ContentRenderer content={group.content} />
+        }));
+        return <DepartmentAccordion title="STUDENTS" items={items} defaultOpenIndex={0} />;
+    }
 
     // Effect to fetch CSV data when a section and year are active
     useEffect(() => {

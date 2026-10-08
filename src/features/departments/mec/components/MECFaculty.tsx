@@ -12,7 +12,14 @@ const MECFaculty: React.FC<MECFacultyProps> = ({ dept }) => {
     const items = [
         {
             title: 'Faculty Profiles',
-            content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKcuTBhi-lGWPB2Jc0ImhZ6DIeqmMrwA0o_wGcCYadV8dYWWjZv45VsDg2QWSIHg/pubhtml?widget=true&headers=false" style={{ width: '100%', height: '800px', border: 'none', borderRadius: '8px' }} />,
+            content: (
+                <FacultyProfiles
+                    faculty={dept.faculty}
+                    title="Faculty Profiles"
+                    subtitle="Department of Mechanical Engineering"
+                    variant="default"
+                />
+            ),
         },
         { 
             title: 'Publications',

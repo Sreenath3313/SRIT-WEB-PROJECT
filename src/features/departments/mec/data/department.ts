@@ -1,7 +1,7 @@
 import { gallery } from './gallery';
 
 import type { DepartmentData } from '../../shared/types';
-import MECAbout from '../components/MECAbout';
+
 import MECOutcome from '../components/MECOutcome';
 import MECEContent from '../components/MECEContent';
 import MECFaculty from '../components/MECFaculty';
@@ -27,7 +27,7 @@ export const mecDepartment: DepartmentData = {
         "CAD/CAM software training (AutoCAD, ANSYS, SolidWorks, CATIA)",
         "Diverse career paths across manufacturing, automotive, aerospace, and energy sectors"
     ],
-    "image": "/Library.JPG",
+    "image": "/departments/dept about us coverpages/mec.jpg",
     "researchAreas": [
         "Thermal Sciences",
         "Advanced Manufacturing",
@@ -67,50 +67,117 @@ export const mecDepartment: DepartmentData = {
         "name": "Dr. K. JOHN SAMUEL",
         "designation": "Associate Professor & Head",
         "message": "The Mechanical Engineering department is committed to producing engineers who are well-versed in both traditional and modern manufacturing technologies. Our curriculum integrates classical mechanical engineering fundamentals with modern tools like CAD/CAM, FEA, and automation to produce industry-ready engineers. We encourage students to take up challenging projects, internships, and research activities to become innovative contributors to the nation.",
-        "image": "/mechod"
+        "image": ""
     },
     "faculty": [
         {
-            "name": "Dr. V. Krishna Reddy",
-            "designation": "Professor & Head",
-            "specialization": "Manufacturing Technology & CAD/CAM",
-            "qualification": "Ph.D."
+            "name": "Dr. K. JOHN SAMUEL",
+            "designation": "Associate Professor & Head",
+            "qualification": "M. Tech. Ph. D.",
+            "joiningDate": "19-06-2017",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/view/johnsamuel/"
         },
         {
-            "name": "Dr. S. Narasimha Rao",
+            "name": "Dr. D. SAI CHAITANYA KISHORE",
+            "designation": "Professor & Director IQAC",
+            "qualification": "M. Tech. Ph. D.",
+            "joiningDate": "12-06-2017",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/srit.ac.in/me-dsck/"
+        },
+        {
+            "name": "Dr. Y. RAMAMOHAN REDDY",
             "designation": "Professor",
-            "specialization": "Thermal Engineering & Heat Transfer",
-            "qualification": "Ph.D."
+            "qualification": "M. Tech. Ph. D.",
+            "joiningDate": "14-07-2014",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/srit.ac.in/ramamohan/home"
         },
         {
-            "name": "Dr. P. Ravi Shankar",
+            "name": "Dr. B. ANJANEULU",
+            "designation": "Professor",
+            "qualification": "M. Tech. Ph. D.",
+            "joiningDate": "28-03-2022",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/srit.ac.in/anji/international-journals"
+        },
+        {
+            "name": "Dr. S. SHARMAS VALI",
             "designation": "Associate Professor",
-            "specialization": "Machine Design & FEA",
-            "qualification": "Ph.D."
+            "qualification": "M. Tech. Ph. D.",
+            "joiningDate": "18-04-2023",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/srit.ac.in/shaik-sharmas-vali/home"
         },
         {
-            "name": "Mr. G. Durga Prasad",
+            "name": "Dr. M. PEERU NAIK",
             "designation": "Associate Professor",
-            "specialization": "Fluid Mechanics & Hydraulic Machinery",
-            "qualification": "M.Tech"
+            "qualification": "M. Tech. Ph. D.",
+            "joiningDate": "09-12-2019",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/srit.ac.in/m-peeru-naik/home"
         },
         {
-            "name": "Ms. A. Sridevi",
+            "name": "Mr. A. VENKATA DHANUNJAYA REDDY",
             "designation": "Assistant Professor",
-            "specialization": "Materials Science & Metallurgy",
-            "qualification": "M.Tech"
+            "qualification": "M. Tech., (Ph. D.)",
+            "joiningDate": "01-06-2012",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/srit.ac.in/a-venkata-dhanunjaya-reddy/home"
         },
         {
-            "name": "Mr. K. Satish Kumar",
+            "name": "Mr. K. BHARANI KUMAR REDDY",
             "designation": "Assistant Professor",
-            "specialization": "Robotics & Industrial Automation",
-            "qualification": "M.Tech"
+            "qualification": "M. Tech.",
+            "joiningDate": "01-10-2008",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/d/1UD7k-A4ucbpo1auoBAA6GXrXqzyT7APc/p/1FC5NREjt0zvkyTXlOpv5PpvLol4kr6p7/edit"
         },
         {
-            "name": "Mr. M. Suresh",
+            "name": "Mr. C. H. JOSEPH SUNDAR",
             "designation": "Assistant Professor",
-            "specialization": "Automobile Engineering & Dynamics",
-            "qualification": "M.Tech"
+            "qualification": "M. Tech.",
+            "joiningDate": "21-06-2017",
+            "association": "Regular"
+        },
+        {
+            "name": "Mr. D. BALAJI",
+            "designation": "Assistant Professor",
+            "qualification": "M. Tech.",
+            "joiningDate": "03-11-2021",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/view/dbalaji"
+        },
+        {
+            "name": "Mrs. T KIRANMAYEE",
+            "designation": "Assistant Professor",
+            "qualification": "M. Tech.",
+            "joiningDate": "18-01-2021",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/view/kiranmait/home"
+        },
+        {
+            "name": "Mr. B. SREENIVASULU",
+            "designation": "Assistant Professor",
+            "qualification": "M. Tech.",
+            "joiningDate": "07-08-2025",
+            "association": "Regular"
+        },
+        {
+            "name": "Mr. N. PAVAN KUMAR",
+            "designation": "Assistant Professor",
+            "qualification": "M. Tech.",
+            "joiningDate": "27-02-2023",
+            "association": "Regular"
+        },
+        {
+            "name": "Mr. B. RAMESH",
+            "designation": "Assistant Professor",
+            "qualification": "M. Tech.",
+            "joiningDate": "02-06-2025",
+            "association": "Regular",
+            "profileUrl": "https://sites.google.com/view/bramesh/"
         }
     ],
     "overview": [
@@ -180,7 +247,7 @@ export const mecDepartment: DepartmentData = {
     ],
 
     components: {
-        About: MECAbout,
+        
         Outcome: MECOutcome,
         EContent: MECEContent,
         Faculty: MECFaculty,
